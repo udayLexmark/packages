@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">lcd</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUgCklEYXRhQ3Vyc29yIHBpcGVsaW5lQ3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vy
+c29yKCk7CglDaGFubmVsU2Z0cCBjID0gKENoYW5uZWxTZnRwKUlEYXRhVXRpbC5nZXQoIHBpcGVs
+aW5lQ3Vyc29yLCAiQ2hhbm5lbFNmdHAiICk7CglTdHJpbmcJbG9jYWxQYXRoID0gSURhdGFVdGls
+LmdldFN0cmluZyggcGlwZWxpbmVDdXJzb3IsICJsb2NhbFBhdGgiICk7CnBpcGVsaW5lQ3Vyc29y
+LmRlc3Ryb3koKTsKU3RyaW5nIHN0YXR1cyA9IG51bGw7CnRyeSB7CiAgICBjLmxjZChsb2NhbFBh
+dGgpOwogICAgc3RhdHVzID0gIk9LIjsKfQpjYXRjaCAoU2Z0cEV4Y2VwdGlvbiBlKSB7CiAgICAv
+LyBzdGF0dXMgPSBlLnRvU3RyaW5nKCk7CiAgICB0aHJvdyBuZXcgU2VydmljZUV4Y2VwdGlvbihl
+LnRvU3RyaW5nKCkpOwp9CgpJRGF0YUN1cnNvciBwaXBlbGluZUN1cnNvcl8xID0gcGlwZWxpbmUu
+Z2V0Q3Vyc29yKCk7CiAgICAgSURhdGFVdGlsLnB1dChwaXBlbGluZUN1cnNvcl8xLCJzdGF0dXMi
+LHN0YXR1cyk7CnBpcGVsaW5lQ3Vyc29yXzEuZGVzdHJveSgpOw==</value>
+</Values>

@@ -1,0 +1,48 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--
+# $Id: UtilResources.xml,v 1.1.2.6 2004/10/15 22:14:40 kmcafee Exp $
+#
+# Resource nomenclature:
+# The key appears on the left-hand side of the = and the value on the right.  The value is
+# the actual string that is to be fetched.  The key should reflect or resemble the value
+# reasonably, and should only contain the characters [A-Za-z0-9_].  The key should have
+#  as a prefix, and this prefix should NOT be followed by an underscore.
+#
+# The reason for this convention is that the key will typically appear in java source code
+# as a string constant.  As such, the key will be indistinguishable from any other string.
+# By following this convention, it will be simple for a person or a shell script to
+# distinguish a key and an ordinary string constant.
+#
+# We avoid separating the prefix from the key with an underscore (or any other
+# separator) because doing so would impart a word boundary on that part of the key that
+# would follow the _.  This would make it hard to write scripts to operate on strings that
+# are not keys.
+-->
+<Messages xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "../runtime/core/messages.xsd">    
+	  
+	<Domain name = "util">  	  
+	  
+		<!-- Example Structured Message      
+		  <SMessage name = "Message_ID_Common">            
+			<Msg class = "Error" header = "Message Category" text = "Text Description: {0}">                
+				<Msg class = "String" header = "Structured Information" text = "value"/>                
+				<Msg class = "String" header = "Structured Information2" text = "value2"/>            
+			</Msg>        
+		  </SMessage>
+		-->
+		
+		<SMessage name = "Unable_To_Cast__System_Property">		    
+			<Msg class = "Other" header = "Configuration_Error" text = "Unable to cast from {0} to {1}.  Correct the value of the {2} system property to refer to a class that implements {1}.">    
+				<Msg class = "String" header = "Type to cast" text = "{0}"/>    
+				<Msg class = "String" header = "Desired Type" text = "{1}"/>    
+				<Msg class = "String" header = "System Property Name" text = "{2}"/>
+			</Msg>
+		</SMessage>
+		<SMessage name = "Invalid_XML_Character">		    
+			<Msg class = "Output" header = "Output_Data_Error" text = "Unable to write out illegal XML character 0x{0} to XML output data. Please use a filter to remove the character if you wish to use XML.">    
+				<Msg class = "String" header = "Character" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+	</Domain>
+</Messages>

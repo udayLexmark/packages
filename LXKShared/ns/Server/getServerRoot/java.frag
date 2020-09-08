@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getServerRoot</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">LyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqClJldHJpZXZl
+cyB0aGUgd2ViTWV0aG9kcyBzZXJ2ZXIgcm9vdC4KQ3JlYXRlZDogIDgvMjAvMjAwMiAgLSBUb255
+IEZvbHR6CioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKi8K
+ClN0cmluZyBzZXJ2ZXJSb290ID0gU3lzdGVtLmdldFByb3BlcnR5KCJ1c2VyLmRpciIpOwoKLy8g
+U2V0IGEgZGVmYXVsdCBpZiBub3RoaW5nIHJldHVybmVkCmlmICgoc2VydmVyUm9vdCA9PSBudWxs
+KSB8fCAoc2VydmVyUm9vdC5lcXVhbHMoIiIpKSkgewoJc2VydmVyUm9vdCA9ICIvYjJiNDAiOwp9
+CgpJRGF0YUN1cnNvciBjdXJzb3IgCT0gcGlwZWxpbmUuZ2V0Q3Vyc29yKCk7CmN1cnNvci5sYXN0
+KCk7CmN1cnNvci5pbnNlcnRBZnRlcigic2VydmVyUm9vdCIsIHNlcnZlclJvb3QpOw==</value>
+</Values>

@@ -1,0 +1,45 @@
+<!-- new template -->
+<html>
+	<head></head>
+	<title>Output - Reprocess Failed webMethods Services</title>
+	<body>
+		<br></br>
+		<center><font size=6><b>~ Result ~<b></font></center>
+		<br></br>
+
+		%ifvar ReprocessStatus equals('SUCCESS')%
+			<table bgcolor="#DBDBDB" width="50%" cellspacing="2" cellpadding="2" align="center" valign="top">
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr>
+					<td>Reprocess Status</b></td>
+					<td><font color="blue"><b>%value ReprocessStatus%</b></font></td>
+				</tr>
+				<tr>
+					<td>Service Reprocessed</b></td>
+					<td><font color="blue"><b>%value TotalReprocessed%</b></font></td>
+				</tr>
+				<tr><td></td></tr>
+			</table>
+
+		%else%
+			<table bgcolor="#DBDBDB" width="50%" cellspacing="2" cellpadding="2" align="center" valign="top">
+				<tr><td></td></tr>
+				<tr><td></td></tr>
+				<tr>
+					<td>Reprocess Status</b></td>
+					<td><font color="red"><b>%value ReprocessStatus%</b></font></td>
+				</tr>
+				<tr>
+					<td>Error Message</td>
+					<td><font color="red"><b>%value ReprocessErrorMsg%</b></font></td>
+				</tr>
+				<tr>
+					<td>Service Reprocessed</b></td>
+					<td><font color="red"><b>%value TotalReprocessed%</b></font></td>
+				</tr>
+				<tr><td></td></tr>
+			</table>
+		%end%
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">subString</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUKSURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJz
+b3IoKTsKU3RyaW5nCWluU3RyaW5nID0gSURhdGFVdGlsLmdldFN0cmluZyggcGlwZWxpbmVDdXJz
+b3IsICJpblN0cmluZyIgKTsKU3RyaW5nCXNlYXJjaFN0cmluZyA9IElEYXRhVXRpbC5nZXRTdHJp
+bmcoIHBpcGVsaW5lQ3Vyc29yLCAic2VhcmNoU3RyaW5nIiApOwpwaXBlbGluZUN1cnNvci5kZXN0
+cm95KCk7ClN0cmluZyBzdWJTdHJpbmc9bnVsbDsKCmlmIChpblN0cmluZyAhPSBudWxsKQp7CnN1
+YlN0cmluZyA9IG5ldyBTdHJpbmcoaW5TdHJpbmcuc3Vic3RyaW5nKGluU3RyaW5nLmluZGV4T2Yo
+c2VhcmNoU3RyaW5nKSkpOwpzdWJTdHJpbmc9c3ViU3RyaW5nLnJlcGxhY2UoIiAiLCIiKTsKfQpl
+bHNlCntzdWJTdHJpbmcgPSAiR01UIjt9CgoKSURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3JfMSA9
+IHBpcGVsaW5lLmdldEN1cnNvcigpOwoKSURhdGFVdGlsLnB1dCggcGlwZWxpbmVDdXJzb3JfMSwg
+InN1YlN0cmluZyIsIHN1YlN0cmluZyApOwpwaXBlbGluZUN1cnNvcl8xLmRlc3Ryb3koKTs=</value>
+</Values>

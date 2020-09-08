@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">pwd</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUKSURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJz
+b3IoKTsKCUNoYW5uZWxTZnRwIGMgPSAoQ2hhbm5lbFNmdHApSURhdGFVdGlsLmdldCggcGlwZWxp
+bmVDdXJzb3IsICJDaGFubmVsU2Z0cCIgKTsKcGlwZWxpbmVDdXJzb3IuZGVzdHJveSgpOwpTdHJp
+bmcgc3RhdHVzID0gbnVsbDsKU3RyaW5nIHB3ZCA9IG51bGw7CnRyeSB7CiAgICBwd2QgPSBjLnB3
+ZCgpOwogICAgc3RhdHVzID0gIk9LIjsKfQpjYXRjaCAoRXhjZXB0aW9uIGUpIHsKICAgICAgCiAg
+ICAgdGhyb3cgbmV3IFNlcnZpY2VFeGNlcHRpb24oZS50b1N0cmluZygpKTsKICAgIC8vIHN0YXR1
+cyA9IGUudG9TdHJpbmcoKTsKfQoKSURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3JfMSA9IHBpcGVs
+aW5lLmdldEN1cnNvcigpOwogICAgSURhdGFVdGlsLnB1dChwaXBlbGluZUN1cnNvcl8xLCJzdGF0
+dXMiLHN0YXR1cyk7CiAgICBJRGF0YVV0aWwucHV0KHBpcGVsaW5lQ3Vyc29yXzEsInB3ZCIscHdk
+KTsKcGlwZWxpbmVDdXJzb3JfMS5kZXN0cm95KCk7</value>
+</Values>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">multiConcatFromList</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUKLy8gSW5kZXggdGhlIGlucHV0IFN0cmluZ3MgdG8gU3RyTGlzdCBhcnJheQpJ
+RGF0YUN1cnNvciBwaXBlbGluZUN1cnNvciA9IHBpcGVsaW5lLmdldEN1cnNvcigpOwoKCVN0cmlu
+Z1tdIFN0ckxpc3QgPSBJRGF0YVV0aWwuZ2V0U3RyaW5nQXJyYXkoIHBpcGVsaW5lQ3Vyc29yLCAi
+U3RyTGlzdCIgKTsKCWlmICggU3RyTGlzdCAhPSBudWxsKQoJewoJCVN0cmluZyBvdXRTdHIgPSAi
+IjsKCQlmb3IgKCBpbnQgaSA9IDA7IGkgPCBTdHJMaXN0Lmxlbmd0aDsgaSsrICkKCQl7CgkJCXRy
+eQoJCQl7CgkJCQlTdHJpbmcJaW5TdHIgPSBjaGVja051bGwoU3RyTGlzdFtpXSk7CgkJCQkvL0Rl
+YnVnLmxvZyg0LCJTdHJWYWx1ZSBpcyAuLi4iK2luU3RyKTsKCQkJCW91dFN0ciA9IG91dFN0citp
+blN0cjsKCQkJfQoJCQljYXRjaChFeGNlcHRpb24gZSkKCQkJeyAvL0RvIE5vdGhpbmcgCgkJCX0K
+CQkJLy9EZWJ1Zy5sb2coNCwiSXRlcmF0aW9uIG51bWJlciBhZnRlciIraSk7CQkJCQoJCX0KCQlJ
+RGF0YVV0aWwucHV0KCBwaXBlbGluZUN1cnNvciwgIm91dFN0ciIsIG91dFN0ciApOwoJfQpwaXBl
+bGluZUN1cnNvci5kZXN0cm95KCk7</value>
+</Values>

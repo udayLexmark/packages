@@ -1,0 +1,712 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT>TRY-CATCH</COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForAriba</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForJDEUS</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">instring</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForJDEAPG</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/ResumeTriggersForJDEAPG;1;1">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <array name="xml" type="value" depth="1">
+    <value>LXKP2PJDEAPG.inbound.pnConfirmation.triggers:subscribeToInvoiceDocument</value>
+    <value>LXKInterCompanyInvoiceFromJDEAPG.triggers:subscribeToF56BI02InterCoBasicNotificationPublishDocument</value>
+    <value>LXKP2PJDEAPG.inbound.paymentRequest.triggers:receivePaymentRequestDocument</value>
+    <value>LXKInterCompanyInvoiceToJDEAPG.triggers:subscribeToInterCompanyInvoice</value>
+    <value>LXKP2PJDEAPG.outbound.poPull.triggers:APGF56WM04NewRecordTrigger</value>
+    <value>LXKJDEAPGErrorGlobalEventRepo.triggers:trig_subLocalEventRepo</value>
+    <value>LXKIntransitInventoryShipmentToJDEAPG.triggers:subscribeToASNShipment</value>
+    <value>LXKP2PJDEAPG.outbound.appropriations.triggers:subscribeToF56CP01APGAppropriationsNotificationPublishDocument</value>
+    <value>LXKP2PJDEAPG.outbound.projects.triggers:subscribeToF0006APGDeptProjNotificationPublishDocument</value>
+    <value>LXKP2PJDEAPG.outbound.invoice.triggers:subscribeToF56WM06PublishDocument</value>
+    <value>LXKP2PJDEAPG.outbound.departments.triggers:subscribeToF0006APGDeptProjNotificationPublishDocument</value>
+    <value>LXKP2PJDEAPG.outbound.accounts.triggers:subscribeToF0901APGAccountsNotificationPublishDocument</value>
+    <value>LXKP2PJDEAPG.outbound.projects.triggers:subscribeToF0101APGProjectsNotificationPublishDocument</value>
+    <value>LXKP2PJDEAPG.inbound.poPush.triggers:subscribeAPGPOED</value>
+  </array>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">ResumeTriggersForJDEAPG</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">1</value>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/ResumeTriggersForJDEUS;1;1">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <array name="xml" type="value" depth="1">
+    <value>LXKP2PJDEUS.outbound.poPull.triggers:USF56WM04NewRecordTrigger</value>
+    <value>LXKASN2ShipmentToJDEUS.triggers:subscribeToASN2Shipment</value>
+    <value>LXKB2CJDEUS.inbound.Product4Sale.triggers:receiveProducts4SaleNotification</value>
+    <value>LXKCMSSalesOrderRequestJDEIn.triggers:subscribeTosalesOrderRequest</value>
+    <value>LXKInterCompanyInvoiceFromJDEUS.triggers:subscribeToF56BI02InterCoBasicNotificationPublishDocument</value>
+    <value>LXKP2PJDEUS.inbound.paymentRequest.triggers:receivePaymentRequestDocument</value>
+    <value>LXKP2PJDEUS.inbound.pnConfirmation.triggers:subscribeToInvoiceDocument</value>
+    <value>LXKSerialNumberShipmentToJDEUS.triggers:subscribeToSerialNumberShipment</value>
+    <value>LXKSerialNumberToJDEUS.main:subscribeToSerialNumberSalesOrder</value>
+    <value>LXKP2PJDEUS.outbound.accounts.triggers:subscribeToF0901USAccountsNotificationPublishDocument</value>
+    <value>LXKP2PJDEUS.outbound.appropriations.triggers:subscribeToF56CP01USAppropriationsNotificationPublishDocument</value>
+    <value>LXKP2PJDEUS.outbound.conversionRates.triggers:receiveUSF56WM05PublishDocument</value>
+    <value>LXKP2PJDEUS.outbound.departments.triggers:subscribeToF0006USDeptProjNotificationPublishDocument</value>
+    <value>LXKP2PJDEUS.outbound.invoice.triggers:subscribeToF56WM06PublishDocument</value>
+    <value>LXKP2PJDEUS.outbound.projects.triggers:subscribeToF0006USDeptProjNotificationPublishDocument</value>
+    <value>LXKProductJDEUSOut.triggers:trig_subBatchProductKey</value>
+    <value>LXKProductJDEUSOut.triggers:trig_subNRTProductKey</value>
+    <value>LXKInterCompanyInvoiceToJDEUS.triggers:subscribeToInterCompanyInvoice</value>
+    <value>LXKIntransitInventoryShipmentToJDEUS.triggers:subscribeToASNShipment</value>
+    <value>LXKJDEUSErrorGlobalEventRepo.triggers:subscribeToLocalError</value>
+    <value>LXKP2PJDEUS.inbound.poPush.triggers:subscribeUSPOED</value>
+    <value>LXKPickTicketFromJDEUS.triggers:subscribeToF55BOP1</value>
+    <value>LXKPOASNFromJDEUS.triggers:subscribeToPOASN_F55BOA1_BasicNotifPublishDocument</value>
+    <value>LXKInventorySnapshotToJDEUS.triggers:subscribeToInventorySnapshotNotification</value>
+    <value>LXKPOReceiptToJDEUS.triggers:subscribeToPOReceiptNotification</value>
+    <value>LXKSOShipmentNotificationToJDEUS.triggers:subscribeToSOShipmentNotification</value>
+    <value>LXKShipmentStatusFromJDEUS.triggers:subscribeToF55BOC3</value>
+    <value>LXKSalesOrderRequestToJDEUS.triggers:receiveSalesOrderRequest</value>
+    <value>LXKServiceContractAmortizationToJDEUS.triggers:subscribeToServiceContractEnterpriseDocument</value>
+    <value>LXKInventoryNotificationToJDEUS.triggers:subscribeToInventoryNotification</value>
+  </array>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">ResumeTriggersForJDEUS</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">1</value>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/ResumeTriggersForAriba;1;1">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <array name="xml" type="value" depth="1">
+    <value>LXKInvoicePaymentRequestToAriba.triggers:subscribeToInvoicePaymentRequest</value>
+    <value>LXKP2PAriba.inbound.accounts.triggers:subscribeToAccountDocument</value>
+    <value>LXKP2PAriba.inbound.appropriations.triggers:subscribeToAppropriationsDocument</value>
+    <value>LXKP2PAriba.inbound.conversionRates.triggers:SubscribeToConversionRates</value>
+    <value>LXKP2PAriba.inbound.departments.triggers:subscribeToDepartmentDocument</value>
+    <value>LXKP2PAriba.inbound.invoice.triggers:subscribeToInvoiceDocument</value>
+    <value>LXKP2PAriba.inbound.poPull.triggers:subscribeToPO</value>
+    <value>LXKP2PAriba.inbound.projects.triggers:subscribeToProjectDocument</value>
+    <value>LXKP2PAriba.inbound.user.triggers:subscribeSyncUserED</value>
+    <value>LXKP2PAriba.outbound.paymentRequest.triggers:receiveLXKSTGPMTRQSTTAB_BasicNotificationPublishDocument</value>
+    <value>LXKP2PAriba.outbound.pnConfirmation.triggers:subscribeToinvoicePushPublishDocument</value>
+    <value>LXKP2PAriba.outbound.poPush.triggers:triggerPOPush</value>
+    <value>LXKPaymentStatusToAriba.trigger:subscribeToPaymentStatusToAribaTrigger</value>
+    <value>LXKPurchaseOrderToAriba.triggers:subscribeToPO</value>
+    <value>LXKRequisitionFromAriba.triggers:triggerRequisitionFromAriba</value>
+    <value>LXKSupplierResponseToeBuyer.triggers:subscribeToSupplierInformationResponseTrigger</value>
+  </array>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">ResumeTriggersForAriba</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">1</value>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<BRANCH TIMEOUT="" SWITCH="/instring">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<LOOP NAME="ARIBA" TIMEOUT="" IN-ARRAY="/ResumeTriggersForAriba">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.trigger:resumeProcessing" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">resumeProcessingInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">triggerName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">persistChange</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>false</value>
+          <value>true</value>
+        </array>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">SuspendTriggersForAriba</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForAriba</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForJDEUS</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">instring</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForJDEAPG</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">$iteration</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/persistChange;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">true</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">persistChange</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+      <value>false</value>
+      <value>true</value>
+    </array>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY NAME="Link" FROM="/ResumeTriggersForAriba;1;0" TO="/triggerName;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+</LOOP>
+
+<LOOP NAME="JDEUS" TIMEOUT="" IN-ARRAY="/ResumeTriggersForJDEUS">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.trigger:resumeProcessing" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">resumeProcessingInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">triggerName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">persistChange</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>false</value>
+          <value>true</value>
+        </array>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">triggerName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">persistChange</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForAriba</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">SuspendTriggersForJDEUS</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForJDEUS</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">instring</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForJDEAPG</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">$iteration</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/persistChange;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">true</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">persistChange</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+      <value>false</value>
+      <value>true</value>
+    </array>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY NAME="Link" FROM="/ResumeTriggersForJDEUS;1;0" TO="/triggerName;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+</LOOP>
+
+<LOOP NAME="JDEAPG" TIMEOUT="" IN-ARRAY="/ResumeTriggersForJDEAPG">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE TIMEOUT="" SERVICE="pub.trigger:resumeProcessing" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">resumeProcessingInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">triggerName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">persistChange</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>false</value>
+          <value>true</value>
+        </array>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">triggerName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">persistChange</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForAriba</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForJDEUS</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">instring</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForJDEAPG</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">$iteration</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/persistChange;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">true</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">persistChange</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+      <value>false</value>
+      <value>true</value>
+    </array>
+    <value name="nillable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY NAME="Link" FROM="/ResumeTriggersForJDEAPG;1;0" TO="/triggerName;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+</LOOP>
+</BRANCH>
+
+<MAP MODE="STANDALONE">
+  <COMMENT></COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">triggerName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">persistChange</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">SuspendTriggers</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">SuspendTriggersForAriba</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">SuspendTriggersForJDEUS</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForAriba</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">SuspendTriggersForJDEAPG</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForJDEUS</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">instring</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ResumeTriggersForJDEAPG</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/SuspendTriggers;1;1">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/persistChange;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/triggerName;1;0">
+</MAPDELETE>
+</MAP>
+</FLOW>

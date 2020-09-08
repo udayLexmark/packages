@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">resetConfigurationParameters</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgY3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vyc29yKCk7ClN0cmluZyBjb25maWdJ
+ZCA9IG51bGw7CgpjdXJzb3IubGFzdCgiY29uZmlnSWQiKTsKY29uZmlnSWQgPSAoU3RyaW5nKSBj
+dXJzb3IuZ2V0VmFsdWUoKTsKCkhhc2h0YWJsZSBzdG9yYWdlID0gY29uZmlnU3RvcmFnZS5nZXRD
+b25maWdTdG9yYWdlKCk7CgppZiAoY29uZmlnSWQgPT0gbnVsbCB8fCBjb25maWdJZC50cmltKCku
+ZXF1YWxzKCIiKSkKewoJLy9ObyBjb25maWcgSWQgc3BlY2lmaWVkLCBkcm9wIGV2ZXJ5dGhpbmcu
+CglzdG9yYWdlLmNsZWFyKCk7Cn0KZWxzZQp7CgkvL0Ryb3AgYWxsIHByb3BlcnRpZXMgZmlsZXMg
+Zm9yIHRoZSBzcGVjaWZpZWQgY29uZmlnIElkLgoJc3RvcmFnZS5yZW1vdmUoY29uZmlnSWQgKyAi
+X0RFVkVMT1BNRU5ULnByb3BlcnRpZXMiKTsKCXN0b3JhZ2UucmVtb3ZlKGNvbmZpZ0lkICsgIl9U
+RVNULnByb3BlcnRpZXMiKTsKCXN0b3JhZ2UucmVtb3ZlKGNvbmZpZ0lkICsgIl9QUk9EVUNUSU9O
+LnByb3BlcnRpZXMiKTsKfQoKY29uZmlnU3RvcmFnZS5zZXRDb25maWdTdG9yYWdlKHN0b3JhZ2Up
+Owo=</value>
+</Values>

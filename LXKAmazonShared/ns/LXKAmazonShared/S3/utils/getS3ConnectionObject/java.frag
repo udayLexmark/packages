@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getS3ConnectionObject</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsNCkFXU0Ny
+ZWRlbnRpYWxzIGNyZWRlbnRpYWxzID0gKEFXU0NyZWRlbnRpYWxzKSBJRGF0YVV0aWwuZ2V0KHBp
+cGVsaW5lQ3Vyc29yLCAiYXdzQ3JlZGVudGlhbHNPYmplY3QiKTsNCkFtYXpvblMzIGNvbm5TMyA9
+IG51bGw7DQpTdHJpbmcgY29ubkZsYWcgPSAiRmFsc2UiOyANCgl0cnkNCnsNCgljb25uUzMgPSBu
+ZXcgQW1hem9uUzNDbGllbnQoY3JlZGVudGlhbHMpOw0KCQljb25uRmxhZyA9ICJUcnVlIjsgDQp9
+DQpjYXRjaChFeGNlcHRpb24gZSkNCnsNCgljb25uRmxhZz0iRXJyb3IiOw0KICAgICAgICAgICAg
+dGhyb3cgbmV3IFNlcnZpY2VFeGNlcHRpb24oZS50b1N0cmluZygpKTsNCn0NCg0KCUlEYXRhVXRp
+bC5wdXQoIHBpcGVsaW5lQ3Vyc29yLCAiczNDb25uIiwgY29ublMzICk7DQoJSURhdGFVdGlsLnB1
+dCggcGlwZWxpbmVDdXJzb3IsICJjb25uRmxhZyIsIGNvbm5GbGFnKTsNCglwaXBlbGluZUN1cnNv
+ci5kZXN0cm95KCk7DQoNCg0KCQ==</value>
+</Values>

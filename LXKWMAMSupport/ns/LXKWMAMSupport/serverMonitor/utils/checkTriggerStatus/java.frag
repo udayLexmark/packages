@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">checkTriggerStatus</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsKU3RyaW5n
+CXRyaWdnZXJOYW1lID0gSURhdGFVdGlsLmdldFN0cmluZyggcGlwZWxpbmVDdXJzb3IsICJ0cmln
+Z2VyTmFtZSIgKTsKVHJpZ2dlckZhY2FkZSBUcmlnZ2VyPW5ldyBUcmlnZ2VyRmFjYWRlKHRyaWdn
+ZXJOYW1lKTsKVHJpZ2dlckZhY2FkZS5UcmlnZ2VyUnVuVGltZVN0YXR1cyB0cmlnZ2VyUlQgPSBU
+cmlnZ2VyLmdldFRyaWdnZXJSdW5UaW1lU3RhdHVzKCk7ClN0cmluZyBwcm9jZXNzaW5nU3RhdGUg
+PSB0cmlnZ2VyUlQuZ2V0UHJvY2Vzc2luZ1N0YXRlKCk7ClN0cmluZyByZXRyaWV2YWxTdGF0ZSA9
+IHRyaWdnZXJSVC5nZXRSZXRyaWV2YWxTdGF0ZSgpOwpJRGF0YVV0aWwucHV0KCBwaXBlbGluZUN1
+cnNvciwgInByb2Nlc3NpbmdTdGF0ZSIsIHByb2Nlc3NpbmdTdGF0ZSApOwpJRGF0YVV0aWwucHV0
+KCBwaXBlbGluZUN1cnNvciwgInJldHJpZXZhbFN0YXRlIiwgcmV0cmlldmFsU3RhdGUgKTsKcGlw
+ZWxpbmVDdXJzb3IuZGVzdHJveSgpOyA=</value>
+</Values>

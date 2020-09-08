@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+
+   <wsdl:message name="unbindRequest">
+
+   </wsdl:message>
+
+   <wsdl:message name="unbindResponse">
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyCompanyResponse">
+
+      <wsdl:part name="modifyCompanyReturn" type="soapenc:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyCompanyRequest">
+
+      <wsdl:part name="in0" type="soapenc:string"/>
+
+   </wsdl:message>
+   <wsdl:message name="modifyVendorResponse">
+
+      <wsdl:part name="modifyVendorReturn" type="soapenc:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="modifyVendorRequest">
+
+      <wsdl:part name="in0" type="soapenc:string"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="CompanyCatalogService">
+
+      <wsdl:operation name="modifyCompany" parameterOrder="in0">
+
+         <wsdl:input message="impl:modifyCompanyRequest" name="modifyCompanyRequest"/>
+
+         <wsdl:output message="impl:modifyCompanyResponse" name="modifyCompanyResponse"/>
+
+      </wsdl:operation>
+            <wsdl:operation name="modifyVendor" parameterOrder="in0">
+
+         <wsdl:input message="impl:modifyVendorRequest" name="modifyVendorRequest"/>
+
+         <wsdl:output message="impl:modifyVendorResponse" name="modifyVendorResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="unbind">
+
+         <wsdl:input message="impl:unbindRequest" name="unbindRequest"/>
+
+         <wsdl:output message="impl:unbindResponse" name="unbindResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="CompanyCatalogServiceSoapBinding" type="impl:CompanyCatalogService">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="modifyCompany">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="modifyCompanyRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="modifyCompanyResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+            <wsdl:operation name="modifyVendor">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="modifyVendorRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="modifyVendorResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="unbind">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="unbindRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://util.matrix" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="unbindResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="CompanyCatalogServiceService">
+
+      <wsdl:port binding="impl:CompanyCatalogServiceSoapBinding" name="CompanyCatalogService">
+
+         <wsdlsoap:address location="https://plmqa-new.lexmark.com/ematrix/services/CompanyCatalogService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

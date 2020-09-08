@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webServiceDescriptor</value>
+  <value name="node_nsName">LXKEnoviaShared.webservices.consumer:scheduleBuybackMaterialsWS</value>
+  <value name="node_pkg">LXKEnoviaShared</value>
+  <Boolean name="inbound">false</Boolean>
+  <Boolean name="WSICompliant">false</Boolean>
+  <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+  <value name="targetNamespace">http://DefaultNamespace</value>
+  <Boolean name="attachmentEnabled">false</Boolean>
+  <number name="mtomThreshold" type="Integer">0</number>
+  <value name="externalWSDL">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;&lt;wsdl:types&gt;&lt;schema targetNamespace="http://DefaultNamespace" xmlns="http://www.w3.org/2001/XMLSchema"&gt;&lt;import namespace="http://schemas.xmlsoap.org/soap/encoding/"/&gt;&lt;complexType name="ArrayOf_xsd_string"&gt;&lt;complexContent&gt;&lt;restriction base="soapenc:Array"&gt;&lt;attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]"/&gt;&lt;/restriction&gt;&lt;/complexContent&gt;&lt;/complexType&gt;&lt;/schema&gt;&lt;schema targetNamespace="http://xml.apache.org/xml-soap" xmlns="http://www.w3.org/2001/XMLSchema"&gt;&lt;import namespace="http://schemas.xmlsoap.org/soap/encoding/"/&gt;&lt;complexType name="mapItem"&gt;&lt;sequence&gt;&lt;element name="key" nillable="true" type="xsd:string"/&gt;&lt;element name="value" nillable="true" type="xsd:string"/&gt;&lt;/sequence&gt;&lt;/complexType&gt;&lt;complexType name="Map"&gt;&lt;sequence&gt;&lt;element maxOccurs="unbounded" minOccurs="0" name="item" type="apachesoap:mapItem"/&gt;&lt;/sequence&gt;&lt;/complexType&gt;&lt;/schema&gt;&lt;/wsdl:types&gt;
+  &lt;wsdl:message name="SBBServiceResponse"&gt;
+    &lt;wsdl:part name="SBBServiceReturn" type="xsd:string"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="processSAPBuyBackRequest"&gt;
+    &lt;wsdl:part name="in0" type="impl:ArrayOf_xsd_string"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="calculateItemAndAlternateValueResponse"&gt;
+    &lt;wsdl:part name="calculateItemAndAlternateValueReturn" type="apachesoap:Map"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="calculateItemAndAlternateValueRequest"&gt;
+    &lt;wsdl:part name="in0" type="apachesoap:Map"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="sendErrorEmailRequest"&gt;
+    &lt;wsdl:part name="in0" type="xsd:string"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="getFinalExtendedQtyListResponse"&gt;
+    &lt;wsdl:part name="getFinalExtendedQtyListReturn" type="apachesoap:Map"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="sendErrorEmailResponse"&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="SBBServiceRequest"&gt;
+    &lt;wsdl:part name="in0" type="xsd:string"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="processBOMAndAlternateResponse"&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="getFinalExtendedQtyListRequest"&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="processBOMAndAlternateRequest"&gt;
+    &lt;wsdl:part name="in0" type="xsd:string"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="unbindRequest"&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="processSAPBuyBackResponse"&gt;
+    &lt;wsdl:part name="processSAPBuyBackReturn" type="xsd:string"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="processNextLevelChildInfoResponse"&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="unbindResponse"&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:message name="processNextLevelChildInfoRequest"&gt;
+    &lt;wsdl:part name="in0" type="xsd:string"/&gt;
+    &lt;wsdl:part name="in1" type="xsd:string"/&gt;
+    &lt;wsdl:part name="in2" type="xsd:int"/&gt;
+  &lt;/wsdl:message&gt;
+  &lt;wsdl:portType name="SAPBuyBackDataService"&gt;
+    &lt;wsdl:operation name="SBBService" parameterOrder="in0"&gt;
+      &lt;wsdl:input message="impl:SBBServiceRequest" name="SBBServiceRequest"/&gt;
+      &lt;wsdl:output message="impl:SBBServiceResponse" name="SBBServiceResponse"/&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="sendErrorEmail" parameterOrder="in0"&gt;
+      &lt;wsdl:input message="impl:sendErrorEmailRequest" name="sendErrorEmailRequest"/&gt;
+      &lt;wsdl:output message="impl:sendErrorEmailResponse" name="sendErrorEmailResponse"/&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="processSAPBuyBack" parameterOrder="in0"&gt;
+      &lt;wsdl:input message="impl:processSAPBuyBackRequest" name="processSAPBuyBackRequest"/&gt;
+      &lt;wsdl:output message="impl:processSAPBuyBackResponse" name="processSAPBuyBackResponse"/&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="processBOMAndAlternate" parameterOrder="in0"&gt;
+      &lt;wsdl:input message="impl:processBOMAndAlternateRequest" name="processBOMAndAlternateRequest"/&gt;
+      &lt;wsdl:output message="impl:processBOMAndAlternateResponse" name="processBOMAndAlternateResponse"/&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="processNextLevelChildInfo" parameterOrder="in0 in1 in2"&gt;
+      &lt;wsdl:input message="impl:processNextLevelChildInfoRequest" name="processNextLevelChildInfoRequest"/&gt;
+      &lt;wsdl:output message="impl:processNextLevelChildInfoResponse" name="processNextLevelChildInfoResponse"/&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="getFinalExtendedQtyList"&gt;
+      &lt;wsdl:input message="impl:getFinalExtendedQtyListRequest" name="getFinalExtendedQtyListRequest"/&gt;
+      &lt;wsdl:output message="impl:getFinalExtendedQtyListResponse" name="getFinalExtendedQtyListResponse"/&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="calculateItemAndAlternateValue" parameterOrder="in0"&gt;
+      &lt;wsdl:input message="impl:calculateItemAndAlternateValueRequest" name="calculateItemAndAlternateValueRequest"/&gt;
+      &lt;wsdl:output message="impl:calculateItemAndAlternateValueResponse" name="calculateItemAndAlternateValueResponse"/&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="unbind"&gt;
+      &lt;wsdl:input message="impl:unbindRequest" name="unbindRequest"/&gt;
+      &lt;wsdl:output message="impl:unbindResponse" name="unbindResponse"/&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:portType&gt;
+  &lt;wsdl:binding name="SAPBuyBackDataServiceSoapBinding" type="impl:SAPBuyBackDataService"&gt;
+    &lt;wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/&gt;
+    &lt;wsdl:operation name="SBBService"&gt;
+      &lt;wsdlsoap:operation soapAction=""/&gt;
+      &lt;wsdl:input name="SBBServiceRequest"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output name="SBBServiceResponse"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="sendErrorEmail"&gt;
+      &lt;wsdlsoap:operation soapAction=""/&gt;
+      &lt;wsdl:input name="sendErrorEmailRequest"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output name="sendErrorEmailResponse"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="processSAPBuyBack"&gt;
+      &lt;wsdlsoap:operation soapAction=""/&gt;
+      &lt;wsdl:input name="processSAPBuyBackRequest"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output name="processSAPBuyBackResponse"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="processBOMAndAlternate"&gt;
+      &lt;wsdlsoap:operation soapAction=""/&gt;
+      &lt;wsdl:input name="processBOMAndAlternateRequest"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output name="processBOMAndAlternateResponse"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="processNextLevelChildInfo"&gt;
+      &lt;wsdlsoap:operation soapAction=""/&gt;
+      &lt;wsdl:input name="processNextLevelChildInfoRequest"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output name="processNextLevelChildInfoResponse"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="getFinalExtendedQtyList"&gt;
+      &lt;wsdlsoap:operation soapAction=""/&gt;
+      &lt;wsdl:input name="getFinalExtendedQtyListRequest"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output name="getFinalExtendedQtyListResponse"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="calculateItemAndAlternateValue"&gt;
+      &lt;wsdlsoap:operation soapAction=""/&gt;
+      &lt;wsdl:input name="calculateItemAndAlternateValueRequest"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output name="calculateItemAndAlternateValueResponse"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+    &lt;wsdl:operation name="unbind"&gt;
+      &lt;wsdlsoap:operation soapAction=""/&gt;
+      &lt;wsdl:input name="unbindRequest"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://util.matrix" use="encoded"/&gt;
+      &lt;/wsdl:input&gt;
+      &lt;wsdl:output name="unbindResponse"&gt;
+        &lt;wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/&gt;
+      &lt;/wsdl:output&gt;
+    &lt;/wsdl:operation&gt;
+  &lt;/wsdl:binding&gt;
+  &lt;wsdl:service name="SAPBuyBackDataServiceService"&gt;
+    &lt;wsdl:port binding="impl:SAPBuyBackDataServiceSoapBinding" name="SAPBuyBackDataService"&gt;
+      &lt;wsdlsoap:address location="http://plmdev.indiadev.lexmark.com:6280/ematrix/services/SAPBuyBackDataService"/&gt;
+    &lt;/wsdl:port&gt;
+  &lt;/wsdl:service&gt;
+&lt;/wsdl:definitions&gt;</value>
+  <value name="externalWSDLURL">http://plmdev.indiadev.lexmark.com:6280/ematrix/services/SAPBuyBackDataService?wsdl</value>
+  <value name="definitionName">scheduleBuybackMaterialsWS</value>
+  <value name="version">_8_0</value>
+  <Boolean name="rawArray">true</Boolean>
+  <array name="handlerList" type="record" depth="1">
+  </array>
+  <array name="binderList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="binderName">SAPBuyBackDataServiceSoapBinding</value>
+      <value name="portAddress">http://plmdev.indiadev.lexmark.com:6280/ematrix/services/SAPBuyBackDataService</value>
+      <value name="bindingName">SAPBuyBackDataServiceSoapBinding</value>
+      <value name="bindingStyle">rpc</value>
+      <value name="bindingUse">encoded</value>
+      <value name="bindingType">SOAP</value>
+      <value name="portName">SAPBuyBackDataService</value>
+      <value name="portTypeName">SAPBuyBackDataService</value>
+      <value name="bindingTransport">http://schemas.xmlsoap.org/soap/http</value>
+      <value name="transportType">http</value>
+      <record name="operationMap" javaclass="com.wm.util.Values">
+        <value name="">SBBService</value>
+        <value name="">sendErrorEmail</value>
+        <value name="">processSAPBuyBack</value>
+        <value name="">processBOMAndAlternate</value>
+        <value name="">processNextLevelChildInfo</value>
+        <value name="">getFinalExtendedQtyList</value>
+        <value name="">calculateItemAndAlternateValue</value>
+        <value name="">unbind</value>
+      </record>
+      <value name="SOAPProtocol">SOAP 1.1 Protocol</value>
+      <value name="SOAPDirective">ws</value>
+    </record>
+  </array>
+  <array name="operationList" type="record" depth="1">
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">SBBService</value>
+      <value name="serviceName">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.connectors:SBBService</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:SAPBuyBackDataService_SBBService_Input</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_SBBService_Input</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_SBBService_Input</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:SAPBuyBackDataService_SBBService_Output</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_SBBService_Output</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_SBBService_Output</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">sendErrorEmail</value>
+      <value name="serviceName">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.connectors:sendErrorEmail</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:SAPBuyBackDataService_sendErrorEmail_Input</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_sendErrorEmail_Input</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_sendErrorEmail_Input</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:sendErrorEmailResponse</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:sendErrorEmailResponse</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:sendErrorEmailResponse</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">processSAPBuyBack</value>
+      <value name="serviceName">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.connectors:processSAPBuyBack</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:SAPBuyBackDataService_processSAPBuyBack_Input</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_processSAPBuyBack_Input</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_processSAPBuyBack_Input</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:SAPBuyBackDataService_processSAPBuyBack_Output</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_processSAPBuyBack_Output</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_processSAPBuyBack_Output</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">processBOMAndAlternate</value>
+      <value name="serviceName">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.connectors:processBOMAndAlternate</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:SAPBuyBackDataService_processBOMAndAlternate_Input</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_processBOMAndAlternate_Input</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_processBOMAndAlternate_Input</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:processBOMAndAlternateResponse</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:processBOMAndAlternateResponse</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:processBOMAndAlternateResponse</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">processNextLevelChildInfo</value>
+      <value name="serviceName">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.connectors:processNextLevelChildInfo</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:SAPBuyBackDataService_processNextLevelChildInfo_Input</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_processNextLevelChildInfo_Input</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_processNextLevelChildInfo_Input</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:processNextLevelChildInfoResponse</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:processNextLevelChildInfoResponse</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:processNextLevelChildInfoResponse</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">getFinalExtendedQtyList</value>
+      <value name="serviceName">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.connectors:getFinalExtendedQtyList</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:getFinalExtendedQtyListRequest</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:getFinalExtendedQtyListRequest</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:getFinalExtendedQtyListRequest</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:SAPBuyBackDataService_getFinalExtendedQtyList_Output</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_getFinalExtendedQtyList_Output</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_getFinalExtendedQtyList_Output</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">calculateItemAndAlternateValue</value>
+      <value name="serviceName">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.connectors:calculateItemAndAlternateValue</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:SAPBuyBackDataService_calculateItemAndAlternateValue_Input</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_calculateItemAndAlternateValue_Input</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_calculateItemAndAlternateValue_Input</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:SAPBuyBackDataService_calculateItemAndAlternateValue_Output</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_calculateItemAndAlternateValue_Output</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:SAPBuyBackDataService_calculateItemAndAlternateValue_Output</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+    <record javaclass="com.wm.util.Values">
+      <value name="operationName">unbind</value>
+      <value name="serviceName">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.connectors:unbind</value>
+      <record name="requestElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:unbindRequest</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:unbindRequest</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:unbindRequest</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+      <record name="responseElement" javaclass="com.wm.util.Values">
+        <array name="headers" type="record" depth="1">
+        </array>
+        <record name="body" javaclass="com.wm.util.Values">
+          <value name="name">http://DefaultNamespace:unbindResponse</value>
+          <value name="docType">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:unbindResponse</value>
+          <value name="nsOwner">LXKEnoviaShared.webservices.consumer.scheduleBuybackMaterialsWS_.docTypes:unbindResponse</value>
+          <number name="nsOwnerType" type="Integer">3</number>
+          <Boolean name="addedByClient">false</Boolean>
+          <null name="originalDocName"/>
+        </record>
+        <array name="faults" type="record" depth="1">
+        </array>
+      </record>
+    </record>
+  </array>
+  <record name="namespaces" javaclass="com.wm.util.Values">
+    <value name="soapenc">http://schemas.xmlsoap.org/soap/encoding/</value>
+    <value name="">http://schemas.xmlsoap.org/wsdl/</value>
+    <value name="impl">http://DefaultNamespace</value>
+    <value name="apachesoap">http://xml.apache.org/xml-soap</value>
+    <value name="wsdl">http://schemas.xmlsoap.org/wsdl/</value>
+    <value name="xsd">http://www.w3.org/2001/XMLSchema</value>
+    <value name="wsdlsoap">http://schemas.xmlsoap.org/wsdl/soap/</value>
+    <value name="intf">http://DefaultNamespace</value>
+  </record>
+  <Boolean name="stack71X">true</Boolean>
+  <Boolean name="HeadersInPipelineEnabled">false</Boolean>
+  <Boolean name="validateSOAPResponse">true</Boolean>
+</Values>

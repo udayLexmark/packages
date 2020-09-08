@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">removeLastDocumentListItem</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgY3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vyc29yKCk7CklEYXRhIGxpc3RJbltd
+ID0gbnVsbDsgCklEYXRhIGxpc3RPdXRbXTsKSURhdGEgaXRlbU91dCA9IG51bGw7CgppZiAoY3Vy
+c29yLmxhc3QoImxpc3QiKSkKewoJbGlzdEluID0gKElEYXRhW10pIGN1cnNvci5nZXRWYWx1ZSgp
+Owp9CgppdGVtT3V0ID0gbGlzdEluW2xpc3RJbi5sZW5ndGgtMV07CgpsaXN0SW5bbGlzdEluLmxl
+bmd0aC0xXSA9IG51bGw7CgpsaXN0T3V0ID0gbmV3IElEYXRhW2xpc3RJbi5sZW5ndGgtMV07CgpT
+eXN0ZW0uYXJyYXljb3B5KGxpc3RJbiwgMCwgbGlzdE91dCwgMCwgbGlzdEluLmxlbmd0aC0xKTsK
+CmN1cnNvci5sYXN0KCk7CmN1cnNvci5pbnNlcnRBZnRlcigibGlzdE91dCIsIGxpc3RPdXQgKTsK
+Y3Vyc29yLmluc2VydEFmdGVyKCJpdGVtIiwgaXRlbU91dCk7CmN1cnNvci5kZXN0cm95KCk7</value>
+</Values>

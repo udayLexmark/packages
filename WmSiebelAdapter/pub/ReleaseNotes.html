@@ -1,0 +1,197 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<HTML><HEAD><TITLE>webMethods Siebel Adapter 6.0 SP3 Release Notes</TITLE>
+<META http-equiv=Content-Type content="text/html; charset=utf-8">
+<META http-equiv=ContentType content="text/html; charset=iso-8859-1">
+<META http-equiv=ContentType content="text/html; charset=UTF-8">
+<META content="MSHTML 6.00.2900.2802" name=GENERATOR></HEAD>
+<BODY style="FONT-FAMILY: Arial" vLink=#666666 link=#003399 bgColor=#ffffff>
+<CENTER>
+<H1><FONT color=#3366cc>webMethods Siebel Adapter</FONT></H1></CENTER>
+<CENTER>
+<H2><FONT color=#3366cc>Release Notes</FONT></H2></CENTER>
+<HR>
+
+<CENTER><H3>webMethods Siebel Adapter Version 6.0 SP3</H3></CENTER>
+<P>
+In addition to providing all available fixes for the
+webMethods Siebel Adapter 6.0, Service Pack 3 provides
+these new features:
+</P>
+
+<UL>
+<LI>
+<B>Passing User Credentials at Service Run Time</B>
+<P>
+This new feature enables the adapter to accept
+Siebel user credentials at service run time.
+Previously, the adapter only allowed users to define user name
+and password credentials at design time,
+limiting the adapter to those credentials that
+were predefined within the adapter.
+This service pack provides inputs for
+Siebel user names and passwords within each adapter service,
+enabling users to pass those values into any
+Siebel Adapter service dynamically.
+This ability provides greater visibility into which
+users are accessing the Siebel modules via the adapter.</P>
+<LI>
+<B>Case Insensitive Search in Services for Business Components</B>
+<P>
+Previously, the adapter provided only a case sensitive search operator
+when configuring an adapter service for a selected business component.
+This operator is one of the input parameters you select when
+defining the search expression.
+With this service pack, a case insensitive search operator
+is now included.
+</P>
+</UL>
+
+<P>
+For detailed information about these new features,
+see the
+<EM>webMethods Siebel Adapter User's Guide</EM>
+for SP3.
+</P>
+
+<P>
+For a list of all the changes and issues
+resolved since the last release,
+see the readme.txt file for webMethods Siebel Adapter 6.0 SP3
+on the webMethods Advantage Bookshelf
+or in the directories in which you installed
+webMethods Siebel Adapter 6.0 SP3.</P>
+<P>
+For information about previous releases of webMethods Siebel Adapter, see the release
+notes for those releases, below. </P>
+
+
+<HR>
+<CENTER>
+<H3>webMethods Siebel Adapter Version 6.0</H3></CENTER>
+
+<P>The webMethods Siebel Adapter (Siebel Adapter) is a webMethods Integration
+Server adapter for integrating the webMethods Integration Platform with Siebel
+applications. Using the Siebel Adapter, you can create connections to your
+Siebel systems and create adapter services that perform operations on your
+Siebel applications.
+<P>Adapter services you create using the adapter can retrieve data from, write
+data to, and invoke methods in, Siebel applications. You call adapter services
+from IS flow or Java services to interact with the Siebel Server. The adapter
+services perform operations by using Siebel's Business Object Interface (BOI)
+API to operate on Siebel Business Components. The adapter also enables you to
+invoke Siebel business services and workflows.
+<P>For example, you might use the Siebel Adapter to receive new information
+about a sales contact from a webMethods Integration Server client (IS client),
+and then update a Contact business component record in the Siebel application.
+<P>You can also interact with webMethods from a Siebel application. To do this,
+you can use custom Siebel business service methods provided by webMethods, known
+as EAI webMethods Transports.
+<H2>Summary of Major Features</H2>
+<H3>Connectivity to Siebel Applications</H3>
+<P>The Siebel Adapter enables you to establish and manage connections to your
+Siebel systems. Siebel connections, connections pools, and sessions are fully
+managed by the adapter. Through these connections you can create and run your
+Siebel integrations. </P>
+<H3>Dynamically Look Up Siebel Business Components</H3>
+<P>When developing your integrations, you use the adapter and its webMethods
+Developer screens to view business components that reside on the Siebel Server.
+From the list of business components you select the business components to
+perform operations on.
+<H3>Template-Based Integrations</H3>
+<P>The Siebel Adapter provides service templates for interactions with the
+Siebel business components. This makes it easy to develop adapter services to
+interact with Siebel. </P>
+<P>Service templates represent specific tasks for doing work with Siebel. For
+example, a Siebel Adapter service that inserts data into Siebel is based on the
+Insert service template included with the adapter. You can create specific
+adapter services using the templates and invoke them from your integration
+flows. </P>
+<P>The Siebel Adapter provides the ability to generate adapter services that
+implement the following Siebel Object Manager Interface methods:</P>
+<TABLE border=1>
+
+  <TR>
+    <TD vAlign=top>Query</TD>
+    <TD>Executes the Siebel Query business component records</TD></TR>
+  <TR>
+    <TD vAlign=top>Insert</TD>
+    <TD>Executes the Siebel insert method to add business component
+  records.</TD></TR>
+  <TR>
+    <TD vAlign=top>Update</TD>
+    <TD>Executes the Siebel Get method to return the Component Interface
+      matching the specified keys, or to populate the Component Interface with
+      new values.</TD></TR>
+  <TR>
+    <TD vAlign=top>Delete</TD>
+    <TD>Executes the Siebel Delete method to delete business component
+    records.</TD></TR>
+  <TR>
+    <TD vAlign=top>Business Service</TD>
+    <TD>Invokes a Siebel business service and Siebel workflows.</TD></TR>
+  <TR>
+    <TD vAlign=top>Invoke</TD>
+    <TD>Invokes a Siebel business component method.</TD></TR>
+  <TR>
+    <TD vAlign=top>Associate</TD>
+    <TD>Associates MVL fields with one another.</TD></TR>
+  <TR>
+    <TD vAlign=top>Attachment</TD>
+    <TD>Creates an attachment file in a business component record, updates an
+      existing attachment, or obtains an attachment.</TD></TR>
+ </TABLE>
+
+<H3>Siebel-to-webMethods Communications</H3>
+<P>You can perform Siebel-to-webMethods operations using the EAI webMethods
+Transports (Transports). The EAI webMethods Transports are custom Siebel
+business service methods. While provided with the Siebel Adapter product, the
+EAI webMethods Transports are independent from the Siebel Adapter itself and are
+installed on the Siebel Server, rather than on the webMethods Integration Server
+like the Siebel Adapter. They enable Siebel to notify Integration Server
+services when a change (such as an Insert, Update, or Delete) occurs within a
+particular Siebel business component. Transports are designed to provide
+interactive transportation of small volumes of data between the Siebel
+application and the Integration Server. Transports are built using Siebel's
+eScript scripting language. </P>
+<P>The transports enable you to:</P>
+<UL>
+  <LI>Synchronously invoke a service on the Integration Server, using guaranteed
+  delivery.
+  <LI>Synchronously invoke a service on the Integration Server, using
+  non-guaranteed delivery.
+  <LI>Get a transaction's status.
+  <LI>Asynchronously invoke a service on the Integration Server. </LI></UL>
+<H3>Compatibility With Previous webMethods Siebel Adapters</H3>
+<P>The webMethods Siebel Adapter 6.0 is a new adapter and is not compatible with
+integrations built using the webMethods Siebel Adapter 3.0. That is, you cannot
+use the webMethods Siebel Adapter 6.0 to run or edit services you generated
+using the earlier Siebel adapters, and vice versa. </P>
+<P>However, you can run the webMethods Siebel Adapter 6.0 on the same
+Integration Server with earlier webMethods Siebel adapters. </P>
+
+<H2>Platform Support</H2>
+<P>For a complete listing of the versions of Siebel and of webMethods
+Integration Server with which the adapter works, see the <EM>webMethods Siebel
+Adapter Installation Guide 6.0</EM>.</P>
+
+<HR>
+
+<P><I>
+webMethods Access, webMethods Administrator, webMethods Broker,
+webMethods Dashboard, webMethods Developer, webMethods Fabric,
+webMethods Glue, webMethods Installer, webMethods Integration Server,
+webMethods Mainframe, webMethods Manager, webMethods Modeler,
+webMethods Monitor, webMethods Optimize, webMethods Portal, webMethods
+Servicenet, webMethods Trading Networks, and webMethods Workflow are
+trademarks of webMethods, Inc. webMethods and the webMethods logo are
+registered trademarks of webMethods, Inc.
+</p>
+<p>
+All other marks are the property of their respective owners.
+Copyright &copy; 2006 by webMethods, Inc. All rights reserved,
+including the right of reproduction in whole or in part in any
+form.
+</I> </P>
+
+</BODY></HTML>

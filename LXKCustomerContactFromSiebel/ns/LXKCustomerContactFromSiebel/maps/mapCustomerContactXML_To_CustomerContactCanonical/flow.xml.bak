@@ -1,0 +1,1066 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>Save Parent errorInfo so it doesnt Accidentally get overwritten if child service doesnt fail</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactXML</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerContactFromSiebel.docs:CustomerContact</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactXML</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerContactFromSiebel.docs:CustomerContact</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>set error info - About to begin 'LXKCustomerContactToSiebel.maps:mapCustomerContact_Canonical_To_Siebel_BusinessService'</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactXML</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerContactFromSiebel.docs:CustomerContact</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">About to begin 'LXKCustomerContactFromSiebel.maps:mapCustomerContactXML_To_CustomerContactCanonical'</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">action</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">MAPPING</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">false</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">category</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+      <value>COMM</value>
+      <value>DATABASE</value>
+      <value>FLOW</value>
+      <value>JDE</value>
+      <value>MAPPING</value>
+      <value>MQSERIES</value>
+      <value>PUBSUB</value>
+      <value>TN</value>
+      <value>GENERAL</value>
+      <value>FILEIO</value>
+      <value>VALIDATION</value>
+      <value>UNKNOWN</value>
+      <value>TRANSLATION</value>
+      <value>BUSINESS_EVENT</value>
+      <value>WORKFLOW</value>
+      <value>XML</value>
+      <value>INTEGRATION</value>
+      <value>WEBSERVICE</value>
+      <value>SAP</value>
+      <value>SIEBEL</value>
+    </array>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">001</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">false</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">code</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+      <value>001</value>
+      <value>002</value>
+      <value>003</value>
+      <value>004</value>
+      <value>005</value>
+      <value>006</value>
+      <value>007</value>
+      <value>008</value>
+      <value>009</value>
+      <value>010</value>
+      <value>-ANY-</value>
+      <value>022</value>
+      <value>011</value>
+    </array>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<BRANCH TIMEOUT="" SWITCH="/ContactXML/SiebelMessage/ListOfLxkServicesWebReqContact/Contact/LXKTechFlag">
+  <COMMENT>Check to see if the Tech flag from Siebel is enabled.</COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="Y" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>If tech flag is 'Y', set the Role to Service Technician.</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactXML</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerContactFromSiebel.docs:CustomerContact</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">contact</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:CustomerContact</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/Roles;2;1/RoleName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">Service Technician</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">RoleName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+</BRANCH>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>map customer contact xml to customer contact canonical</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">contact</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:CustomerContact</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">contact</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:CustomerContact</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactXML</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerContactFromSiebel.docs:CustomerContact</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPINVOKE SERVICE="pub.date:getCurrentDateString" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
+
+  <!-- nodes -->
+
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/pattern;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">yyyy-MM-dd'T'hh:mm:ss</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">pattern</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/value;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/DocumentMetaData;2;0/IntegrationCreationDateTime;1;0">
+</MAPCOPY>
+</MAP>
+</MAPINVOKE>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/Id;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/ContactReferenceId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/Type;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/ContactType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/FirstName;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/FirstName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LastName;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/LastName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/EmailAddress;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/EmailAddress;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/CellularPhone;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/MobileNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/HomePhone;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/HomePhoneNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/WorkPhone;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/WorkPhoneNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalAddress;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/AddressLine1;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalAddress2;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/AddressLine2;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalAddress3;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/AddressLine3;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalCity;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/City;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalPostalCode;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/PostalCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalCountry;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/Country;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalProvince;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/StateOrProvince;1;0" CONDITION="%ContactXML/SiebelMessage/ListOfLxkServicesWebReqContact/Contact/LXKPrimaryPersonalProvince%!=null">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalState;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/StateOrProvince;1;0" CONDITION="%ContactXML/SiebelMessage/ListOfLxkServicesWebReqContact/Contact/LXKPrimaryPersonalState%!=null">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LoginName;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/EmployeeId;1;0">
+</MAPCOPY>
+
+<MAPDELETE NAME="Dropper" FIELD="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact">
+</MAPDELETE>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/IntegrationId;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/ContactId;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/DocumentMetaData;2;0/IntegrationFrequency;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">RealTime</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_name">IntegrationFrequency</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <array name="enumeration" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">DailyBatch</value>
+          <value name="isList">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">RealTime</value>
+          <value name="isList">false</value>
+        </record>
+      </array>
+      <value name="contentType">1</value>
+      <value name="internalType">instance</value>
+      <value name="ct_class">com.wm.lang.schema.datatypev2.WmString</value>
+      <value name="name">string</value>
+      <array name="parent-ancestors" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">anySimpleType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">anyType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+      <record name="baseType" javaclass="com.wm.util.Values">
+        <record name="whiteSpace" javaclass="com.wm.util.Values">
+          <record name="FacetWSCValue" javaclass="com.wm.util.Values">
+            <value name="cDecimalValue">3</value>
+          </record>
+          <value name="facetFixed">false</value>
+        </record>
+        <value name="contentType">1</value>
+        <value name="internalType">instance</value>
+        <value name="ct_class">com.wm.lang.schema.datatypev2.WmString</value>
+        <value name="dataTypeVersion">dtVersion2</value>
+      </record>
+      <value name="dataTypeVersion">dtVersion2</value>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/DocumentMetaData;2;0/ObjectChangeActionType;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">CHANGE</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_name">ObjectChangeActionType</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <array name="enumeration" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">CHANGE</value>
+          <value name="isList">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">DELETE</value>
+          <value name="isList">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">NEW</value>
+          <value name="isList">false</value>
+        </record>
+      </array>
+      <value name="contentType">1</value>
+      <value name="internalType">instance</value>
+      <value name="ct_class">com.wm.lang.schema.datatypev2.WmString</value>
+      <value name="name">string</value>
+      <array name="parent-ancestors" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">anySimpleType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">anyType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+      <record name="baseType" javaclass="com.wm.util.Values">
+        <record name="whiteSpace" javaclass="com.wm.util.Values">
+          <record name="FacetWSCValue" javaclass="com.wm.util.Values">
+            <value name="cDecimalValue">3</value>
+          </record>
+          <value name="facetFixed">false</value>
+        </record>
+        <value name="contentType">1</value>
+        <value name="internalType">instance</value>
+        <value name="ct_class">com.wm.lang.schema.datatypev2.WmString</value>
+        <value name="dataTypeVersion">dtVersion2</value>
+      </record>
+      <value name="dataTypeVersion">dtVersion2</value>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/DocumentMetaData;2;0/SourceSystem;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">SIEBEL</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_name">SourceSystem</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/DocumentMetaData;2;0/BusinessProcess;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">CustomerContact</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_name">BusinessProcess</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="true" FIELD="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/CustomerName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">%ContactXML/SiebelMessage/ListOfLxkServicesWebReqContact/Contact/FirstName% %ContactXML/SiebelMessage/ListOfLxkServicesWebReqContact/Contact/LastName%</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_name">CustomerName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalOffice;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/OfficeNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalState;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/StateCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalProvince;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/Province;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalDistrict;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/District;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalCounty;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/County;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalRegion;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/Region;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalCountryCode;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/CountryCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalStateFullName;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/StateFullName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalLatitude;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/Latitude;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/ContactXML;4;0;LXKCustomerContactFromSiebel.docs:CustomerContact/SiebelMessage;2;0/ListOfLxkServicesWebReqContact;2;0/Contact;2;0/LXKPrimaryPersonalLongitude;1;0" TO="/contact;4;0;LXKEnterprise.EnterpriseObjectDocuments:CustomerContact/CustomerContact;2;0/Data;2;0/PhysicalAddress;2;0/Longitude;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT> Reset Parent errorInfo fields since this service is exitting successfully</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">contact</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:CustomerContact</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">contact</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:CustomerContact</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="is_public">false</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0">
+</MAPCOPY>
+
+<MAPDELETE NAME="Dropper" FIELD="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo">
+</MAPDELETE>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0">
+</MAPCOPY>
+</MAP>
+</FLOW>

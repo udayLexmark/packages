@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">cd</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUgCklEYXRhQ3Vyc29yIHBpcGVsaW5lQ3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vy
+c29yKCk7CglDaGFubmVsU2Z0cCBjID0gKENoYW5uZWxTZnRwKUlEYXRhVXRpbC5nZXQoIHBpcGVs
+aW5lQ3Vyc29yLCAiQ2hhbm5lbFNmdHAiICk7CglTdHJpbmcJcGF0aCA9IElEYXRhVXRpbC5nZXRT
+dHJpbmcoIHBpcGVsaW5lQ3Vyc29yLCAicGF0aCIgKTsKcGlwZWxpbmVDdXJzb3IuZGVzdHJveSgp
+OwpTdHJpbmcgc3RhdHVzID0gbnVsbDsKdHJ5IHsKICAgIGMuY2QocGF0aCk7CiAgICBzdGF0dXMg
+PSAiT0siOwp9CmNhdGNoIChTZnRwRXhjZXB0aW9uIGUpIHsKCiAgICB0aHJvdyBuZXcgU2Vydmlj
+ZUV4Y2VwdGlvbigiRmFpbGVkIHRvIGNoYW5nZSBkaXJlY3RvcnkgdG86ICIrcGF0aCsgIiwgIitl
+LnRvU3RyaW5nKCkpOwogICAvLyBzdGF0dXMgPSBlLnRvU3RyaW5nKCk7Cn0KCklEYXRhQ3Vyc29y
+IHBpcGVsaW5lQ3Vyc29yXzEgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsKICAgICBJRGF0YVV0aWwu
+cHV0KHBpcGVsaW5lQ3Vyc29yXzEsInN0YXR1cyIsc3RhdHVzKTsKcGlwZWxpbmVDdXJzb3JfMS5k
+ZXN0cm95KCk7</value>
+</Values>

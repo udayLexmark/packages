@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://DefaultNamespace" xmlns:intf="http://DefaultNamespace" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: #axisVersion#
+Built on #today#-->
+ <wsdl:types>
+  <schema targetNamespace="http://DefaultNamespace" xmlns="http://www.w3.org/2001/XMLSchema">
+   <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+   <complexType name="ArrayOf_xsd_anyType">
+    <complexContent>
+     <restriction base="soapenc:Array">
+      <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:anyType[]"/>
+     </restriction>
+    </complexContent>
+   </complexType>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getConnectedObjectsRequest">
+
+      <wsdl:part name="in0" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getInfoAboutObjectRequest">
+
+      <wsdl:part name="in0" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getObjectRevisionsRequest">
+
+      <wsdl:part name="in0" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getConnectedObjectsResponse">
+
+      <wsdl:part name="getConnectedObjectsReturn" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getClassificationAttributesRequest">
+
+      <wsdl:part name="in0" type="xsd:string"/>
+
+      <wsdl:part name="in1" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getInfoAboutObjectResponse">
+
+      <wsdl:part name="getInfoAboutObjectReturn" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="connectObjectsResponse">
+
+      <wsdl:part name="connectObjectsReturn" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getClassificationAttributesResponse">
+
+      <wsdl:part name="getClassificationAttributesReturn" type="impl:ArrayOf_xsd_anyType"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="connectObjectsRequest">
+
+      <wsdl:part name="in0" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:message name="getObjectRevisionsResponse">
+
+      <wsdl:part name="getObjectRevisionsReturn" type="xsd:string"/>
+
+   </wsdl:message>
+
+   <wsdl:portType name="ObjectInfoService">
+
+      <wsdl:operation name="getClassificationAttributes" parameterOrder="in0 in1">
+
+         <wsdl:input message="impl:getClassificationAttributesRequest" name="getClassificationAttributesRequest"/>
+
+         <wsdl:output message="impl:getClassificationAttributesResponse" name="getClassificationAttributesResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getConnectedObjects" parameterOrder="in0">
+
+         <wsdl:input message="impl:getConnectedObjectsRequest" name="getConnectedObjectsRequest"/>
+
+         <wsdl:output message="impl:getConnectedObjectsResponse" name="getConnectedObjectsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getObjectRevisions" parameterOrder="in0">
+
+         <wsdl:input message="impl:getObjectRevisionsRequest" name="getObjectRevisionsRequest"/>
+
+         <wsdl:output message="impl:getObjectRevisionsResponse" name="getObjectRevisionsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="connectObjects" parameterOrder="in0">
+
+         <wsdl:input message="impl:connectObjectsRequest" name="connectObjectsRequest"/>
+
+         <wsdl:output message="impl:connectObjectsResponse" name="connectObjectsResponse"/>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getInfoAboutObject" parameterOrder="in0">
+
+         <wsdl:input message="impl:getInfoAboutObjectRequest" name="getInfoAboutObjectRequest"/>
+
+         <wsdl:output message="impl:getInfoAboutObjectResponse" name="getInfoAboutObjectResponse"/>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="ObjectInfoServiceSoapBinding" type="impl:ObjectInfoService">
+
+      <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getClassificationAttributes">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getClassificationAttributesRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getClassificationAttributesResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getConnectedObjects">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getConnectedObjectsRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getConnectedObjectsResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getObjectRevisions">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getObjectRevisionsRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getObjectRevisionsResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="connectObjects">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="connectObjectsRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="connectObjectsResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+      <wsdl:operation name="getInfoAboutObject">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getInfoAboutObjectRequest">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getInfoAboutObjectResponse">
+
+            <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace" use="encoded"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="ObjectInfoServiceService">
+
+      <wsdl:port binding="impl:ObjectInfoServiceSoapBinding" name="ObjectInfoService">
+
+         <wsdlsoap:address location="https://plm.lexmark.com/ematrix/services/ObjectInfoService"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>

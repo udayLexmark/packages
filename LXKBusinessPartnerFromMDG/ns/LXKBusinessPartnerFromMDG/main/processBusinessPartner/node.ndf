@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="svc_type">flow</value>
+  <value name="svc_subtype">default</value>
+  <value name="svc_sigtype">java 3.5</value>
+  <record name="svc_sig" javaclass="com.wm.util.Values">
+    <record name="sig_in" javaclass="com.wm.util.Values">
+      <value name="node_type">record</value>
+      <value name="node_subtype">unknown</value>
+      <value name="is_public">false</value>
+      <value name="field_type">record</value>
+      <value name="field_dim">0</value>
+      <value name="wrapper_type">IData</value>
+      <value name="nillable">true</value>
+      <value name="form_qualified">false</value>
+      <value name="is_global">false</value>
+      <array name="rec_fields" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="node_subtype">unknown</value>
+          <value name="node_comment"></value>
+          <record name="node_hints" javaclass="com.wm.util.Values">
+            <value name="field_usereditable">true</value>
+            <value name="field_largerEditor">false</value>
+            <value name="field_password">false</value>
+          </record>
+          <value name="is_public">false</value>
+          <value name="field_name">debug</value>
+          <value name="field_type">string</value>
+          <value name="field_dim">0</value>
+          <array name="field_options" type="value" depth="1">
+          </array>
+          <value name="nillable">true</value>
+          <value name="form_qualified">false</value>
+          <value name="is_global">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="node_subtype">unknown</value>
+          <value name="node_comment"></value>
+          <record name="node_hints" javaclass="com.wm.util.Values">
+            <value name="field_largerEditor">false</value>
+            <value name="field_password">false</value>
+          </record>
+          <value name="is_public">false</value>
+          <value name="field_name">LXKNotifications.SAP:ZCREMAS06_EXT_ALEListenerNotificationAsyncPublishDocument</value>
+          <value name="field_type">recref</value>
+          <value name="field_dim">0</value>
+          <value name="wrapper_type">IData</value>
+          <value name="nillable">true</value>
+          <value name="form_qualified">false</value>
+          <value name="is_global">false</value>
+          <value name="rec_closed">true</value>
+          <value name="modifiable">true</value>
+          <value name="rec_ref">LXKNotifications.SAP:ZCREMAS06_EXT_ALEListenerNotificationAsyncPublishDocument</value>
+        </record>
+      </array>
+      <value name="modifiable">true</value>
+    </record>
+    <record name="sig_out" javaclass="com.wm.util.Values">
+      <value name="node_type">record</value>
+      <value name="node_subtype">unknown</value>
+      <value name="is_public">false</value>
+      <value name="field_type">record</value>
+      <value name="field_dim">0</value>
+      <value name="wrapper_type">IData</value>
+      <value name="nillable">true</value>
+      <value name="form_qualified">false</value>
+      <value name="is_global">false</value>
+      <array name="rec_fields" type="record" depth="1">
+      </array>
+      <value name="modifiable">true</value>
+    </record>
+  </record>
+  <value name="node_comment">Service Name: LXKBusinessPartnerFromMDG.main:processBusinessPartner
+Author: Wipro Technologies - Karthik Velusamy
+Date: 09/12/2019
+
+Description
+The Webmethods IS service will get ZCREMAS06_EXT iDocs from MDG via RFC and map them into BusinessPartner xml files.This XML document is an instance of the BusinessPartner Enterprise Document.
+The xml is then validated against the schema and published to the broker.
+Errors thrown are appropriately handled.
+
+MDG Team sends 'Vendor' details in their ZCREMAS06_EXT iDoc and wM map them to mainly 'TransactionalVendorAccount' segment of the Business Partner enterprise document. This iDoc is subscribed by the trigger 'subscribeToZCREMAS06_EXT' with no filter.
+
+HardCode Values: 
+1) Initialize MaxRepeatCount=3 &amp; RepeatInterval=5
+		 
+Inputs-
+LXKNotifications.SAP:ZCREMAS06_EXT_ALEListenerNotificationAsyncPublishDocument
+
+Outputs-
+N/A</value>
+  <value name="stateless">no</value>
+  <value name="caching">no</value>
+  <value name="prefetch">no</value>
+  <value name="cache_ttl">15</value>
+  <value name="prefetch_level">1</value>
+  <value name="template_type">html</value>
+  <value name="audit_level">off</value>
+  <value name="check_internal_acls">no</value>
+  <value name="icontext_policy">$null</value>
+  <value name="svcInvkURLAlias"></value>
+  <value name="system_service">no</value>
+  <value name="retry_max">0</value>
+  <value name="retry_interval">0</value>
+  <value name="svc_in_validator_options">none</value>
+  <value name="svc_out_validator_options">none</value>
+  <value name="auditoption">1</value>
+  <array name="auditfields_input" type="value" depth="2">
+    <array type="value" depth="1">
+      <value>/LXKNotifications.SAP:ZCREMAS06_EXT_ALEListenerNotificationAsyncPublishDocument;4;0;LXKNotifications.SAP:ZCREMAS06_EXT_ALEListenerNotificationAsyncPublishDocument/ZCREMAS06_EXT;2;0/IDOC;2;1/E1LFA1M;2;0/Z1METADATA;2;0/ZOCAT;1;0</value>
+      <value>ZOCAT</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/LXKNotifications.SAP:ZCREMAS06_EXT_ALEListenerNotificationAsyncPublishDocument;4;0;LXKNotifications.SAP:ZCREMAS06_EXT_ALEListenerNotificationAsyncPublishDocument/ZCREMAS06_EXT;2;0/IDOC;2;1/E1LFA1M;2;0/Z1METADATA;2;0/ZSRCSYS;1;0</value>
+      <value>ZSRCSYS</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/LXKNotifications.SAP:ZCREMAS06_EXT_ALEListenerNotificationAsyncPublishDocument;4;0;LXKNotifications.SAP:ZCREMAS06_EXT_ALEListenerNotificationAsyncPublishDocument/ZCREMAS06_EXT;2;0/IDOC;2;1/E1LFA1M;2;0/Z1METADATA;2;0/ZBUSSPO;1;0</value>
+      <value>ZBUSSPO</value>
+    </array>
+  </array>
+  <null name="auditfields_output"/>
+  <record name="auditsettings" javaclass="com.wm.util.Values">
+    <value name="document_data">1</value>
+    <value name="startExecution">false</value>
+    <value name="stopExecution">true</value>
+    <value name="onError">true</value>
+  </record>
+  <value name="pipeline_option">1</value>
+  <null name="originURI"/>
+  <value name="modifiable">true</value>
+  <value name="is_public">false</value>
+</Values>

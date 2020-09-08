@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">copyDocument</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgY3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vyc29yKCk7CklEYXRhIGlucHV0RG9j
+ICAgICAgID0gbnVsbDsKSURhdGEgZG9jQ29weQkJID0gbnVsbDsKCnRyeSAKewoJaWYgKGN1cnNv
+ci5sYXN0KCJpbnB1dERvY3VtZW50IikpIAoJewkKCQlpbnB1dERvYyA9IChJRGF0YSkgY3Vyc29y
+LmdldFZhbHVlKCk7Cgl9CgoJaWYgKGlucHV0RG9jICE9IG51bGwpIAoJewoJCWRvY0NvcHkgPSBJ
+RGF0YUZhY3RvcnkuY3JlYXRlKCk7CgkJZG9jQ29weSA9IElEYXRhVXRpbC5kZWVwQ2xvbmUoaW5w
+dXREb2MpOwoJfQp9CmNhdGNoIChFeGNlcHRpb24gZSkKewoJdGhyb3cobmV3IFNlcnZpY2VFeGNl
+cHRpb24oZS50b1N0cmluZygpKSk7Cn0KCgpjdXJzb3IubGFzdCgpOwpjdXJzb3IuaW5zZXJ0QWZ0
+ZXIoImRvY3VtZW50Q29weSIsIGRvY0NvcHkpOwoKY3Vyc29yLmRlc3Ryb3koKTs=</value>
+</Values>

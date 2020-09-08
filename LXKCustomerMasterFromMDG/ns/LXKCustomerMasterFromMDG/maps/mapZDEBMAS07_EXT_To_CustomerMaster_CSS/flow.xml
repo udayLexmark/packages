@@ -1,0 +1,3896 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" SWITCH="/debug">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE NAME="$null" TIMEOUT="" SERVICE="pub.flow:savePipelineToFile" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">savePipelineToFileInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">fileName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/fileName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">mapCustomerMasterFromMDG</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">field</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">fileName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+
+<INVOKE NAME="$default" TIMEOUT="" SERVICE="pub.flow:restorePipelineFromFile" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">restorePipelineFromFileInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">fileName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">merge</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>true</value>
+          <value>false</value>
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/fileName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">mapCustomerMasterFromMDG</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">field</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">fileName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+</MAP>
+</INVOKE>
+</BRANCH>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>Map errorInfo to parent errorInfo</COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0" TO="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0" TO="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0" TO="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0" TO="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0" TO="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0" TO="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0" TO="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0" TO="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0" TO="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0" TO="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0">
+</MAPCOPY>
+
+<MAPDELETE NAME="Dropper" FIELD="/debug;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/fileName;1;0">
+</MAPDELETE>
+</MAP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>Set global values for all &lt;errorInfo&gt; fields here</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ZDEBMAS07_EXT</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">parent-errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">001</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">false</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">code</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+      <value>001</value>
+      <value>002</value>
+      <value>003</value>
+      <value>004</value>
+      <value>005</value>
+      <value>006</value>
+      <value>007</value>
+      <value>008</value>
+      <value>009</value>
+      <value>010</value>
+      <value>-ANY-</value>
+      <value>022</value>
+    </array>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">MAPPING</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">false</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">category</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+      <value>COMM</value>
+      <value>DATABASE</value>
+      <value>FLOW</value>
+      <value>JDE</value>
+      <value>MAPPING</value>
+      <value>MQSERIES</value>
+      <value>PUBSUB</value>
+      <value>TN</value>
+      <value>GENERAL</value>
+      <value>FILEIO</value>
+      <value>VALIDATION</value>
+      <value>UNKNOWN</value>
+      <value>TRANSLATION</value>
+      <value>BUSINESS_EVENT</value>
+      <value>WORKFLOW</value>
+      <value>XML</value>
+      <value>INTEGRATION</value>
+      <value>WEBSERVICE</value>
+      <value>SAP</value>
+      <value>SIEBEL</value>
+    </array>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">1</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">false</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">severity</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+      <value>1</value>
+      <value>2</value>
+      <value>3</value>
+    </array>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">About to begin "LXKCustomerMasterFromMDG.maps:mapZDEBMAS07_EXT_To_CustomerMaster" map service</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">action</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">LXKCustomerMasterFromMDG.maps:mapZDEBMAS07_EXT_To_CustomerMaster</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">serviceName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<LOOP TIMEOUT="" IN-ARRAY="/ZDEBMAS07_EXT/ZDEBMAS07_EXT/IDOC" OUT-ARRAY="/CustomerMaster/CustomerMaster">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>Address Details</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ZDEBMAS07_EXT</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">parent-errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">CustomerMaster</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerMasterFromMDG.docs:CustomerMaster</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ZDEBMAS07_EXT</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">parent-errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">CustomerMaster</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerMasterFromMDG.docs:CustomerMaster</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">$iteration</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/STRAS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/StreetAddressLine1;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/StreetAddressLine3;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">StreetAddressLine3</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/StreetAddressLine4;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">StreetAddressLine4</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/StreetAddressLine5;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">StreetAddressLine5</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/REGIO;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/StateOrProvince;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/RegionRelatedCountry;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">RegionRelatedCountry</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ORT02;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/District;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ORT01;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/City;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/LAND1;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/Country;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/PSTLZ;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/CityPostalCode;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/ContactInformation;2;1">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <array name="xml" type="record" depth="1">
+  </array>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">ContactInformation</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">1</value>
+    <value name="field_opt">true</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="is_soap_array_encoding_used">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonType</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonTitle</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonFirstName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonMiddleName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonLastName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonJobTitle</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonTelephoneNumber</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonMobileNumber</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonAlternateTelephoneNumber</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonFaxNumber</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonEmailAddress</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonDepartment</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonHouseNumber</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonHouseNumberSupplement</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonStreetAddressLine1</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonStreetAddressLine2</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonStreetAddressLine3</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonStreetAddressLine4</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonStreetAddressLine5</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonDistrict</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonCity</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonStateOrProvince</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ContactPersonCountry</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="rec_closed">true</value>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/FITYP;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CustomerTaxInformation;2;0/TaxIdType;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/LAND1;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CustomerTaxInformation;2;0/TaxCountry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/STCD1;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CustomerTaxInformation;2;0/TaxIDNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNSICCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/USSICDetails;2;0/US1987SIC1;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZ_DNSICCD2;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/USSICDetails;2;0/US1987SIC2;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZ_DNSICCD3;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/USSICDetails;2;0/US1987SIC3;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZ_DNSICCD4;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/USSICDetails;2;0/US1987SIC4;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZ_DNSICCD5;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/USSICDetails;2;0/US1987SIC5;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZ_DNSICCD6;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/USSICDetails;2;0/US1987SIC6;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNPLAC;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/USSICDetails;2;0/PrimaryLocalActivity;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNACTIN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/USSICDetails;2;0/ActivityIndicator;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNYRST;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/USSICDetails;2;0/YearStarted;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1;2;0/ZZ_MDMID;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalEntityDetails;2;0/LegalEntityMDMId;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1;2;0/ZZLE_BNME;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalEntityDetails;2;0/LegalEntityLegalName;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1;2;0/ZZLE_STRAD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalEntityDetails;2;0/LegalEntityStreetAddress;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1;2;0/ZZLE_CTYNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalEntityDetails;2;0/LegalEntityCity;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1;2;0/ZZLE_PSTCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalEntityDetails;2;0/LegalEntityPostalCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1;2;0/ZZLE_STATN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalEntityDetails;2;0/LegalEntityStateOrProvince;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1;2;0/ZZLE_STATN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalEntityDetails;2;0/LegalEntityRegion;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1;2;0/ZZLE_CNTRN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalEntityDetails;2;0/LegalEntityCountry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1X;2;0/ZZLE_ECCNUM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalEntityDetails;2;0/LegalEntityECCNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZHQ_DUNS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/HeadquarterParentDetails;2;0/HeadquarterParentDUNSNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZHQ_BNME;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/HeadquarterParentDetails;2;0/HeadquarterParentBusinessName;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZHQ_STRAD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/HeadquarterParentDetails;2;0/HeadquarterParentStreetAddress;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZHQ_CTYNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/HeadquarterParentDetails;2;0/HeadquarterParentCity;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZHQ_STATN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/HeadquarterParentDetails;2;0/HeadquarterParentStateOrProvince;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZHQ_CNTRN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/HeadquarterParentDetails;2;0/HeadquarterParentCountry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZHQ_CONTC;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/HeadquarterParentDetails;2;0/HeadquarterParentCounty;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZHQ_PSTCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/HeadquarterParentDetails;2;0/HeadquarterParentPostalCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZHQ_CONTT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/HeadquarterParentDetails;2;0/HeadquarterParentContinent;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZHQ_CNTRC;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/HeadquarterParentDetails;2;0/ParentHQCountryCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZDU_DUNS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticUltimateDetails;2;0/DomesticUltimateDUNSNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZDU_BNME;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticUltimateDetails;2;0/DomesticUltimateBusinessName;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZDU_STRAD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticUltimateDetails;2;0/DomesticUltimateStreetAddress;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZDU_CTYNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticUltimateDetails;2;0/DomesticUltimateCity;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZDU_STATN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticUltimateDetails;2;0/DomesticUltimateStateOrProvince;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZDU_CNTRN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticUltimateDetails;2;0/DomesticUltimateCountry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZDU_PSTCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticUltimateDetails;2;0/DomesticUltimatePostalCode;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticUltimateDetails;2;0/DomesticUltimatePartyRolePartyType;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">DomesticUltimatePartyRolePartyType</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticUltimateDetails;2;0/DomesticUltimateECCNumber;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">DomesticUltimateECCNumber</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZDU_STATA;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticUltimateDetails;2;0/DomesticStateAbbreviation;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZGU_DUNS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateDUNSNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNGUIND;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateIndicator;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZGU_BNME;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateBusinessName;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZGU_STRAD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateStreetAddress;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZGU_CTYNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateCity;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZGU_STATN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateStateOrProvince;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZGU_CNTRN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateCountry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZGU_CNTRC;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateCountryCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZGU_CONTC;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateCounty;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZGU_PSTCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimatePostalCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZGU_CONTT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateContinent;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalUltimateECCNumber;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">GlobalUltimateECCNumber</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/TotalCompanyRevenue;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">TotalCompanyRevenue</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZGU_STATA;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalUltimateDetails;2;0/GlobalStateAbbreviation;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LexmarkRevenueHistory;2;1">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <array name="xml" type="record" depth="1">
+  </array>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">LexmarkRevenueHistory</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">1</value>
+    <value name="field_opt">true</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="is_soap_array_encoding_used">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">LexmarkRevenueHistoryYear</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">LexmarkRevenue</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="rec_closed">true</value>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AverageRevenue;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">AverageRevenue</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZ_TRDSTYNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CondidateCompanies;2;0/TradeName;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNB1M;2;1/BUKRS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CompanyDetails;2;0/Company;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNB1M;2;1/AKONT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CompanyDetails;2;0/ReconciliationAccount;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNB1M;2;1/FDGRV;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CompanyDetails;2;0/PlanningGroup;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNB1M;2;1/ZTERM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CompanyDetails;2;0/PaymentTerms;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/SORTL;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CompanyDetails;2;0/SortKey;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNSNUM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseDUNSNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNBNAME;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseBusinessName;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseSecondaryBusinessName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">WorldBaseSecondaryBusinessName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNRAIND;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/RegisteredAddressIndicator;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNSTADR;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseStreetAddressLine1;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZ_DNSTRAD2;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseStreetAddressLine2;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNCTNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseCity;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNSTNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseStateOrProvince;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNCNTNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseCountry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNCNTCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/DandBCountry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNPSTCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/StreetAddressPostalCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNCONTC;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseContinent;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZMA_ADDR;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/MailingAddressStreetAddress;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZMA_CTYNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/MailingAddressCity;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZMA_CONTN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/MailingAddressCounty;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZMA_STATN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/MailingAddressStateOrProvince;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZMA_CNTRN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/MailingAddressCountry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZMA_PSTCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/MailingAddressPostalCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZMA_CONTT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/MailingAddressContinent;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNNINU;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/NationalIdentificationNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNNISC;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/NationalIdentificationSystem;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNTELCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/CountryTelephoneAccessCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNTELNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseTelephoneNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNCBTEL;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseCableTelex;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNFAXNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/WorldBaseFaxNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNCEONM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/ChiefExecutiveOfficerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNCEOTI;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/ChiefExecutiveOfficerTitle;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNLOB;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/LineOfBusiness;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNLOSAL;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/AnnualSalesInLocalCurrency;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNSALUS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WorldBaseNameAndAddress;2;0/AnnualSalesInUSDollars;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNVVM;2;1/VKORG;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/SalesInformation;2;0/SalesOrganization;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNFAMNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AdditionalDetails;2;0/NumberOfFamilyMembers;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNDISCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AdditionalDetails;2;0/DIASCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNHCDE;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AdditionalDetails;2;0/HierarchyCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNFMUDT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AdditionalDetails;2;0/FamilyUpdateDate;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNCURCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AdditionalDetails;2;0/Currency;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNLEGST;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AdditionalDetails;2;0/LegalStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNSTCDE;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AdditionalDetails;2;0/Status;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZ_PDNSNUM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AdditionalDetails;2;0/PreviousDUNSNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNRPDT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AdditionalDetails;2;0/ReportDate;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNEMPT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DandBEmployees;2;0/EmployeesTotal;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNEMPHR;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DandBEmployees;2;0/EmployeesHere;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNINPIN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DandBEmployees;2;0/IncludePrinciplesIndicator;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNEMIND;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DandBEmployees;2;0/EmployeesHereindicator;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNEMTIN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DandBEmployees;2;0/EmployeesTotalIndicator;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/KTOKD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GoldenSourceRecords;2;1/SourceSystem;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/KUNNR;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GoldenSourceRecords;2;1/SourceCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/NonGoldenSourceRecords;2;1">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <array name="xml" type="record" depth="1">
+  </array>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">NonGoldenSourceRecords</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">1</value>
+    <value name="field_opt">true</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="is_soap_array_encoding_used">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">SourceSystem</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">SourceCustomerNumber</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="rec_closed">true</value>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/MultilingualData;2;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="Language"></value>
+    <value name="LegalBusinessName"></value>
+  </record>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">MultilingualData</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">Language</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_usereditable">true</value>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">LegalBusinessName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+        </array>
+        <record name="field_content_type" javaclass="com.wm.util.Values">
+          <value name="contentType">1</value>
+          <value name="internalType">reference</value>
+          <value name="dataTypeVersion">dtVersion2</value>
+          <array name="targetNames" type="record" depth="1">
+            <record javaclass="com.wm.util.Values">
+              <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+              <value name="ncName">string</value>
+            </record>
+          </array>
+        </record>
+        <value name="nillable">false</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+    <value name="rec_closed">true</value>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1;2;0/ZZ_MDMACCID;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/MDMAccount;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1;2;0/ZZ_MDMID;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/MDMId;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1;2;0/ZZLE_BNME;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalName;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/SecondaryLegalName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">SecondaryLegalName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET4;2;0/ZZ_TRDSTYNM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DoingBusinessAsName;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1;2;0/ZZ_TACNTST;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CustomerStatus;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/SecondaryDoingBusinessAsName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">SecondaryDoingBusinessAsName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1;2;0/ZZ_PARTYRLE;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PartyRole;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1;2;0/ZZ_PARTYTYP;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PartyType;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1;2;0/ZZ_PARTGRP;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PartyGroup;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNSNUM;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DUNSNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZDU_DUNS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/DomesticDUNSNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET3;2;0/ZZDU_DUNS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/GlobalDUNSNumber;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/WebsiteURLAddress;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">WebsiteURLAddress</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/KTOKD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CustomerAccountGroup;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/TELF1;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimaryTelephoneNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1X;2;0/ZZLXK_VERT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/InternalIndustry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1X;2;0/ZZLXK_SVERT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LexmarkSubIndustry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNVVM;2;1/WAERS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimaryCurrency;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/SPRAS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/Language;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/LAND1;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CustomerGeographyHierarchy;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET1;2;0/ZZ_DNNISC;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/NAICSCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNEMPT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/NumberOfEmployees;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimaryPurchasingMethod;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimaryPurchasingMethod</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimaryPaymentMethod;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimaryPaymentMethod</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimaryPricingTier;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimaryPricingTier</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/LZONE;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/TransportationZone;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/STCD1;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/TaxNumber;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CreditScore;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">CreditScore</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CreditStatus;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">CreditStatus</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CreditRating;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">CreditRating</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CreditLimit;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">CreditLimit</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/MatchKey;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">MatchKey</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNSTCDE;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/Status;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNSUBCD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/Subsidiary;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/MatchGrade;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">MatchGrade</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/ConfidenceCode;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">ConfidenceCode</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNCMPSZ;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CompanySize;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimaryInternalSegment;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimaryInternalSegment</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/Grade;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">Grade</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/ServicesQualified;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">ServicesQualified</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimarySICCode2Digit;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimarySICCode2Digit</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimarySICCode2DigitDesc;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimarySICCode2DigitDesc</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimarySICCode4Digit;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimarySICCode4Digit</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimarySICCode4DigitDesc;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimarySICCode4DigitDesc</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimarySICCode6Digit;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimarySICCode6Digit</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimarySICCode6DigitDesc;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimarySICCode6DigitDesc</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimarySICCode8Digit;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimarySICCode8Digit</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/PrimarySICCode8DigitDesc;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">PrimarySICCode8DigitDesc</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/CustomerIntegrationType;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">CustomerIntegrationType</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/OriginatingCompany;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml"></value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">true</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="is_public">false</value>
+    <value name="field_name">OriginatingCompany</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <array name="field_options" type="value" depth="1">
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNVVM;2;1/E1KNVIM;2;1/TAXKD;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/TaxClassification;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1X;2;0/ZZ_STRT2;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/StreetAddressLine2;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1X;2;0/ZZ_HOUSENUMBER;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/HouseNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/REGIO;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/Region;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/PFACH;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/POBox;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1X;2;0/ZZ_POBOXCITY;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/POBoxCity;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1X;2;0/ZZ_POBOXREGION;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/POBoxRegion;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1X;2;0/ZZ_POBOXCOUNTRY;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/POBoxCountry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/PSTL2;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AddressDetails;2;0/POBoxPostalCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZLEDET1;2;0/ZZLE_CNTRN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/LegalEntityDetails;2;0/LegalEntityRegionRelatedCountry;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNVVM;2;1/SPART;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/SalesInformation;2;0/Division;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNVVM;2;1/VTWEG;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/SalesInformation;2;0/DistributionChannel;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNVVM;2;1/VSBED;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/SalesInformation;2;0/ShippingConditions;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/E1KNVVM;2;1/KALKS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/SalesInformation;2;0/PricingConditions;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1X;2;0/ZZ_UPDATEDBY;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/UpdatedBy;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1KNA1X;2;0/ZZ_UPDATEDON;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/UpdatedOn;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/ZDUNSDET2;2;0/ZZ_DNIEAIN;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/Data;2;0/AdditionalDetails;2;0/ImportExportCode;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1METADATA;2;0/ZSRCSYS;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/DocumentMetaData;2;0/SourceSystem;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1METADATA;2;0/ZOCAT;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/DocumentMetaData;2;0/ObjectChangeActionType;1;0">
+</MAPCOPY>
+
+<MAPINVOKE SERVICE="pub.string:concat" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
+
+  <!-- nodes -->
+
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/EDI_DC40;2;0/CREDAT;1;0" TO="/inString1;1;0">
+</MAPCOPY>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/EDI_DC40;2;0/CRETIM;1;0" TO="/inString2;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY FROM="/value;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/DocumentMetaData;2;0/IntegrationCreationDateTime;1;0">
+</MAPCOPY>
+</MAP>
+</MAPINVOKE>
+
+<MAPCOPY FROM="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT/ZDEBMAS07_EXT;2;0/IDOC;2;0/E1KNA1M;2;0/Z1METADATA;2;0/ZBUSSPO;1;0" TO="/CustomerMaster;4;0;LXKCustomerMasterFromMDG.docs:CustomerMaster/CustomerMaster;2;0/DocumentMetaData;2;0/BusinessProcess;1;0">
+</MAPCOPY>
+</MAP>
+</LOOP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>Restore parent errorInfo</COMMENT>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0">
+</MAPCOPY>
+
+<MAPDELETE NAME="Dropper" FIELD="/parent-errorInfo;4;0;LXKEnterprise.error:errorInfo">
+</MAPDELETE>
+
+<MAPDELETE FIELD="/ZDEBMAS07_EXT;4;0;LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT">
+</MAPDELETE>
+</MAP>
+
+<INVOKE TIMEOUT="" SERVICE="pub.flow:clearPipeline" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT>clean Up</COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">clearPipelineInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">field</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">preserve</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" GLOBALVARIABLES="false" FIELD="/preserve;1;1">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <array name="xml" type="value" depth="1">
+    <value>CustomerMaster</value>
+    <value>errorInfo</value>
+  </array>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">field</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_name">preserve</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">1</value>
+    <value name="field_opt">true</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <value name="is_soap_array_encoding_used">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">preserve</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">1</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="is_soap_array_encoding_used">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">ZDEBMAS07_EXT</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerMasterFromMDG.docs:ZDEBMAS07_EXT</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="is_public">false</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_subtype">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="is_public">false</value>
+        <value name="field_name">CustomerMaster</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="wrapper_type">IData</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="modifiable">true</value>
+        <value name="rec_ref">LXKCustomerMasterFromMDG.docs:CustomerMaster</value>
+      </record>
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_subtype">unknown</value>
+    <value name="is_public">false</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="wrapper_type">IData</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+    <value name="modifiable">true</value>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/preserve;1;1">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+</FLOW>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getSystemProperty</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">LyoqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqClJldHJpZXZl
+cyBhIHN5c3RlbSBwcm9wZXJ0eS4gCkNyZWF0ZWQ6ICA4LzI4LzIwMDIgIC0gVG9ueSBGb2x0egoq
+KioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKioqKiovCklEYXRhQ3Vy
+c29yIGN1cnNvciAJCQkgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsKU3RyaW5nIAkJcmV0cmlldmVQ
+cm9wZXJ0eSA9ICIiOwpTdHJpbmcgCQlwcm9wZXJ0eVZhbHVlICAgID0gIiI7CgppZiAoY3Vyc29y
+Lmxhc3QoInByb3BlcnR5IikpIHsKCXJldHJpZXZlUHJvcGVydHkgPSAoU3RyaW5nKSBjdXJzb3Iu
+Z2V0VmFsdWUoKTsKCXByb3BlcnR5VmFsdWUgPSBTeXN0ZW0uZ2V0UHJvcGVydHkocmV0cmlldmVQ
+cm9wZXJ0eSk7Cn0KZWxzZSB7Cglwcm9wZXJ0eVZhbHVlID0gbnVsbDsKfQoKY3Vyc29yLmxhc3Qo
+KTsKY3Vyc29yLmluc2VydEFmdGVyKCJwcm9wZXJ0eVZhbHVlIixwcm9wZXJ0eVZhbHVlKTs=</value>
+</Values>

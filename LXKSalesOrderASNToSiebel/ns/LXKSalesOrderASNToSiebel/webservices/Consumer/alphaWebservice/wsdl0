@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://alpha.lexmark.com/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" targetNamespace="http://alpha.lexmark.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://alpha.lexmark.com/">
+      <s:element name="ExecSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecSQLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SQLExecSQL">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="sql" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SQLExecSQLResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQLExecSQLResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ExecuteStoredProcedure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="spname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameterList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameterType" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfAnyType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="anyType" nillable="true" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ExecuteStoredProcedureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ExecuteStoredProcedureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SQLExecuteStoredProcedure">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="username" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="spname" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameterList" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="parameterType" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="Values" type="tns:ArrayOfAnyType" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SQLExecuteStoredProcedureResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SQLExecuteStoredProcedureResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ExecSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecSQL" />
+  </wsdl:message>
+  <wsdl:message name="ExecSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="SQLExecSQLSoapIn">
+    <wsdl:part name="parameters" element="tns:SQLExecSQL" />
+  </wsdl:message>
+  <wsdl:message name="SQLExecSQLSoapOut">
+    <wsdl:part name="parameters" element="tns:SQLExecSQLResponse" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteStoredProcedureSoapIn">
+    <wsdl:part name="parameters" element="tns:ExecuteStoredProcedure" />
+  </wsdl:message>
+  <wsdl:message name="ExecuteStoredProcedureSoapOut">
+    <wsdl:part name="parameters" element="tns:ExecuteStoredProcedureResponse" />
+  </wsdl:message>
+  <wsdl:message name="SQLExecuteStoredProcedureSoapIn">
+    <wsdl:part name="parameters" element="tns:SQLExecuteStoredProcedure" />
+  </wsdl:message>
+  <wsdl:message name="SQLExecuteStoredProcedureSoapOut">
+    <wsdl:part name="parameters" element="tns:SQLExecuteStoredProcedureResponse" />
+  </wsdl:message>
+  <wsdl:portType name="Service1Soap">
+    <wsdl:operation name="ExecSQL">
+      <wsdl:input message="tns:ExecSQLSoapIn" />
+      <wsdl:output message="tns:ExecSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SQLExecSQL">
+      <wsdl:input message="tns:SQLExecSQLSoapIn" />
+      <wsdl:output message="tns:SQLExecSQLSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteStoredProcedure">
+      <wsdl:input message="tns:ExecuteStoredProcedureSoapIn" />
+      <wsdl:output message="tns:ExecuteStoredProcedureSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SQLExecuteStoredProcedure">
+      <wsdl:input message="tns:SQLExecuteStoredProcedureSoapIn" />
+      <wsdl:output message="tns:SQLExecuteStoredProcedureSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="Service1Soap" type="tns:Service1Soap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecSQL">
+      <soap:operation soapAction="http://alpha.lexmark.com/ExecSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SQLExecSQL">
+      <soap:operation soapAction="http://alpha.lexmark.com/SQLExecSQL" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteStoredProcedure">
+      <soap:operation soapAction="http://alpha.lexmark.com/ExecuteStoredProcedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SQLExecuteStoredProcedure">
+      <soap:operation soapAction="http://alpha.lexmark.com/SQLExecuteStoredProcedure" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="Service1Soap12" type="tns:Service1Soap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ExecSQL">
+      <soap12:operation soapAction="http://alpha.lexmark.com/ExecSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SQLExecSQL">
+      <soap12:operation soapAction="http://alpha.lexmark.com/SQLExecSQL" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ExecuteStoredProcedure">
+      <soap12:operation soapAction="http://alpha.lexmark.com/ExecuteStoredProcedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SQLExecuteStoredProcedure">
+      <soap12:operation soapAction="http://alpha.lexmark.com/SQLExecuteStoredProcedure" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="Service1Soap" binding="tns:Service1Soap">
+      <soap:address location="https://alphadata.lexmark.com/cwsprod/service1.asmx" />
+    </wsdl:port>
+    <wsdl:port name="Service1Soap12" binding="tns:Service1Soap12">
+      <soap12:address location="https://alphadata.lexmark.com/cwsprod/service1.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

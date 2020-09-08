@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getCallingServiceName</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">IFN0cmluZyBzdHJDYWxsaW5nU2VydmljZU5hbWU7DQogdHJ5IHsNCiBOU1NlcnZpY2UgY2FsbGlu
+Z1NlcnZpY2UgPSBTZXJ2aWNlLmdldENhbGxpbmdTZXJ2aWNlKCk7DQogDQogaWYgKGNhbGxpbmdT
+ZXJ2aWNlIT1udWxsKSANCiBzdHJDYWxsaW5nU2VydmljZU5hbWUgPSBjYWxsaW5nU2VydmljZS50
+b1N0cmluZygpOyANCiAJIA0KIGVsc2UgDQoJIHN0ckNhbGxpbmdTZXJ2aWNlTmFtZSA9ICJObyBj
+YWxsaW5nIFNlcnZpY2UgZm91bmQiOw0KIA0KIElEYXRhQ3Vyc29yIHBpcGVsaW5lQ3Vyc29yID0g
+cGlwZWxpbmUuZ2V0Q3Vyc29yKCk7DQogcGlwZWxpbmVDdXJzb3IuaW5zZXJ0QWZ0ZXIoInNlcnZp
+Y2VOYW1lIiwgc3RyQ2FsbGluZ1NlcnZpY2VOYW1lKTsNCiBwaXBlbGluZUN1cnNvci5kZXN0cm95
+KCk7DQogDQogfSAvLyBlbmQgb2YgdHJ5DQogY2F0Y2ggKEV4Y2VwdGlvbiAgZXgpIHsNCgkgdGhy
+b3cgbmV3IFNlcnZpY2VFeGNlcHRpb24oZXgpOw0KIH0=</value>
+</Values>

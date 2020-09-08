@@ -1,0 +1,168 @@
+'
+' Copyright (c) 1996-2004, webMethods Inc.  All Rights Reserved.
+'
+' This software is the confidential and proprietary information of
+' webMethods, Inc. ("Confidential Information").  You shall not
+' disclose such Confidential Information and shall use it only in
+' accordance with the terms of the license agreement you entered 
+'into  with webMethods.
+'
+' webMethods MAKES NO REPRESENTATIONS OR WARRANTIES 
+' ABOUT THE SUITABILITY OF THE SOFTWARE, EITHER 
+' EXPRESSED OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE 
+' IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A 
+' PARTICULAR  PURPOSE, OR NON-INFRINGEMENT. webMethods 
+' SHALL NOT BE LIABLE FOR ANY DAMAGES SUFFERED BY 
+' LICENSEE AS A RESULT OF USING, MODIFYING OR DISTRIBUTING
+' THIS SOFTWARE OR ITS DERIVATIVES.
+'
+' ---------------------------------------------------------------------------
+
+'
+' This template provides a skeleton of the typical steps for 
+' communication from Siebel to the webMethods integration server. 
+' Portions of this template can be used without change.  Other 
+' portions must be updated to suit your specific application, but 
+' examples are provided to show proper syntax.  Those portions 
+' that must be updated are commented and marked with
+'  "REPLACE ME" comments.
+'
+' It is assumed that this script is registered with Siebel to be invoked 
+' when a specific event occurs for a specific Siebel Business 
+' Component.  Typical events might be BusComp_NewRecord, 
+' BusComp_DeleteRecord, BusComp_WriteRecord, etc.
+'
+' The basic strategy has 7 steps:
+'  - Retrieve information from the current Siebel business 
+' component record.
+'  - Create a webMethods values object for service input 
+' parameters.
+'  - Use the information retrieved from the Siebel business 
+' component to populate the input parameters values object.
+'  - Establish a connection to the webMethods Integration Server.
+'  - Invoke a webMethods service upon connection.
+'  - Check the values object returned by the webMethods service.
+'  - Break the connection to the webMethods Integration Server.
+'
+
+'  REPLACE ME begins - Subroutine name identifies event trigger.  
+' Actual subroutine name is provided by Siebel Tools script editor '
+' when script is registered.
+
+Sub BusComp_????
+
+'  REPLACE ME ends
+
+'
+'   Step 0, declare the local variables we'll use...
+'
+
+' VB Objects to hold references to webMethods Objects
+Dim myContext As Object        ' for Context
+Dim b2bInputRecord As Object   ' for input parameter Values object
+Dim b2bResponse As Object  ' for Values object returned by webMethods
+
+' Variants to hold data passing between the webMethods Integration Server 
+' and Siebel;  the Values.put & Values.get methods use Variants for 
+' parameters and return types.
+
+'  REPLACE ME begins - supply actual variables for data elements you will use
+' for input and/or output for webMethods service
+
+  Dim SblComments
+  Dim outResults
+  
+'  REPLACE ME ends
+
+'  REPLACE ME begins -Remove the following  Dim and Set statements 
+' for Siebel7.0.3
+
+  Dim activeBC As BusComp
+' Set a reference to the current active Siebel component
+ Set activeBC = TheApplication.ActiveBusComp
+  
+'  REPLACE ME ends
+
+
+' If you need to work with the Siebel Business Object (probably not)...
+  Set activeBO = TheApplication.ActiveBusObject
+
+' Get data from Siebel BusComp
+'  REPLACE ME begins - supply actual local variables and 
+' component field names
+
+  With activeBC
+    SblComments = .GetFieldValue("Comment")
+  End With
+    
+'  REPLACE ME ends
+'
+'Step 2, create a webMethods Values object for the data elements...
+'
+' Create values object to hold data to use as input into the service
+
+  Set b2bInputRecord = CreateObject("webMethods.Values")
+
+'
+' Step 3, populate the values object with the data elements...
+'
+
+' Populate values object with data elements from the BusComp
+'  REPLACE ME begins - supply actual pipeline field names and local variables
+
+  b2bInputRecord.put "Comments", SblComments
+  
+'  REPLACE ME ends
+
+'
+' Step 4, establish a connection to the webMethods Integration Server...
+'
+
+' Create webMethods Client Object and establish connection
+
+  Set myContext = CreateObject("webMethods.Context")
+
+'  REPLACE ME begins - supply actual parameters for host, login & password
+
+  myContext.Connect "hostMachine:hostPort", "login", "password"
+  
+'  REPLACE ME ends
+
+'
+' Step 5, invoke a webMethods service...
+'
+
+'  REPLACE ME begins - supply actual package & folder names
+
+  Set b2bResponse = myContext.Invoke("package", "service", InputRecord)
+  
+'  REPLACE ME ends
+
+'
+' Step 6, check the results returned...
+'
+' Typically want to verify that service succeeded... here, we simply display
+' value from the results field.
+
+'  REPLACE ME begins - supply your own results verification process using
+' actual local variables and pipeline field names
+
+  outResults = b2bResponse.get("results")
+  If isNull(outResults) Then
+    MsgBox "results: (NULL)"
+  Else
+    MsgBox "results: " & outResults
+  End If
+  
+'  REPLACE ME ends
+
+'
+' Step 7, disconnect from webMethods Integration Server...
+'
+
+' Break connection
+
+  myContext.Disconnect
+
+End Sub
+

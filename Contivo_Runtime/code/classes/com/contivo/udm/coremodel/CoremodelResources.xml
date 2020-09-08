@@ -1,0 +1,227 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--
+# $Id: CoremodelResources.xml,v 1.1.2.4 2004/11/24 01:09:35 wlindsay Exp $
+#
+# Resource nomenclature:
+# The key appears on the left-hand side of the = and the value on the right.  The value is
+# the actual string that is to be fetched.  The key should reflect or resemble the value
+# reasonably, and should only contain the characters [A-Za-z0-9_].  The key should have
+#  as a prefix, and this prefix should NOT be followed by an underscore.
+#
+# The reason for this convention is that the key will typically appear in java source code
+# as a string constant.  As such, the key will be indistinguishable from any other string.
+# By following this convention, it will be simple for a person or a shell script to
+# distinguish a key and an ordinary string constant.
+#
+# We avoid separating the  prefix from the key with an underscore (or any other
+# separator) because doing so would impart a word boundary on that part of the key that
+# would follow the _.  This would make it hard to write scripts to operate on strings that
+# are not keys.
+-->
+<Messages xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "../../runtime/core/messages.xsd">    
+	<Domain name = "coremodel"> 
+		<!-- Example Structured Message    
+			<SMessage name = "Message_ID">            
+				<Msg class = "Error" header = "Message_Category" text = "Text Description: {0}">                
+					<Msg class = "String" header = "Structured Information" text = "value"/>                
+					<Msg class = "String" header = "Structured Information2" text = "value2"/>            
+				</Msg>        
+			</SMessage>        
+        -->
+        <!-- TDateTime -->
+		<SMessage name = "Invalid_Format_InFormat"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Invalid format &quot;{0}&quot;."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Timezone_Format"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Invalid timezone format."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Timezone_Format_InFormat"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Invalid timezone representation in format &quot;{0}&quot;."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Timezone_Format_NotClosed"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The end-of-timezone character &apos;}&apos; was not specified."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Subsecond_Format"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Invalid subsecond format."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Subsecond_Format_InFormat"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Invalid subsecond representation in format &quot;{0}&quot;."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Subsecond_Format_NotClosed"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The end-of-subsecond character &apos;}&apos; was not specified."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Subsecond_Format_Invalid_Character"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Unrecognized character &quot;{0}&quot; in the subsecond format."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Format_Duplicated_Data"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The {0} information is specified more than once."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Format_No_Data"> 
+			<Msg class = "Other" header = "Internal_Error" text = "No format codes have been specified, so the format does not represent any data that can vary."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Format_Prefix_Not_At_Start"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The prefix code &quot;{0}&quot; is not at the start of the relevant portion of the format."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Missing_mnameSpecs_Entry"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Missing mnameSpecs entry {0}."> 
+					<Msg class = "String" header = "Index" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Invalid_Format_Entry"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The compiled format entry &quot;{0}&quot; at index {1} is not valid."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Missing_Timezone_Data"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The data for the {0} format code in the timezone format is not available.  The format is &quot;{1}&quot;."> 
+					<Msg class = "String" header = "Code" text = "{0}"/>                
+					<Msg class = "String" header = "Format" text = "{1}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Timezone_Hours_Out_Of_Range"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The timezone data has an out of range hh value {0}.  The minimum is -14 and the maximum is +14."> 
+					<Msg class = "String" header = "hh" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Timezone_Minutes_Out_Of_Range"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The timezone data has an out of range mm value {0}.  The minimum is 00 and the maximum is 59."> 
+					<Msg class = "String" header = "mm" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Timezone_Out_Of_Range"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The timezone data has an out of range value {0}.  The minimum is -14:00 and the maximum is +14:00."> 
+					<Msg class = "String" header = "Value" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "DateTime_Data_Too_Short"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The input data &quot;{0}&quot; is too short for format &quot;{1}&quot;"> 
+					<Msg class = "String" header = "Data" text = "{0}"/>                
+					<Msg class = "String" header = "Format" text = "{1}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "DateTime_Data_Not_Match"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The input data &quot;{0}&quot; does not match format &quot;{1}&quot;"> 
+					<Msg class = "String" header = "Data" text = "{0}"/>                
+					<Msg class = "String" header = "Format" text = "{1}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Missing_DateTime_Data"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The data for the {0} format code is not available.  The format is &quot;{1}&quot;."> 
+					<Msg class = "String" header = "Code" text = "{0}"/>                
+					<Msg class = "String" header = "Format" text = "{1}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "DateTime_Literal_Not_Found"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The data does not include the literal value &quot;{0}&quot; in the right location in data value &quot;{1}&quot; and format &quot;{2}&quot;."> 
+					<Msg class = "String" header = "Value" text = "{0}"/>                
+					<Msg class = "String" header = "Data" text = "{1}"/>                
+					<Msg class = "String" header = "Format" text = "{2}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "DateTime_Year_Zero"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The year data &quot;{0}&quot; indicates year zero."> 
+					<Msg class = "String" header = "Value" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "DateTime_Year_Min_Max"> 
+			<Msg class = "Other" header = "Internal_Error" text = "The year data &quot;{0}&quot; is out of range.  Years must be in the range -9999 to 9999."> 
+					<Msg class = "String" header = "Value" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "DateTime_PM_Out_Of_Range"> 
+			<Msg class = "Other" header = "Internal_Error" text = "If PM is indicated, the hours value must be less than 12, but it is {0}."> 
+					<Msg class = "String" header = "Hour" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "DateTime_Coercion_NoTimezone"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Cannot coerce a date or time value to a new timezone unless a timezone is already present."> 
+			</Msg>
+		</SMessage> 
+		<!-- TXMLNode -->
+		<SMessage name = "XML_Node_Cannot_Delete_Root"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Cannot delete the root node."> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "XML_Node_Corrupted"> 
+			<Msg class = "Other" header = "Internal_Error" text = "An XML Node is corrupted."> 
+			</Msg>
+		</SMessage> 
+		<!-- TSimpleType -->
+		<SMessage name = "SimpleType_List_Item_Type_List"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Type {0} is a list and may not be a list."> 
+					<Msg class = "String" header = "Type" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "SimpleType_Union_At_Least_One_Member"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Union type for type {0} must have at least 1 memberType."> 
+					<Msg class = "String" header = "Type" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "SimpleType_Failed_To_Resolve_Type"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Failed to resolve all necessary information for type &quot;{0}&quot; in namespace &quot;{1}&quot;.  The underlying error is:  {2}"> 
+					<Msg class = "String" header = "Type" text = "{0}"/>                
+					<Msg class = "String" header = "Namespace" text = "{1}"/>                
+					<Msg class = "String" header = "Root Error" text = "{2}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "SimpleType_Inapplicable_Facet_Value"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Attempted to set inapplicable value &quot;{0}&quot; for facet {1} for type {2}."> 
+					<Msg class = "String" header = "Value" text = "{0}"/>                
+					<Msg class = "String" header = "Facet" text = "{1}"/>                
+					<Msg class = "String" header = "Type" text = "{2}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "SimpleType_Override_Facet_Value"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Attempted to override a fixed facet value with &quot;{0}&quot; for facet {1} for type {2}."> 
+					<Msg class = "String" header = "Value" text = "{0}"/>                
+					<Msg class = "String" header = "Facet" text = "{1}"/>                
+					<Msg class = "String" header = "Type" text = "{2}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "SimpleType_Read_Only_Type_Facet_Value"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Attempted to set facet value &quot;{0}&quot; for facet {1} for the read-only type {2}."> 
+					<Msg class = "String" header = "Value" text = "{0}"/>                
+					<Msg class = "String" header = "Facet" text = "{1}"/>                
+					<Msg class = "String" header = "Type" text = "{2}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "SimpleType_Rename_Read_Only_Type"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Attempted rename type {1} with name {0}."> 
+					<Msg class = "String" header = "New Name" text = "{0}"/>                
+					<Msg class = "String" header = "Type" text = "{1}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "SimpleType_Facets_Annotations_FixedP_Same_Number"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Attempted to set up the facets simple type {0} using an unequal number of facets, values, fixedPs, and annotations."> 
+					<Msg class = "String" header = "Type" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "SimpleType_Missing_Format"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Missing format for type {0}."> 
+					<Msg class = "String" header = "Type" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "SimpleType_Enum_Invalid_Type"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Invalid enum code for simple type {0}."> 
+					<Msg class = "String" header = "Type" text = "{0}"/>                
+			</Msg>
+		</SMessage> 
+		<SMessage name = "SimpleType_Invalid_Runtime_Data_Type"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Invalid data type {1} for simple type {0}."> 
+					<Msg class = "String" header = "Type" text = "{0}"/>                
+					<Msg class = "String" header = "Data" text = "{1}"/>                
+			</Msg>
+		</SMessage> 
+	</Domain>
+</Messages>

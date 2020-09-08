@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="node_type">webMethods/trigger</value>
+  <value name="node_subtype">unknown</value>
+  <value name="node_nsName">LXKServicePartnerNotificationWOSOToSiebel.triggers:subscribeToWorkOrderServiceOrder_Grp5</value>
+  <value name="node_pkg">LXKServicePartnerNotificationWOSOToSiebel</value>
+  <value name="node_comment"></value>
+  <value name="is_public">false</value>
+  <value name="trigger_type">broker-trigger</value>
+  <record name="trigger" javaclass="com.wm.util.Values">
+    <value name="serialSuspendOnError">false</value>
+    <value name="concurrent">false</value>
+    <value name="ordering">1</value>
+    <value name="auditOption">0</value>
+    <record name="auditSettings" javaclass="com.wm.util.Values">
+      <value name="document_data">0</value>
+      <value name="startExecution">false</value>
+      <value name="stopExecution">false</value>
+      <value name="onError">true</value>
+    </record>
+    <record name="redeliveryOptions" javaclass="com.wm.util.Values">
+      <value name="max">0</value>
+      <value name="delayInterval">10000</value>
+      <value name="onRedeliveryFailure">0</value>
+    </record>
+    <value name="joinTimeout">86400000</value>
+    <value name="maxConcurrentThreads">1</value>
+    <value name="inDoubtDetection">false</value>
+    <value name="resolveWithHistory">false</value>
+    <value name="resolutionHistoryTTL">7200000</value>
+    <value name="uniqueId">OWh+D73iq6Bqtt/bepd4LCpysRs=</value>
+    <value name="executeUser">Administrator</value>
+    <array name="conditions" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="type">simple</value>
+        <record name="data" javaclass="com.wm.util.Values">
+          <record name="messageTypeFilterPair" javaclass="com.wm.util.Values">
+            <value name="messageType">LXKEnterprise.enterpriseDocuments:workOrderServiceOrder</value>
+            <value name="filter"></value>
+            <value name="umFilter">((MetaData.PurposeCode  =  'STS' and DocumentMetaData.BusinessProcess  =  'WorkOrderServiceOrder - Status Notification') and (DocumentMetaData.TradingPartnerMetaData.OriginalPartnerName  =  'FUJIFILM'))</value>
+          </record>
+          <value name="serviceName">LXKServicePartnerNotificationWOSOToSiebel.main:processWorkOrderServiceOrder</value>
+          <value name="conditionName">Cdn_SPStatusNotification_Grp5</value>
+        </record>
+      </record>
+    </array>
+    <value name="processingSuspended">true</value>
+    <value name="retrievalSuspended">false</value>
+    <value name="transportAckSize">1</value>
+    <value name="deliverEnabled">true</value>
+    <value name="executeEnabled">true</value>
+    <value name="docsPrefetchMax">10</value>
+    <value name="docsPrefetchMin">4</value>
+    <value name="priorityEnabled">false</value>
+    <null name="namedObjectString"/>
+  </record>
+  <number name="LOCK_STATUS" type="Integer">3</number>
+  <record name="LOCK_INFO" javaclass="com.wm.util.Values">
+    <value name="OWNER">dagarwal</value>
+    <value name="HOST">10.186.254.10</value>
+    <date name="LOCK_TIME">Thu Dec 19 07:13:10 UTC 2019</date>
+  </record>
+  <null name="DEPENDENT_LOCKS"/>
+  <value name="status">true</value>
+</Values>

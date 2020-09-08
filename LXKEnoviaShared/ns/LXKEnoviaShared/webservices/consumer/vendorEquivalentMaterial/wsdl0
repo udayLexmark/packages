@@ -1,0 +1,46 @@
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:impl="http://DefaultNamespace" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:intf="http://DefaultNamespace" targetNamespace="http://DefaultNamespace">
+<wsdl:message name="unbindRequest"></wsdl:message>
+<wsdl:message name="unbindResponse"></wsdl:message>
+<wsdl:message name="getEquivalentmaterialCatalogResponse">
+<wsdl:part name="getEquivalentmaterialCatalogReturn" type="soapenc:string"></wsdl:part>
+</wsdl:message>
+<wsdl:message name="getEquivalentmaterialCatalogRequest">
+<wsdl:part name="in0" type="soapenc:string"></wsdl:part>
+</wsdl:message>
+<wsdl:portType name="EquivalentMaterialCatalogService">
+<wsdl:operation name="getEquivalentmaterialCatalog" parameterOrder="in0">
+<wsdl:input name="getEquivalentmaterialCatalogRequest" message="impl:getEquivalentmaterialCatalogRequest"></wsdl:input>
+<wsdl:output name="getEquivalentmaterialCatalogResponse" message="impl:getEquivalentmaterialCatalogResponse"></wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="unbind">
+<wsdl:input name="unbindRequest" message="impl:unbindRequest"></wsdl:input>
+<wsdl:output name="unbindResponse" message="impl:unbindResponse"></wsdl:output>
+</wsdl:operation>
+</wsdl:portType>
+<wsdl:binding name="EquivalentMaterialCatalogServiceSoapBinding" type="impl:EquivalentMaterialCatalogService">
+<wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+<wsdl:operation name="getEquivalentmaterialCatalog">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="getEquivalentmaterialCatalogRequest">
+<wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace"/>
+</wsdl:input>
+<wsdl:output name="getEquivalentmaterialCatalogResponse">
+<wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace"/>
+</wsdl:output>
+</wsdl:operation>
+<wsdl:operation name="unbind">
+<wsdlsoap:operation soapAction=""/>
+<wsdl:input name="unbindRequest">
+<wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://util.matrix"/>
+</wsdl:input>
+<wsdl:output name="unbindResponse">
+<wsdlsoap:body use="encoded" encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://DefaultNamespace"/>
+</wsdl:output>
+</wsdl:operation>
+</wsdl:binding>
+<wsdl:service name="EquivalentMaterialCatalogServiceService">
+<wsdl:port name="EquivalentMaterialCatalogService" binding="impl:EquivalentMaterialCatalogServiceSoapBinding">
+<wsdlsoap:address location="https://plmqa.lexmark.com/ematrix/services/EquivalentMaterialCatalogService"/>
+</wsdl:port>
+</wsdl:service>
+</wsdl:definitions>

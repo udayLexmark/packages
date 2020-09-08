@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="svc_type">flow</value>
+  <value name="svc_subtype">default</value>
+  <value name="svc_sigtype">java 3.5</value>
+  <record name="svc_sig" javaclass="com.wm.util.Values">
+    <record name="sig_in" javaclass="com.wm.util.Values">
+      <value name="node_type">record</value>
+      <value name="node_subtype">unknown</value>
+      <value name="node_comment"></value>
+      <value name="is_public">false</value>
+      <value name="field_type">record</value>
+      <value name="field_dim">0</value>
+      <value name="wrapper_type">IData</value>
+      <value name="nillable">true</value>
+      <value name="form_qualified">false</value>
+      <value name="is_global">false</value>
+      <array name="rec_fields" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="node_subtype">unknown</value>
+          <value name="node_comment"></value>
+          <record name="node_hints" javaclass="com.wm.util.Values">
+            <value name="field_largerEditor">false</value>
+            <value name="field_password">false</value>
+          </record>
+          <value name="is_public">false</value>
+          <value name="field_name">LXKNotifications.SAP:CRMXIF_ORDER_SAVE_M02ListenerNotificationPublishDocument</value>
+          <value name="field_type">recref</value>
+          <value name="field_dim">0</value>
+          <value name="wrapper_type">IData</value>
+          <value name="nillable">true</value>
+          <value name="form_qualified">false</value>
+          <value name="is_global">false</value>
+          <value name="rec_closed">true</value>
+          <value name="modifiable">true</value>
+          <value name="rec_ref">LXKNotifications.SAP:CRMXIF_ORDER_SAVE_M02ListenerNotificationPublishDocument</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="node_subtype">unknown</value>
+          <value name="node_comment"></value>
+          <record name="node_hints" javaclass="com.wm.util.Values">
+            <value name="field_usereditable">true</value>
+            <value name="field_largerEditor">false</value>
+            <value name="field_password">false</value>
+          </record>
+          <value name="is_public">false</value>
+          <value name="field_name">debug</value>
+          <value name="field_type">string</value>
+          <value name="field_dim">0</value>
+          <value name="field_opt">true</value>
+          <array name="field_options" type="value" depth="1">
+          </array>
+          <value name="nillable">true</value>
+          <value name="form_qualified">false</value>
+          <value name="is_global">false</value>
+        </record>
+      </array>
+      <value name="modifiable">true</value>
+    </record>
+    <record name="sig_out" javaclass="com.wm.util.Values">
+      <value name="node_type">record</value>
+      <value name="node_subtype">unknown</value>
+      <value name="node_comment"></value>
+      <value name="is_public">false</value>
+      <value name="field_type">record</value>
+      <value name="field_dim">0</value>
+      <value name="wrapper_type">IData</value>
+      <value name="nillable">true</value>
+      <value name="form_qualified">false</value>
+      <value name="is_global">false</value>
+      <array name="rec_fields" type="record" depth="1">
+      </array>
+      <value name="modifiable">true</value>
+    </record>
+  </record>
+  <value name="node_comment">Service Name: LXKContractCatalogFromSAPCRMToSiebel.main:processContractCatalog
+Author: Titu Roy
+Date: 07/06/2013
+
+Description
+This main service will be invoked upon the receipt of LXKNotifications.SAP:CRMXIF_ORDER_SAVE_M02ListenerNotificationPublishDocument 
+from the Broker that satisfies the filter criteria in LXKContractCatalogFromSAPCRMToSiebel.triggers:subscribeToCRMXIF_ORDER_SAVE_M02. 
+The main service will call the mapping service to transform the CRMXIF_ORDER_SAVE_M02IDOC to ContractCatalog document,then ContractCatalog 
+record will be sent to Siebel through Siebel Adapter. All errors will be handled by using standard error handling mechanism.
+
+HardCode Values: 
+N/A
+
+Inputs-
+LXKNotifications.SAP:CRMXIF_ORDER_SAVE_M02ListenerNotificationPublishDocument
+
+Outputs-
+N/A</value>
+  <value name="stateless">no</value>
+  <value name="caching">no</value>
+  <value name="prefetch">no</value>
+  <value name="cache_ttl">15</value>
+  <value name="prefetch_level">1</value>
+  <value name="template_type">html</value>
+  <value name="audit_level">off</value>
+  <value name="check_internal_acls">no</value>
+  <value name="icontext_policy">$null</value>
+  <value name="svcInvkURLAlias"></value>
+  <value name="system_service">no</value>
+  <value name="retry_max">0</value>
+  <value name="retry_interval">0</value>
+  <value name="svc_in_validator_options">none</value>
+  <value name="svc_out_validator_options">none</value>
+  <value name="auditoption">1</value>
+  <array name="auditfields_input" type="value" depth="2">
+    <array type="value" depth="1">
+      <value>/LXKNotifications.SAP:CRMXIF_ORDER_SAVE_M02ListenerNotificationPublishDocument;4;0;LXKNotifications.SAP:CRMXIF_ORDER_SAVE_M02ListenerNotificationPublishDocument/CRMXIF_ORDER_SAVE_M02;2;0/IDOC;2;1/E101CRMXIF_BUSTRANS;2;0/OBJECT_ID;1;0</value>
+      <value>OBJECT_ID</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/LXKNotifications.SAP:CRMXIF_ORDER_SAVE_M02ListenerNotificationPublishDocument;4;0;LXKNotifications.SAP:CRMXIF_ORDER_SAVE_M02ListenerNotificationPublishDocument/CRMXIF_ORDER_SAVE_M02;2;0/IDOC;2;1/EDI_DC40;2;0/DOCNUM;1;0</value>
+      <value>DOCNUM</value>
+    </array>
+    <array type="value" depth="1">
+      <value>/LXKNotifications.SAP:CRMXIF_ORDER_SAVE_M02ListenerNotificationPublishDocument;4;0;LXKNotifications.SAP:CRMXIF_ORDER_SAVE_M02ListenerNotificationPublishDocument/CRMXIF_ORDER_SAVE_M02;2;0/IDOC;2;1/E101CRMXIF_BUSTRANS;2;0/E101CRMXIF_SALES_X;2;0/E101CRMXIF_SALES;2;0/PO_NUMBER_UC;1;0</value>
+      <value>PO_NUMBER_UC</value>
+    </array>
+  </array>
+  <null name="auditfields_output"/>
+  <record name="auditsettings" javaclass="com.wm.util.Values">
+    <value name="document_data">1</value>
+    <value name="startExecution">false</value>
+    <value name="stopExecution">true</value>
+    <value name="onError">true</value>
+  </record>
+  <value name="pipeline_option">1</value>
+  <null name="originURI"/>
+  <value name="modifiable">true</value>
+  <value name="is_public">false</value>
+</Values>

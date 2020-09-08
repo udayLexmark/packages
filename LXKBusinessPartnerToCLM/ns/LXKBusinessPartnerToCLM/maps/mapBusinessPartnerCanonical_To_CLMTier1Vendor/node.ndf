@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="svc_type">flow</value>
+  <value name="svc_subtype">default</value>
+  <value name="svc_sigtype">java 3.5</value>
+  <record name="svc_sig" javaclass="com.wm.util.Values">
+    <record name="sig_in" javaclass="com.wm.util.Values">
+      <value name="node_type">record</value>
+      <value name="node_comment"></value>
+      <value name="is_public">false</value>
+      <value name="field_type">record</value>
+      <value name="field_dim">0</value>
+      <value name="nillable">true</value>
+      <value name="form_qualified">false</value>
+      <value name="is_global">false</value>
+      <array name="rec_fields" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="node_comment"></value>
+          <record name="node_hints" javaclass="com.wm.util.Values">
+            <value name="field_largerEditor">false</value>
+            <value name="field_password">false</value>
+          </record>
+          <value name="is_public">false</value>
+          <value name="field_name">LXKEnterprise.EnterpriseObjectDocuments:BusinessPartner</value>
+          <value name="field_type">recref</value>
+          <value name="field_dim">0</value>
+          <value name="nillable">true</value>
+          <value name="form_qualified">false</value>
+          <value name="is_global">false</value>
+          <value name="rec_closed">true</value>
+          <value name="modifiable">true</value>
+          <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:BusinessPartner</value>
+        </record>
+      </array>
+      <value name="modifiable">true</value>
+    </record>
+    <record name="sig_out" javaclass="com.wm.util.Values">
+      <value name="node_type">record</value>
+      <value name="node_comment"></value>
+      <value name="is_public">false</value>
+      <value name="field_type">record</value>
+      <value name="field_dim">0</value>
+      <value name="nillable">true</value>
+      <value name="form_qualified">false</value>
+      <value name="is_global">false</value>
+      <array name="rec_fields" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="node_type">record</value>
+          <value name="node_comment"></value>
+          <record name="node_hints" javaclass="com.wm.util.Values">
+            <value name="field_largerEditor">false</value>
+            <value name="field_password">false</value>
+          </record>
+          <value name="is_public">false</value>
+          <value name="field_name">LXKBusinessPartnerToCLM.docs:CLM_Vendor</value>
+          <value name="field_type">recref</value>
+          <value name="field_dim">0</value>
+          <value name="nillable">true</value>
+          <value name="form_qualified">false</value>
+          <value name="is_global">false</value>
+          <value name="rec_closed">true</value>
+          <value name="modifiable">true</value>
+          <value name="rec_ref">LXKBusinessPartnerToCLM.docs:CLM_Vendor</value>
+        </record>
+      </array>
+      <value name="modifiable">true</value>
+    </record>
+  </record>
+  <value name="node_comment">Service Name: LXKBusinessPartnerToCLM.maps:mapBusinessPartnerCanonical_To_CLMTier1Vendor
+Author: Sudip Sen
+Date:07/14/2014
+
+Description:
+This map service will be invoked from the main service where Business Process = 'Vendor_Publish' and will transform the Business Partner Canonical fields to the CLM Vendor Tier1 XML structure.
+
+Hardcode values are 
+
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/@version = '1.0'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/@encoding = 'UTF-8'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/@defaultlanguage = ''
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/@xsi:noNamespaceSchemaLocation = 'Vendor.xsd'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/objects/object/@classname = 'masterdata.Vendor'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/objects/object/fields/INACTIVE = 'FALSE'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/objects/object/fields/IS_REPLICATED = 'TRUE'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/objects/object/fields/LOG_SYS = 'MDMCLNT001'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/objects/object/fields/SUPPLIER_FROM_EXTERNAL_SYSTEM = 'TRUE'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/objects/object/collections/LOGICAL_SYS_T/object/@classname = 'odp.masterdata.VendorLogSy'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/objects/object/collections/LOGICAL_SYS_T/object/fields/LOGICAL_SYSTEM = 'MDMCLNT001'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/objects/object/collections/LOGICAL_SYS_T/object/fields/VEN_ACCT_GROUP = 'ZCLM'
+LXKBusinessPartnerToCLM.docs:CLM_Vendor/sapesourcing/objects/object/collections/LOGICAL_SYS_T/object/collections/LOGSYS_PORG/object[0]/@classname = 'odp.masterdata.VendorLogSysPOrg'
+
+Input: LXKEnterprise.EnterpriseObjectDocuments:BusinessPartner
+Output: LXKBusinessPartnerToCLM.docs:CLM_Vendor</value>
+  <value name="stateless">no</value>
+  <value name="caching">no</value>
+  <value name="prefetch">no</value>
+  <value name="cache_ttl">15</value>
+  <value name="prefetch_level">1</value>
+  <value name="template">LXKBusinessPartnerToCLM_maps_mapBusinessPartnerCanonical_To_CLMTier1Vendor</value>
+  <value name="template_type">html</value>
+  <value name="audit_level">off</value>
+  <value name="check_internal_acls">no</value>
+  <value name="icontext_policy">$null</value>
+  <value name="system_service">no</value>
+  <value name="retry_max">0</value>
+  <value name="retry_interval">0</value>
+  <value name="svc_in_validator_options">none</value>
+  <value name="svc_out_validator_options">none</value>
+  <value name="auditoption">0</value>
+  <null name="auditfields_input"/>
+  <null name="auditfields_output"/>
+  <record name="auditsettings" javaclass="com.wm.util.Values">
+    <value name="document_data">0</value>
+    <value name="startExecution">false</value>
+    <value name="stopExecution">false</value>
+    <value name="onError">true</value>
+  </record>
+  <value name="pipeline_option">1</value>
+  <null name="originURI"/>
+  <value name="modifiable">true</value>
+  <value name="is_public">false</value>
+</Values>

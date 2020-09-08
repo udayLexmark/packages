@@ -1,0 +1,187 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--
+# $Id: DomResources.xml,v 1.1.2.7.12.3 2005/09/12 17:26:53 kmcafee Exp $
+#
+# Resource nomenclature:
+# The key appears on the left-hand side of the = and the value on the right.  The value is
+# the actual string that is to be fetched.  The key should reflect or resemble the value
+# reasonably, and should only contain the characters [A-Za-z0-9_].  The key should have
+#  as a prefix, and this prefix should NOT be followed by an underscore.
+#
+# The reason for this convention is that the key will typically appear in java source code
+# as a string constant.  As such, the key will be indistinguishable from any other string.
+# By following this convention, it will be simple for a person or a shell script to
+# distinguish a key and an ordinary string constant.
+#
+# We avoid separating the  prefix from the key with an underscore (or any other
+# separator) because doing so would impart a word boundary on that part of the key that
+# would follow the _.  This would make it hard to write scripts to operate on strings that
+# are not keys.
+-->
+<Messages xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "../core/messages.xsd">    
+	  
+	<Domain name = "dom">  	  
+	  
+		<!-- Example Structured Message      
+		  <SMessage name = "Message_ID_Common">            
+			<Msg class = "Error" header = "Message Category" text = "Text Description: {0}">                
+				<Msg class = "String" header = "Structured Information" text = "value"/>                
+				<Msg class = "String" header = "Structured Information2" text = "value2"/>            
+			</Msg>        
+		  </SMessage>
+		-->
+		
+		<!-- TDomMessage -->
+		       
+		<SMessage name = "Errors_generated">            
+			<Msg class = "Other" header = "Internal_Error" text = "Errors occurred during the transform (details suppressed).">            
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Formatting_Error">            
+			<Msg class = "Other" header = "Internal_Error" text = "Errors occurred while formatting message">
+				<Msg class = "String" header = "Structured Message" text = "{0}"/>            
+			</Msg>        
+		</SMessage> 
+		<SMessage name = "FailedToStart">            
+			<Msg class = "Other" header = "Internal_Error" text = "Failed to start the transform due to an unknown exception">
+				<Msg class = "String" header = "Exception Message" text = "{0}"/>            
+			</Msg>        
+		</SMessage>   
+		<!-- TDocNode -->
+		<SMessage name = "Input_Bridge_Error">            
+			<Msg class = "Other" header = "Internal_Error" text = "Can't call getChildNode() on a repeated group.">           
+			</Msg>        
+		</SMessage>    
+		<SMessage name = "Bad_Node_Type">            
+			<Msg class = "Other" header = "Internal_Error" text = "Expected nodeType = REPEATED_GROUP_NODE; failed.">           
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Expected_Dom_Node">            
+			<Msg class = "Other" header = "Internal_Error" text = "Expected instance of TDomNode, got something else.">           
+			</Msg>        
+		</SMessage> 
+		<SMessage name = "GetNth_Called_Non_Group">            
+			<Msg class = "Other" header = "Internal_Error" text = "GetNthChild called on non-group node.">           
+			</Msg>        
+		</SMessage> 
+		<!-- TDom2Dom, Dom2DomChainTest, Dom2DomTest -->
+		<SMessage name = "Folow_Error_Occur">            
+			<Msg class = "Other" header = "Internal_Error" text = "The following errors occured in the transform ...">           
+			</Msg>        
+		</SMessage> 
+		<SMessage name = "Folow_Warning_Occur">            
+			<Msg class = "Other" header = "Internal_Error" text = "The following warnings occured in the transform ...">           
+			</Msg>        
+		</SMessage> 
+		<SMessage name = "Generate_Trace">            
+			<Msg class = "Other" header = "Internal_Error" text = "Generating trace ...">           
+			</Msg>        
+		</SMessage> 
+		<SMessage name = "Generate_Report">            
+			<Msg class = "Other" header = "Internal_Error" text = "Generating reports ...">           
+			</Msg>        
+		</SMessage> 
+		<!-- TDom2DomManager -->
+		<SMessage name = "Fatal_Error_Rule_File">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Fatal error constructing rule tracing file">           
+				<Msg class = "String" header = "File Name" text = "{0}"/>            
+			</Msg>        
+		</SMessage> 
+		<SMessage name = "Source_Business_Obj_No_Pipeline">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Source business object {0} is not in the pipeline.  The transform will not run.">
+				<Msg class = "String" header = "Source Business Object Name" text = "{0}"/>            
+			</Msg>        
+		</SMessage> 
+		<!-- Transform -->
+		        
+		<SMessage name = "Transform_Not_In_Config_File">            
+			<Msg class = "Other" header = "Configuration_Warning" text = "Warning: {0} is not specified in the config file. Using Default options."/>        
+		</SMessage> 
+        
+		<SMessage name = "Cannot_Parse_Config_File">            
+			<Msg class = "Other" header = "Configuration_Warning" text = "Cannot parse config file: {0}"/>        
+		</SMessage>        
+		<SMessage name = "No_Transform_Input">            
+			<Msg class = "Other" header = "Configuration_Error" text = "No inputs specified for transform."/>        
+		</SMessage>        
+		<SMessage name = "No_Transform_Output">            
+			<Msg class = "Other" header = "Configuration_Error" text = "No output specified for transform."/>        
+		</SMessage>
+		<SMessage name = "Bad_FFD_Count">            
+			<Msg class = "Other" header = "Configuration_Error" text = "FFD count does not match input count."/>        
+		</SMessage>
+		<SMessage name = "Log_Dir_Not_Dir">            
+			<Msg class = "Other" header = "Configuration_Warning" text = "Warning, {0} is not a directory"/>        
+		</SMessage>
+		<SMessage name = "Old_Transform_Regen">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Logfile specified, but class {0} does not conform to interface TransformLogClass. Transform class must be regenerated with newer Analyst version.">
+				<Msg class = "String" header = "Transform Name" text = "{0}"/>            
+			</Msg>        
+		</SMessage>
+		<SMessage name = "TransformClass_IRuntimeErrorHandler">            
+			<Msg class = "Other" header = "Configuration_Error" text = "An error handler was specified, but transform class {0} does not conform to interface ITransform and thus cannot work with an error handler (IRuntimeErrorHandler). The transform must be regenerated with Analyst 3.9.1 or later.">
+				<Msg class = "String" header = "Transform Name" text = "{0}"/>            
+			</Msg>        
+		</SMessage>
+		<SMessage name = "UnableToLocateTransform">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Unable to locate the transform {0}.">
+				<Msg class = "String" header = "Transform Name" text = "{0}"/>            
+			</Msg>        
+		</SMessage>
+		<SMessage name = "UnrecognizableAsTransform">            
+			<Msg class = "Other" header = "Configuration_Error" text = "The transform class {0} was loaded, but it does not implement an interface that indicates it is a Contivo transform generated from a supported version of Analyst.">
+				<Msg class = "String" header = "Transform Name" text = "{0}"/>            
+			</Msg>        
+		</SMessage>
+		<SMessage name = "File_Spec_Bad_Mode">            
+			<Msg class = "Other" header = "Configuration_Error" text = "FileSpec Mode must be one of INPUT, OUTPUT."/>        
+		</SMessage>
+		<SMessage name = "FFD_No_Stream">            
+			<Msg class = "Other" header = "Configuration_Error" text = "FFD cannot deal with character streams."/>        
+		</SMessage>
+		<SMessage name = "Rule_Trace_Error">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Unable to emit the rule trace data due to exception &quot;{0}&quot;.">
+				<Msg class = "String" header = "Exception" text = "{0}"/>            
+			</Msg>        
+		</SMessage>
+		<SMessage name = "Transform_Input_Preparation">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Unable to read input data for business object &quot;{0}&quot;.">
+				<Msg class = "String" header = "Business Object Name" text = "{0}"/>            
+			</Msg>        
+		</SMessage>
+		<SMessage name = "Transform_Input_XML_Error">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Unable to read input data for business object {0} due to a XML Error.">
+				<Msg class = "String" header = "Business Object Name" text = "{0}"/>            
+				<Msg class = "String" header = "XML Error" text = "{1}"/>            
+			</Msg>        
+		</SMessage>
+		<SMessage name = "Transform_Input_IO_Error">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Unable to read input data for business object {0} due to a Input/Output Error.">
+				<Msg class = "String" header = "Business Object Name" text = "{0}"/>            
+				<Msg class = "String" header = "IO Error" text = "{1}"/>            
+			</Msg>        
+		</SMessage>
+		<SMessage name = "Transform_Input_FFD_Error">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Unable to read input data for business object {0} due to a FFD Error.">
+				<Msg class = "String" header = "Business Object Name" text = "{0}"/>            
+				<Msg class = "String" header = "FFD Error" text = "{1}"/>            
+			</Msg>        
+		</SMessage>
+		<!-- TXMLFormatter -->
+		<SMessage name = "Header_Detail_Mismatch">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Structured Message {0} has a Structured Information mismatch.  Headers and text do not have the same number."/>        
+		</SMessage>
+		<!-- TRuntimeErrorHandler --> 
+		<SMessage name = "IOException_In_Init">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Unable to call init() on TRuntimeErrorHandler due to an IOException.">
+				<Msg class = "String" header = "IOException Message" text = "{0}"/>            
+			</Msg>        
+		</SMessage>
+		<!-- TDocNode -->
+		<SMessage name = "Cannot_Get_Name_On_IRENode">            
+			<Msg class = "Other" header = "Internal_Error" text = "Can't get Name on IRENode becuase of bad IRENode init">          
+			</Msg>        
+		</SMessage>
+	</Domain>
+</Messages>

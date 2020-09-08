@@ -1,0 +1,51 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--
+# $Id: WmResources.xml,v 1.1.2.4 2004/06/03 21:57:53 kmcafee Exp $
+#
+# Resource nomenclature:
+# The key appears on the left-hand side of the = and the value on the right.  The value is
+# the actual string that is to be fetched.  The key should reflect or resemble the value
+# reasonably, and should only contain the characters [A-Za-z0-9_].  The key should have
+#  as a prefix, and this prefix should NOT be followed by an underscore.
+#
+# The reason for this convention is that the key will typically appear in java source code
+# as a string constant.  As such, the key will be indistinguishable from any other string.
+# By following this convention, it will be simple for a person or a shell script to
+# distinguish a key and an ordinary string constant.
+#
+# We avoid separating the  prefix from the key with an underscore (or any other
+# separator) because doing so would impart a word boundary on that part of the key that
+# would follow the _.  This would make it hard to write scripts to operate on strings that
+# are not keys.
+-->
+<Messages xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "../core/messages.xsd">    
+	<Domain name = "wm">    
+	    
+		<!-- Example Structured Message    
+			<SMessage name = "Message_ID">            
+				<Msg class = "Scope: Other" header = "Message_Category" text = "Text Description: {0}">                
+					<Msg class = "String" header = "Structured Information" text = "value"/>                
+					<Msg class = "String" header = "Structured Information2" text = "value2"/>            
+				</Msg>        
+			</SMessage>        
+        -->
+		        
+		<SMessage name = "Problem_In_Pipeline">            
+			<Msg class = "Other" header = "Configuration_Error" text = "Unexpected Exception while trying to read configuration information from the pipeline.">                          
+				<Msg class = "String" header = "Exception Message" text = "{0}"/>
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "FFD_IO_Exception">            
+			<Msg class = "Other" header = "Configuration_Error" text = "IOException while parsing FFD information">                          
+				<Msg class = "String" header = "Exception Message" text = "{0}"/>
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Replace_Xerces">            
+			<Msg class = "Other" header = "Configuration_Error" text = "You need to replace the xerces.jar that comes with webMethods B2B Server with a new version. Contact Contivo for further support."/>        
+		</SMessage>  
+		<SMessage name = "XML_Validation_Warning">            
+			<Msg class = "Other" header = "Configuration_Error" text = "If you want to turn off input XML document validation against external DTD You need to replace the xerces.jar that comes with webMethods B2B Server with a new version. Contact Contivo for further support."/>        
+		</SMessage>  
+	</Domain>
+</Messages>

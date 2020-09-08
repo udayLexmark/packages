@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">createURL</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgY3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vyc29yKCk7CgpTdHJpbmcgcHJvdG9j
+b2wgPSBudWxsOwpTdHJpbmcgaG9zdCA9IG51bGw7CmludCBwb3J0ID0gLTE7ClN0cmluZyBsb2Nh
+dGlvbiA9IG51bGw7CgppZiAoY3Vyc29yLmZpcnN0KCJwcm90b2NvbCIpKQp7CiAgcHJvdG9jb2wg
+PSAoU3RyaW5nKWN1cnNvci5nZXRWYWx1ZSgpOwp9CgppZiAoY3Vyc29yLmZpcnN0KCJob3N0Iikp
+CnsKICBob3N0ID0gKFN0cmluZyljdXJzb3IuZ2V0VmFsdWUoKTsKfQoKaWYgKGN1cnNvci5maXJz
+dCgibG9jYXRpb24iKSkKewogIGxvY2F0aW9uID0gKFN0cmluZyljdXJzb3IuZ2V0VmFsdWUoKTsK
+fQoKaWYgKGN1cnNvci5maXJzdCgicG9ydCIpKQp7CiAgcG9ydCA9IEludGVnZXIucGFyc2VJbnQo
+KFN0cmluZyljdXJzb3IuZ2V0VmFsdWUoKSk7Cn0KCklEYXRhVXRpbC5wdXQoY3Vyc29yLCAidXJs
+IiwgZ2V0VVJMKHByb3RvY29sLCBob3N0LCBwb3J0LCBsb2NhdGlvbikpOwpjdXJzb3IuZGVzdHJv
+eSgpOw==</value>
+</Values>

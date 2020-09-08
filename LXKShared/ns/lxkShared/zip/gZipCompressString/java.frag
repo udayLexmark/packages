@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">gZipCompressString</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsNClN0cmlu
+ZyBpblN0cmluZyA9IElEYXRhVXRpbC5nZXRTdHJpbmcoIHBpcGVsaW5lQ3Vyc29yLCAiaW5TdHJp
+bmciICk7IA0KIGJ5dGVbXSBpbkJ5dGVzID0gKGJ5dGVbXSkgSURhdGFVdGlsLmdldChwaXBlbGlu
+ZUN1cnNvciwgImluQnl0ZXMiKTsNCgkNClN0cmluZwltb2RlID0gSURhdGFVdGlsLmdldFN0cmlu
+ZyggcGlwZWxpbmVDdXJzb3IsICJtb2RlIiApOw0KdHJ5ew0KaWYobW9kZS5lcXVhbHMoImNvbXBy
+ZXNzIikpew0KCUlEYXRhVXRpbC5wdXQocGlwZWxpbmVDdXJzb3IsICJvdXRCeXRlcyIsIGNvbXBy
+ZXNzKGluU3RyaW5nKSk7DQp9IGVsc2UNCglJRGF0YVV0aWwucHV0KHBpcGVsaW5lQ3Vyc29yLCAi
+b3V0U3RyaW5nIiwgZGVjb21wcmVzcyhpbkJ5dGVzKSk7DQp9Y2F0Y2goRXhjZXB0aW9uIGUpew0K
+CQ0KfQ0KCQ==</value>
+</Values>

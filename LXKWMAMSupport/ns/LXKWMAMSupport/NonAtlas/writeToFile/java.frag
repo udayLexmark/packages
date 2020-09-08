@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">writeToFile</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUKSURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJz
+b3IoKTsKCVN0cmluZwlmaWxlbmFtZSA9IElEYXRhVXRpbC5nZXRTdHJpbmcoIHBpcGVsaW5lQ3Vy
+c29yLCAiZmlsZU5hbWUiICk7CglTdHJpbmcJbWVzc2FnZSA9IElEYXRhVXRpbC5nZXRTdHJpbmco
+IHBpcGVsaW5lQ3Vyc29yLCAiZGF0YSIgKTsKcGlwZWxpbmVDdXJzb3IuZGVzdHJveSgpOwoKQnVm
+ZmVyZWRXcml0ZXIgYncgPSBudWxsOwoKdHJ5IAp7CglidyA9IG5ldyBCdWZmZXJlZFdyaXRlcihu
+ZXcgRmlsZVdyaXRlcihmaWxlbmFtZSwgdHJ1ZSkpOwoJCglidy53cml0ZShtZXNzYWdlKTsKCWJ3
+Lm5ld0xpbmUoKTsKCWJ3LmZsdXNoKCk7Cn0gCmNhdGNoIChJT0V4Y2VwdGlvbiBpb2UpIAp7Cglp
+b2UucHJpbnRTdGFja1RyYWNlKCk7Cn0gCmZpbmFsbHkgCnsgICAgICAgICAgICAgICAgICAgICAg
+IC8vIGFsd2F5cyBjbG9zZSB0aGUgZmlsZQoJaWYgKGJ3ICE9IG51bGwpIAoJdHJ5IAoJewoJCWJ3
+LmNsb3NlKCk7Cgl9IAoJY2F0Y2ggKElPRXhjZXB0aW9uIGlvZTIpIAoJewoJCS8vIGp1c3QgaWdu
+b3JlIGl0Cgl9Cn0gLy8gZW5kIHRyeS9jYXRjaC9maW5hbGx5Cg==</value>
+</Values>

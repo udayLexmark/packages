@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getClassDetails</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgY3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vyc29yKCk7ClN0cmluZyBjbGFzc05h
+bWUgPSAiIjsKU3RyaW5nIGNsYXNzRGV0YWlscyA9ICIiOwoKaWYgKGN1cnNvci5sYXN0KCJjbGFz
+c05hbWUiKSkgewoJY2xhc3NOYW1lID0gKFN0cmluZykgY3Vyc29yLmdldFZhbHVlKCk7Cn0KZWxz
+ZSB7CgljdXJzb3IubGFzdCgpOwoJY3Vyc29yLmluc2VydEFmdGVyKCJlcnJvciIsICJNaXNzaW5n
+IGlucHV0IHBhcmFtZXRlcjogY2xhc3NOYW1lIik7CglyZXR1cm47Cn0gCgp0cnkgewoJY2xhc3NE
+ZXRhaWxzID0gQ2xhc3NEZXRhaWxzLmdldENsYXNzRGV0YWlscyhjbGFzc05hbWUpOwp9CmNhdGNo
+IChFeGNlcHRpb24gZSkgewoJY3Vyc29yLmxhc3QoKTsKCWN1cnNvci5pbnNlcnRBZnRlcigiZXJy
+b3IiLCBlLnRvU3RyaW5nKCkpOwoJcmV0dXJuOwp9CgpjdXJzb3IubGFzdCgpOwpjdXJzb3IuaW5z
+ZXJ0QWZ0ZXIoImNsYXNzRGV0YWlscyIsIGNsYXNzRGV0YWlscyk7CiAK</value>
+</Values>

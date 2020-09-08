@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">moveSourceIfExists</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gcGlwZWxpbmUKSURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJz
+b3IoKTsKCVN0cmluZwlTb3VyY2UgPSBJRGF0YVV0aWwuZ2V0U3RyaW5nKCBwaXBlbGluZUN1cnNv
+ciwgIlNvdXJjZSIgKTsKCVN0cmluZwlPdGhlciA9IElEYXRhVXRpbC5nZXRTdHJpbmcoIHBpcGVs
+aW5lQ3Vyc29yLCAiT3RoZXIiICk7CgoJaWYoU291cmNlICE9IG51bGwpIHsKCQlpZihPdGhlciA9
+PSBudWxsKSAKCQkJSURhdGFVdGlsLnB1dChwaXBlbGluZUN1cnNvciwgIlRhcmdldCIsIFNvdXJj
+ZSk7CgkJIGVsc2UJCQkJCQkKCQkJSURhdGFVdGlsLnB1dChwaXBlbGluZUN1cnNvciwgIlRhcmdl
+dCIsIFNvdXJjZSk7CQkKCX0gZWxzZSB7CgkJaWYoT3RoZXIgIT0gbnVsbCkKCQkJSURhdGFVdGls
+LnB1dChwaXBlbGluZUN1cnNvciwgIlRhcmdldCIsIE90aGVyKTsKCQllbHNlCgkJCUlEYXRhVXRp
+bC5wdXQocGlwZWxpbmVDdXJzb3IsICJUYXJnZXQiLCAiIik7CQkKCX0KcGlwZWxpbmVDdXJzb3Iu
+ZGVzdHJveSgpOwoKCg==</value>
+</Values>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getListSize</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgY3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vyc29yKCk7CmludCBzaXplID0gMDsK
+T2JqZWN0W10gb2JqZWN0QXJyYXkgPSBudWxsOwoKLy9HZXQgdGhlIGxpc3Qgb2JqZWN0IGZyb20g
+dGhlIHBpcGVsaW5lCmlmIChjdXJzb3IuZmlyc3QoImxpc3QiKSkKewogIG9iamVjdEFycmF5ID0g
+KE9iamVjdFtdKWN1cnNvci5nZXRWYWx1ZSgpOwogIC8vR2V0IHRoZSBsZW5ndGggb2YgdGhlIGxp
+c3QKICBpZiAob2JqZWN0QXJyYXkgIT0gbnVsbCkKICB7CiAgICBzaXplID0gb2JqZWN0QXJyYXku
+bGVuZ3RoOwogIH0KICBlbHNlCiAgewogICAgc2l6ZSA9IC0xOwogIH0KfQoKaWYgKGN1cnNvci5m
+aXJzdCgic2l6ZSIpKQp7CiAgY3Vyc29yLnNldFZhbHVlKFN0cmluZy52YWx1ZU9mKHNpemUpKTsK
+fQplbHNlCnsKICBjdXJzb3IuaW5zZXJ0QWZ0ZXIoInNpemUiLFN0cmluZy52YWx1ZU9mKHNpemUp
+KTsKfQpjdXJzb3IuZGVzdHJveSgpOwo=</value>
+</Values>

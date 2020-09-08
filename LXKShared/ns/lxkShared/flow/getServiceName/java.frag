@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">getServiceName</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">Ly8gVGhpcyBzZXJ2aWNlIHdpbGwgcmV0dXJuIHRoZSBjYWxsaW5nIHNlcnZpY2UncyBuYW1lCi8v
+IFVzZSB0aGlzIHNlcnZpY2UgdG8gcmV0cmlldmUgdGhlIG5hbWUgb2YgeW91ciBjdXJyZW50IGZs
+b3cgc2VydmljZQoKLy8gTk9URTogVGhpcyBzZXJ2aWNlIHdpbGwgbm90IHdvcmsgd2hlbiBydW5u
+aW5nIGluIGRlYnVnL3RyYWNlIG1vZGUgKHRocm91Z2ggRGV2ZWxvcGVyKSwKLy8gICAgICAgaXQg
+d2lsbCByZXR1cm46ICJ3bS5zZXJ2ZXIuZmxvdzpzdGVwRmxvdyIKCk5TU2VydmljZSBzZXJ2aWNl
+ID0gU2VydmljZS5nZXRDYWxsaW5nU2VydmljZSgpOwppZiAoc2VydmljZSAhPSBudWxsKSB7CglJ
+RGF0YUN1cnNvciBwaXBlbGluZUN1cnNvciA9IHBpcGVsaW5lLmdldEN1cnNvcigpOwoJSURhdGFV
+dGlsLnB1dCggcGlwZWxpbmVDdXJzb3IsIEdFVFNFUlZJQ0VOQU1FX09VVFBVVFBBUk1fU0VSVklD
+RU5BTUUsIHNlcnZpY2UudG9TdHJpbmcoKSApOwoJcGlwZWxpbmVDdXJzb3IuZGVzdHJveSgpOwp9
+Cg==</value>
+</Values>

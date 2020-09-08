@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">closeDBConnection</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">REJDb25uZWN0aW9uIGRiQ29ubmVjdCA9IG51bGw7ClN0cmluZyAJCSBlcnJvckxpc3QgPSAiIjsK
+CklEYXRhQ3Vyc29yIGN1cnNvciA9IHBpcGVsaW5lLmdldEN1cnNvcigpOwoKaWYgKGN1cnNvci5m
+aXJzdCgiZGJDb25uZWN0aW9uIikpIHsKCWRiQ29ubmVjdCA9IChEQkNvbm5lY3Rpb24pIGN1cnNv
+ci5nZXRWYWx1ZSgpOwoKCXRyeSB7CgkJZGJDb25uZWN0LmNsb3NlQ29ubmVjdGlvbigpOwoJfQoJ
+Y2F0Y2ggKEV4Y2VwdGlvbiBlKSB7CgkJRGVidWcubG9nKDAsICJFcnJvciBjbG9zaW5nIERCIGNv
+bm5lY3Rpb246IEV4Y2VwdGlvbiA9ICIgKyBlLnRvU3RyaW5nKCkpOwoJCWVycm9yTGlzdCA9IGVy
+cm9yTGlzdCArICJFcnJvciBjbG9zaW5nIERCIGNvbm5lY3Rpb246IEV4Y2VwdGlvbiA9ICIgKyBl
+LnRvU3RyaW5nKCk7CgkJaWYgKGVycm9yTGlzdCAhPSAiIikgewoJCQljdXJzb3IuaW5zZXJ0QWZ0
+ZXIoImVycm9ycyIsIGVycm9yTGlzdCk7CgkJCURlYnVnLmxvZygwLCAiZXJyb3JMaXN0ID0gIiAr
+IGVycm9yTGlzdCk7CgkJfQoJfQoKCWN1cnNvci5kZWxldGUoKTsKfQ==</value>
+</Values>

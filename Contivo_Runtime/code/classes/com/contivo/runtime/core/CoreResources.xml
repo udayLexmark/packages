@@ -1,0 +1,623 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--
+# $Id: CoreResources.xml,v 1.1.2.29.4.9.2.3 2007/04/07 07:08:34 wlindsay Exp $
+#
+# Resource nomenclature:
+# The key appears on the left-hand side of the = and the value on the right.  The value is
+# the actual string that is to be fetched.  The key should reflect or resemble the value
+# reasonably, and should only contain the characters [A-Za-z0-9_].  The key should have
+#  as a prefix, and this prefix should NOT be followed by an underscore.
+#
+# The reason for this convention is that the key will typically appear in java source code
+# as a string constant.  As such, the key will be indistinguishable from any other string.
+# By following this convention, it will be simple for a person or a shell script to
+# distinguish a key and an ordinary string constant.
+#
+# We avoid separating the  prefix from the key with an underscore (or any other
+# separator) because doing so would impart a word boundary on that part of the key that
+# would follow the _.  This would make it hard to write scripts to operate on strings that
+# are not keys.
+-->
+<Messages xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "./messages.xsd">    
+	<include src = "com/contivo/util/UtilResources.xml"/>    
+	<include src = "com/contivo/runtime/common/CommonResources.xml"/>    
+	<include src = "com/contivo/runtime/dom/DomResources.xml"/>   
+	<include src = "com/contivo/runtime/wm/WmResources.xml"/>
+	<include src = "com/contivo/runtime/ffd/FFDResources.xml"/>
+	<include src = "com/contivo/udm/coremodel/CoremodelResources.xml"/>
+	<Domain name = "core"> 
+		<!-- Example Structured Message    
+			<SMessage name = "Message_ID">            
+				<Msg class = "Error" header = "Message_Category" text = "Text Description: {0}">                
+					<Msg class = "String" header = "Structured Information" text = "value"/>                
+					<Msg class = "String" header = "Structured Information2" text = "value2"/>            
+				</Msg>        
+			</SMessage>        
+        -->
+		<SMessage name = "No_Message_In_Resource">            
+			<Msg class = "Other" header = "Internal_Error" text = "The following message could not be found in the resource bundle">                          
+				<Msg class = "String" header = "Message ID" text = "{0}"/>
+				<Msg class = "String" header = "Resource Bundle Domain" text = "{1}"/>
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Call_Command_Failure_Exception">            
+			<Msg class = "Other" header = "Call_Command_Error" text = "Failed to execute because of exception {0}">                          
+				<Msg class = "String" header = "Exception Message" text = "{0}"/>
+			</Msg>        
+		</SMessage>                        
+		<SMessage name = "Structured_Exception_Default_Message">            
+			<Msg class = "Other" header = "Internal_Error" text = "Default Message for TStructuredException">                          
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Call_Command_Interruption_Failure">            
+			<Msg class = "Other" header = "Call_Command_Error" 
+						text = "Interrupted Exception! Failed to execute call command because: {0}">                
+				<Msg class = "String" header = "Exception Message" text = "{0}"/>            
+			</Msg>        
+		</SMessage>        
+		<SMessage name = "Call_Command_Timeout_Failure">            
+			<Msg class = "Other" header = "Call_Command_Error" 
+					text = "Call command Error: time-out occurred"/>        
+		</SMessage>        
+		<SMessage name = "Call_Command_Execution_Error">            
+			<Msg class = "Other" header = "Call_Command_Error"
+						 text = "Error encountered while executing call command: {0}">                
+				<Msg class = "String" header = "Error Message" text = "{0}"/>            
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Call_Java_Bad_Signature">            
+			<Msg class = "Other" header = "Call_Java_Error" 
+					text = "Method {0} must throw TRuntimeEngineException and return String">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>            
+			</Msg>        
+		</SMessage>         
+		<SMessage name = "Call_Java_Bad_Signature">            
+			<Msg class = "Other" header = "Call_Java_Error" text = "Call Java Method {0} must throw TRuntimeEngineException and return String">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>            
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Call_Java_Timeout">            
+			<Msg class = "Other" header = "Call_Java_Error" 
+						text = "Call Java Method {0} timed out during execution">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>            
+			</Msg>        
+		</SMessage>   
+		<SMessage name = "Call_Java_User_Exception">            
+			<Msg class = "Other" header = "Call_Java_Error" text = "Call Java Method {0} threw an exception during execution">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>    
+				<Msg class = "Exception" header = "Exception Message" text = "{1}"/>            
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Call_Java_Other_Exception">            
+			<Msg class = "Other" header = "Call_Java_Error" text = "Call Java Method {0} encountered an exception during execution">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>    
+				<Msg class = "Exception" header = "Exception Message" text = "{0}"/>            
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Call_Java_Class_Not_Found">            
+			<Msg class = "Other" header = "Call_Java_Error" 
+						text = "Call Java Method {0} was not found on the classpath">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>            
+			</Msg>        
+		</SMessage>        
+		<!-- KJM: Parse 2 --> 		 	  
+		<SMessage name = "Call_Java_Class_Bad_Static_Init">            
+			<Msg class = "Other" header = "Call_Java_Error" 
+				text = "Call Java Method {0} encountered and error in the static initializer in class">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>            
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Call_Java_No_Default_Constructor">            
+			<Msg class="Other" header = "Call_Java_Error" 
+					text = "Call Java Method {0} does not have a no parameter constructor">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>            
+			</Msg>            
+		</SMessage>        
+		<SMessage name = "Call_Java_Method_Not_Found">            
+			<Msg class="Other" header = "Call_Java_Error" 
+						text = "Call Java Method {0} cannot be found in class {1}. The signature of the method may be incorrect">                    
+				<Msg class = "String" header = "Java Method" text = "{0}"/>    
+				<Msg class = "String" header = "Java Class" text = "{1}"/>
+				<Msg class = "String" header = "Exception Message" text = "{2}"/>     
+			</Msg>           
+		</SMessage>        	  
+		<SMessage name = "Call_Java_Security">            
+			<Msg class="Other" header = "Call_Java_Error" 
+							text = "Call Java Method {0} threw a SecurityException">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>  
+				<Msg class = "String" header = "Java Class" text = "{1}"/>  
+				<Msg class = "Exception" header = "Security Exception" text = "{1}"/>            
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "Call_Java_No_Invoke">            
+			<Msg class="Other" header = "Call_Java_Error" 
+						text = "Call Java Method {0} could not be invoked because of {1}">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>    
+				<Msg class = "String" header = "Exception" text = "{1}"/>                      
+			</Msg>  
+		</SMessage>  
+		<SMessage name = "Call_Java_No_Load">            
+			<Msg class="Other" header = "Call_Java_Error" 
+					text = "Call Java Method {0} could not load class {1} because of {2}">                
+				<Msg class = "String" header = "Java Method" text = "{0}"/>    
+				<Msg class = "String" header = "Java Class" text = "{1}"/>    
+				<Msg class = "Exception" header = "Exception" text = "{2}"/>       
+			</Msg>     
+		</SMessage> 
+		<SMessage name = "Call_Java_No_Init">            
+			<Msg class="Other" header = "Call_Java_Error" 
+					text = "Call Java class {0} could not call the default constructor because of {1}">                   
+				<Msg class = "String" header = "Java Class" text = "{0}"/>    
+				<Msg class = "Exception" header = "Exception" text = "{1}"/>       
+			</Msg>     
+		</SMessage>
+		<SMessage name = "Call_Java_Bad_Init">            
+			<Msg class="Other" header = "Call_Java_Error" 
+					text = "Call Java class {0}: An exception occurred while invoking the default constructor!">                   
+				<Msg class = "String" header = "Java Class" text = "{0}"/>    
+				<Msg class = "Exception" header = "Exception" text = "{1}"/>       
+			</Msg>     
+		</SMessage>
+		<SMessage name = "Extract_Command_Invalid_Length">    
+			<Msg class="Other" header = "Contivo_Rule_Error" 
+					text = "Command extract, invalid extraction length {0}.">
+				<Msg class = "String" header = "Length" text = "{0}"/> 
+			</Msg>
+		</SMessage>  
+		<SMessage name = "Extract_Command_Invalid_Start_Position">    
+			<Msg class="Other" header = "Contivo_Rule_Error" 
+								text = "Command extract, invalid start position {0}.">
+				<Msg class = "String" header = "Start Position" text = "{0}"/> 
+			</Msg>
+		</SMessage>        
+		<SMessage name = "Class_Not_Found">    
+			<Msg class="Other" header = "Configuration_Error" 
+				text = "Could not find class {0}.">
+				<Msg class = "String" header = "Class" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "XML_Configuration_File_Unknown_Element">    
+			<Msg class="Other" header = "Configuration_Error" 
+						text = "Unknown Element {0} found while parsing the XML Configuration File.">
+				<Msg class = "String" header = "Element" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "XML_Configuration_Transform_Att_Missing">    
+			<Msg class="Other" header = "Configuration_Error" 
+				text = "Invalid XML Config file.  The Transform/@name attribute is missing.">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Field_Has_Unknown_Type">    
+			<Msg class = "Both" header = "Internal_Error" text = "Field {0} has an unknown type with value {1}.">
+				<Msg class = "String" header = "Field Name" text = "{0}"/>
+				<Msg class = "String" header = "Field Value" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Java_File_Not_Found_On_ClassPath">    
+			<Msg class = "Other" header = "Configuration_Error" text = "Java file could not be found on the classpath.">
+				<Msg class = "String" header = "File Name" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Regex_Input_Not_Match_Content">    
+			<Msg class = "Input" header = "Input_Data_Error" text = "Regex processing: Input data does not match content model at {0}.">
+				<Msg class = "String" header = "Source Path" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Bad_Input_Tree_Type">    
+			<Msg class = "Other" header = "Internal_Error" text = "Internal Input Node {0} has invalid IRENode type {1}.">
+				<Msg class = "String" header = "Source Name" text = "{0}"/>
+				<Msg class = "String" header = "Node type" text = "{1}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Bad_Object_Type">    
+			<Msg class = "Other" header = "Internal_Error" text = "Qualifier Object: {0} must be a Number or a String for comparison.">
+				<Msg class = "String" header = "Qualifier Object Name" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Repeated_Virtual_Field"> 
+			<Msg class = "Output" header = "Output_Data_Error" text = 
+					"Repeated virtual field encountered. The field has been discarded.">
+				<Msg class = "String" header = "Output Field" text = "{0}"/>
+				<Msg class = "String" header = "Qualifier" text = "{1}"/>
+				<Msg class = "String" header = "Value" text = "{2}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "No_Slot_For_Virtual_Field"> 		    
+			<Msg class = "Output" header = "Output_Data_Warning" text = "No available slot on the target group to add this virtual field.">
+				<Msg class = "String" header = "Output Field" text = "{0}"/>
+				<Msg class = "String" header = "Qualifier" text = "{1}"/>
+				<Msg class = "String" header = "Value" text = "{2}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Output_Data_Occurs_Less_Than_Min_Occurs"> 
+			<Msg class = "Output" header = "Iteration_Error" text = "{0} occurs fewer times than its minimum number of occurrences.">
+				<Msg class = "String" header = "Output Type" text = "{0}"/>
+				<Msg class = "String" header = "Output Path" text = "{1}"/>
+				<Msg class = "String" header = "Minimum Target Iteration Count" text = "{2}"/>  
+				<Msg class = "String" header = "Actual Iteration Count" text = "{3}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Fatal_Runtime_Exception">     
+			<Msg class = "Other" header = "Internal_Error" text = "Fatal Runtime Exception with no Structured Message has been found.">
+				<Msg class = "String" header = "Exception message" text = "{0}"/>  
+			</Msg>
+		</SMessage>	    
+		<SMessage name = "Empty_Tag_Creation_For_Output"> 	    
+			<Msg class = "Output" header = "Output_Data_Warning" text = "An empty tag may have been created for target: {0}.">
+				<Msg class = "String" header = "Output Path" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Source_Field_Occur_Less_Than_Min_Occurs">     
+			<Msg class = "Input" header = "Iteration_Error" text = "Data Error: {0} occurs fewer times than its minimum number of occurrences.">
+				<Msg class = "String" header = "Item Type" text = "{0}"/> 
+				<Msg class = "String" header = "Input Path" text = "{1}"/> 
+				<Msg class = "String" header = "Source Minimum Iteration" text = "{2}"/>    
+				<Msg class = "String" header = "Source Actual Iteration" text = "{3}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Source_Field_Occurs_More_Than_Max_Occurs">     
+			<Msg class = "Input" header = "Iteration_Error" text = "Data Error: {0} occurs more times than its maximum number of occurrences.  The extra iterations will be discarded.">
+				<Msg class = "String" header = "Item Type" text = "{0}"/> 
+				<Msg class = "String" header = "Input Path" text = "{1}"/> 
+				<Msg class = "String" header = "Source Maximum Iteration" text = "{2}"/>    
+				<Msg class = "String" header = "Source Actual Iteration" text = "{3}"/>    
+			</Msg>
+		</SMessage>
+		<!-- TMapper.java -->
+		<SMessage name = "Cannot_generate_rule_trace"> 		    
+			<Msg class = "Other" header = "Internal_Warning" text = "The java transform is not configured to generate rule trace. The &quot;generate rule command trace&quot; option must be enabled when generating the transform file.">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Null_Output_Tree"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Contivo Runtime Engine, Initialization failure: Null output tree.">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Validation_Error"> 
+			<Msg class = "Other" header = "Internal_Error" text = "Unmanaged Validation Error">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "ID_Outside_Range"> 		    
+			<Msg class = "Both" header = "Internal_Error" text = "Object ID outside range: {0}">
+				<Msg class = "String" header = "Object ID" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "No_Locate_Source_Field"> 		    
+			<Msg class = "Both" header = "Internal_Error" text = "Failed to locate source field with id {0} while creating target field {1}.">
+				<Msg class = "String" header = "Source Field ID" text = "{0}"/>
+				<Msg class = "String" header = "Target Field Name" text = "{1}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Error_Constructing_Source_FFD_Object"> 		    
+			<Msg class = "Input" header = "Internal_Error" text = "Unable to construct FFD object for source interface {0}.">
+				<Msg class = "String" header = "Source" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Error_Constructing_Target_FFD_Object"> 		    
+			<Msg class = "Input" header = "Internal_Error" text = "Unable to construct FFD object for the target.">
+			</Msg>
+		</SMessage>
+		<SMessage name = "Invalid_Type_Presentation"> 		    
+			<Msg class = "Other" header = "Internal_Error" text = "The combination of type {0} and presentation {1} is invalid in field {2}.">
+			</Msg>
+		</SMessage>
+		<!-- TReports.java  -->		 
+		<SMessage name = "Cannot_generate_report"> 
+			<Msg class = "Other" header = "Internal_Warning" text = "Unable to generate any reports because the transform control is not set.">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Cannot_generate_source_report"> 
+			<Msg class = "Input" header = "Internal_Warning" text = "Unable to build source structure report because no root is registered.">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Cannot_generate_target_report"> 		    
+			<Msg class = "Output" header = "Internal_Warning" text = "Unable to build target structure report because no root is registered.">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Cannot_generate_looping_report"> 		    
+			<Msg class = "Both" header = "Internal_Warning" text = "Unable to build looping assocation report because no root is registered.">    
+			</Msg>
+		</SMessage>
+		<!-- TSourceField-->
+		<SMessage name = "Source_Number"> 
+			<Msg class = "Other" header = "Internal_Warning" text = "source number {0}"/>
+		</SMessage>
+		<SMessage name = "Value_Cached"> 
+			<Msg class = "Other" header = "Internal_Warning" text = "value (cached) = {0}"/>
+		</SMessage>
+		<SMessage name = "Source_Field_Type_Mismatch"> 		    
+			<Msg class = "Input" header = "Input_Data_Error" text = "Source Field {0} registered as having unknown type with index {1} and has runtime type {2}.">
+				<Msg class = "String" header = "Input Path" text = "{0}"/>
+				<Msg class = "String" header = "Source Field Type Index" text = "{1}"/>
+				<Msg class = "String" text = "{2}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Source_Field_Expect_Type_Has_Type"> 		    
+			<Msg class = "Input" header = "Input_Data_Error" text = "Source Field {0} was expected to be of type {1} but was instead of type {2}.">
+				<Msg class = "String" header = "Source Field Name" text = "{0}"/>
+				<Msg class = "String" header = "Source Field Expected Type" text = "{1}"/>
+				<Msg class = "String" header = "Runtime Type" text = "{2}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Source_Field_Cannot_Be_Numeric"> 		    
+			<Msg class = "Input" header = "Input_Data_Error" text = "Source Field {0} cannot be fetched as a numeric value. Its declared type was &quot;{1}&quot;.">
+				<Msg class = "String" header = "Source Field Name" text = "{0}"/>
+				<Msg class = "String" header = "Source Field Expected Type" text = "{1}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Source_Field_Cannot_Be_Converted_To_Number"> 
+			<Msg class = "Input" header = "Input_Data_Error" text = "Source Field {0} was unable to be converted to a number.  Its declared type was {1} and had value &quot;{2}&quot;.">
+				<Msg class = "String" header = "Source Field Name" text = "{0}"/>
+				<Msg class = "String" header = "Source Field Declared Type" text = "{1}"/>
+				<Msg class = "String" header = "Input Value" text = "{2}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "IllegalArgumentException">
+			<Msg class = "Other" header = "Internal_Error" text = "An Illegal Argument Exception was encountered.">
+				<Msg class = "String" header = "Exception Message" text = "{0}"/>  
+			</Msg>
+		</SMessage>
+		<SMessage name = "InvocationTargetException">
+			<Msg class = "Other" header = "Internal_Error" text = "An Invocation Target Exception was encountered.">
+				<Msg class = "String" header = "Exception Message" text = "{0}"/>  
+			</Msg>
+		</SMessage>
+		<SMessage name = "UnknownException">
+			<Msg class = "Other" header = "Internal_Error" text = "An Unknown Exception was encountered.">
+				<Msg class = "String" header = "Exception Message" text = "{0}"/>  
+				<Msg class = "String" header = "Exception Stack" text = "{1}"/>  
+			</Msg>
+		</SMessage>
+		<SMessage name = "Startup_Failure">
+			<Msg class = "Other" header = "Internal_Error" text = "The following startup error was encountered: {0}">
+				<Msg class = "String" header = "Startup Failure Message" text = "{0}"/>  
+			</Msg>
+		</SMessage>
+		<SMessage name = "Invalid_Primitive_Type">
+			<Msg class = "Both" header = "Internal_Error" text = "Field {0} has an invalid primitive data type: {1}">
+				<Msg class = "String" header = "Field Name" text = "{0}"/>  
+				<Msg class = "String" header = "Runtime Type" text = "{1}"/>  
+			</Msg>
+		</SMessage>
+		<SMessage name = "Input_Value_Not_A_Permitted_Value"> 
+			<Msg class = "Input" header = "Input_Data_Error" text = "Input value does not match any permitted value. Source is discarded.">
+				<Msg class = "String" header = "Source Path" text = "{0}"/>
+				<Msg class = "String" header = "Target Path" text = "{1}"/>
+				<Msg class = "String" header = "Source Value" text = "{2}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Source_Number__"> 
+			<Msg class = "Other" header = "Internal_Resource" text = "Source number {0}">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Value__"> 
+			<Msg class = "Other" header = "Internal_Resource" text = "Value = {0}">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Source_String__"> 
+			<Msg class = "Other" header = "Internal_Resource" text = "Source String {0}">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Value__Quot"> 
+			<Msg class = "Other" header = "Internal_Resource" text = "value = &quot;{0}&quot;">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Value__Cached"> 
+			<Msg class = "Other" header = "Internal_Resource" text = "value (cached) = {0}">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Value__Cached_Quot"> 
+			<Msg class = "Other" header = "Internal_Resource" text = "value (cached) = &quot;{0}&quot;">    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Source_Field_Has_Null_Value"> 		    
+			<Msg class = "Input" header = "Input_Data_Error" text = "Source Field {0} expected to be of type {1} but instead a null value was fetched.">
+				<Msg class = "String" header = "Source Name" text = "{0}"/>
+				<Msg class = "String" header = "Source Type" text = "{1}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Source_Field_Empty_Tag"> 
+			<Msg class = "Input" header = "Input_Data_Error" text = "Source Field is an empty tag.">
+			</Msg>
+		</SMessage>
+		<SMessage name = "QName_Colon_Wrong_Place"> 
+			<Msg class = "Input" header = "Input_Data_Error" text = "The QName has the colon in an invalid location.">
+				<Msg class = "String" header = "Source Value" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "QName_Unknown_Prefix"> 
+			<Msg class = "Input" header = "Input_Data_Error" text = "The prefix of a QName could not be resolved.">
+				<Msg class = "String" header = "Prefix" text = "{0}"/>    
+				<Msg class = "String" header = "Source Value" text = "{1}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "QName_Prefix_Starts_With_XML"> 
+			<Msg class = "Input" header = "Input_Data_Error" text = "The prefix of a QName can not start with the letters x or X, followed by m or M, followed by l or L.">
+				<Msg class = "String" header = "Prefix" text = "{0}"/>    
+				<Msg class = "String" header = "Source Field" text = "{1}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Cannot_Get_QName_URL"> 
+			<Msg class = "Input" header = "Input_Data_Error" text = "Unable to get the URL for a QName field value from this input data source.">
+				<Msg class = "String" header = "Prefix" text = "{0}"/>    
+				<Msg class = "String" header = "Message" text = "{1}"/>    
+			</Msg>
+		</SMessage>
+		<!-- TTargetField -->		 
+		<SMessage name = "Output_Data_Truncated"> 
+			<Msg class = "Output" header = "Output_Data_Warning" text = "Truncation at {0} when the data was copied to target">
+				<Msg class = "String" header = "Output Path" text = "{0}"/>
+				<Msg class = "String" header = "Value Before Truncation" text = "{1}"/>
+				<Msg class = "String" header = "Value After Truncation" text = "{2}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Target_field_result">
+			<Msg class = "Output" header = "Internal_Resource" text = "Target field result"/>     
+		</SMessage>
+		<SMessage name = "Field_Result"> 	    
+			<Msg class = "Output" header = "Internal_Resource" text = "Target field result &quot;{0}&quot;">     
+				<Msg class = "String" header = "Target Result" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Target_Field_Result_Error"> 	    
+			<Msg class = "Output" header = "Output_Data_Error" text = "Error in getting output for target field.">     
+				<Msg class = "String" header = "Output Path" text = "{0}"/>
+				<Msg class = "String" header = "Detailed Error Message" text = "{1}"/>
+			</Msg>
+		</SMessage>
+		<SMessage name = "Target_Field_Infinite_Error"> 	    
+			<Msg class = "Output" header = "Output_Data_Error" text = "The target field had an infinite value, possibly due to a divide by zero error.">     
+				<Msg class = "String" header = "Output Path" text = "{0}"/>
+				<Msg class = "String" header = "Target Value" text = "{1}"/>
+			</Msg>
+		</SMessage>
+		<SMessage name = "Output_Binary_Conversion_Error"> 		    
+			<Msg class = "Output" header = "Output_Data_Error" text = "Unable to convert field value {0} to {1} for field {2}">    
+				<Msg class = "String" header = "Value Before Conversion" text = "{0}"/>    
+				<Msg class = "String" header = "Data Type" text = "{1}"/>    
+				<Msg class = "String" header = "Output Path" text = "{2}"/>
+				<Msg class = "String" header = "Detailed Error Message" text = "{3}"/>
+			</Msg>
+		</SMessage>
+		<SMessage name = "Error_Rule_Processing"> 
+			<Msg class = "Output" header = "Output_Data_Error" text = "Error in rule processing">     
+				<Msg class = "String" header = "Exception Message" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Failure_To_Invoke_Method"> 
+			<Msg class = "Output" header = "Output_Data_Error" text = "Failed to invoke the transform method for target field {0}, id = {1}, due to {2}.">     
+				<Msg class = "String" header = "Target Field" text = "{0}"/>     
+				<Msg class = "String" header = "Target ID" text = "{1}"/>  
+				<Msg class = "String" header = "Exception Message" text = "{2}"/>  
+			</Msg>
+		</SMessage>
+		<SMessage name = "Exception_Default_Rule_Processing"> 
+			<Msg class = "Output" header = "Output_Data_Error" text = "Error in default rule processing">     
+				<Msg class = "String" header = "Exception Message" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<!-- TTransformControl -->
+		 
+		<SMessage name = "Bad_Iteration_Slot"> 
+			<Msg class = "Other" header = "Iteration_Error" text = "Attempted to fetch iteration slot {0} but the maximum slot number is {1}.">     
+				<Msg class = "String" header = "Iteration Slot" text = "{0}"/>     
+				<Msg class = "String" header = "Max Slot Number" text = "{1}"/>  
+			</Msg>
+		</SMessage>
+		<SMessage name = "Bad_Output_Type_Presentation"> 		    
+			<Msg class = "Output" header = "Output_Data_Error" text = "Argument to this rule doesn't have the correct type/presentation.">     
+				<Msg class = "String" header = "Target Field" text = "{0}"/>     
+				<Msg class = "String" header = "Expected Type" text = "{1}"/>     
+				<Msg class = "String" header = "Expected Presentation" text = "{2}"/>     
+				<Msg class = "String" header = "Argument" text = "{3}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Date_Difference_Bad_Presentation"> 
+			<Msg class = "Output" header = "Output_Data_Error" text = "The presentation of the argument for DateDifference cannot be converted into YYYYMMDD format.">    
+				<Msg class = "String" header = "Field Name" text = "{0}"/>
+			</Msg>
+		</SMessage>
+		<SMessage name = "Date_Difference_Bad_Presentation_2"> 
+			<Msg class = "Output" header = "Output_Data_Error" text = "The argument for DateDifference cannot be converted into YYYYMMDD format, it may not be a date or may have wrong presentation.">    
+				<Msg class = "String" header = "Field Name" text = "{0}"/>
+			</Msg>  
+		</SMessage>
+		<SMessage name = "Top_Level_Record_Not_Found"> 		    
+			<Msg class = "Both" header = "Internal_Error" text = "Top-level {0} record&quot;{1}&quot; not found in {2} Values.">
+				<Msg class = "String" header = "Source Or Target" text = "{0}"/>
+				<Msg class = "String" header = "Input Or Output" text = "{1}"/>    
+			</Msg>
+		</SMessage>  
+		<!-- TTransformControl -->
+		<SMessage name = "Default_Report_Message"> 
+			<Msg class = "Other" header = "Internal_Resource" text = "Report {0} : {1}"> 
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Default_Error_Message"> 
+			<Msg class = "Other" header = "Call_Java_Error" text = "Error {0} : {1}">   
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Default_Warning_Message"> 
+			<Msg class = "Other" header = "Call_Java_Warning" text = "Warning {0} : {1}">
+			</Msg>
+		</SMessage> 
+		<SMessage name = "Call_Java_Returned_Null">
+			<Msg class = "Both" header = "Call_Java_Warning" text = "Call Java Method {0} returned null.">
+				<Msg class = "String" header = "Java Method" text = "{0}"/>
+			</Msg>
+		</SMessage> 
+   		<!-- Command Exceptions -->
+		<SMessage name = "User_Fatal_Error">             
+			<Msg class = "Output" header = "Custom_Error" text = "User Command Fatal Error: {0}">       
+				<Msg class = "String" header = "Text" text = "{0}"/>    
+				<Msg class = "String" header = "Output Path" text = "{1}"/>            
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "User_Error_Message">             
+			<Msg class = "Output" header = "Custom_Error" text = "User Command Error: {0}">       
+				<Msg class = "String" header = "Text" text = "{0}"/>    
+				<Msg class = "String" header = "Output Path" text = "{1}"/>            
+			</Msg>        
+		</SMessage>  
+		<SMessage name = "User_Warning_Message">             
+			<Msg class = "Output" header = "Custom_Warning" text = "User Command Warning: {0}">       
+				<Msg class = "String" header = "Text" text = "{0}"/>    
+				<Msg class = "String" header = "Output Path" text = "{1}"/>            
+			</Msg>        
+		</SMessage>  			
+		<!-- TXMLOutputTree -->
+		<SMessage name = "Exception_Writing_Output"> 		    
+			<Msg class = "Output" header = "Output_Data_Error" text = "Exception &quot;{0}&quot; encountered generating output.">    
+				<Msg class = "String" header = "Error Message" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "Exception_Writing_Output_Field"> 		    
+			<Msg class = "Output" header = "Output_Data_Error" text = "Exception &quot;{0}&quot; encountered generating output for field {1}.">    
+				<Msg class = "String" header = "Error Message" text = "{0}"/>    
+				<Msg class = "String" header = "Field Name" text = "{1}"/>    
+			</Msg>
+		</SMessage>
+		<!-- Call, but is not user visible. -->
+		<SMessage name = "Bad_Method_Call_Command_Timed_Out">
+			<Msg class = "Other" header = "Internal_Error" text = "Method {0} is not implemented if the call command has timed out.">       
+				<Msg class = "String" header = "Method" text = "{0}"/>            
+			</Msg>        
+		</SMessage>
+		<!-- TInputFieldReader -->
+		<SMessage name = "Expected_Repeated_Got_Instance"> 		    
+			<Msg class = "Input" header = "Input_Data_Error" text = "Internal error: Logical hierarchy node {0} returned an instance, not repeated data.">
+			</Msg>
+		</SMessage>
+		<SMessage name = "Logical_Hierarchy_ID_Missing"> 		    
+			<Msg class = "Input" header = "Input_Data_Error" text = "Unable to locate the logical hierarchy ID field for {0}.">
+			</Msg>
+		</SMessage>
+		<SMessage name = "Logical_Hierarchy_Parent_ID_Missing"> 		    
+			<Msg class = "Input" header = "Input_Data_Error" text = "Unable to insert {0} into the correct place in the logical hierarchy, because the parent ID field had a value and did not match a parent group's ID.">
+			</Msg>
+		</SMessage>
+		<SMessage name = "Exception_Organizing_Logical_Hierarchy"> 		    
+			<Msg class = "Output" header = "Output_Data_Error" text = "Exception &quot;{0}&quot; encountered while organizing the logical hierarchy for {1}.">    
+				<Msg class = "String" header = "Error Message" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<!-- TInternalOutputTree -->
+		<SMessage name = "Cannot_Put_QName"> 
+			<Msg class = "Input" header = "Output_Data_Error" text = "Unable to put a QName field value to this output data sink.">
+				<Msg class = "String" header = "QName" text = "{0}"/>    
+				<Msg class = "String" header = "Message" text = "{1}"/>    
+			</Msg>
+		</SMessage>
+		<!-- Transform generation only, no effect on the runtime -->
+		<SMessage name = "Subtype_Groups_Not_Supported"> 
+			<Msg class = "Other" header = "Configuration_Error" text = "Subtype groups are not supported by this transform generator.">
+				<Msg class = "String" header = "Field" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+		<SMessage name = "QName_Not_Supported"> 
+			<Msg class = "Other" header = "Configuration_Error" text = "QName fields are not supported by this transform generator.">
+				<Msg class = "String" header = "Field" text = "{0}"/>    
+			</Msg>
+		</SMessage>
+	</Domain>
+</Messages>

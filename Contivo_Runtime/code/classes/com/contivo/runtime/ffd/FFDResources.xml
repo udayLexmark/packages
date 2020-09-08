@@ -1,0 +1,515 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!--
+# $Id: FFDResources.xml,v 1.1.2.6.8.1.2.2.4.1 2006/09/08 21:17:24 kmcafee Exp $
+#
+# Resource nomenclature:
+# The key appears on the left-hand side of the = and the value on the right.  The value is
+# the actual string that is to be fetched.  The key should reflect or resemble the value
+# reasonably, and should only contain the characters [A-Za-z0-9_].  The key should have
+#  as a prefix, and this prefix should NOT be followed by an underscore.
+#
+# The reason for this convention is that the key will typically appear in java source code
+# as a string constant.  As such, the key will be indistinguishable from any other string.
+# By following this convention, it will be simple for a person or a shell script to
+# distinguish a key and an ordinary string constant.
+#
+# We avoid separating the  prefix from the key with an underscore (or any other
+# separator) because doing so would impart a word boundary on that part of the key that
+# would follow the _.  This would make it hard to write scripts to operate on strings that
+# are not keys.
+-->
+<Messages xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation = "./messages.xsd">
+    <Domain name = "ffd">
+        <!-- Example Structured Message
+            <SMessage name = "Message_ID">
+                <Msg class = "Error" header = "Message_Category" text = "Text Description: {0}">
+                    <Msg class = "String" header = "Structured Information" text = "value"/>
+                    <Msg class = "String" header = "Structured Information2" text = "value2"/>
+                </Msg>
+            </SMessage>
+        -->
+        <SMessage name = "Tree_Field_IRENode_Has_No_Parent">
+            <Msg class = "Other" header = "Internal_Error" text = "The IRENode {0} has no parent, and cannot generate XPath information.">
+                <Msg class = "String" header = "IRENode Name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "No_XPath_Bad_IRENode_Object_Type">
+            <Msg class = "Other" header = "Internal_Error" text = "Could Not calculate XPath in IRENode due to unknown IRENode Object Type.">
+                <Msg class = "String" header = "Object Type" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Pop_Mark_Out_Of_Range">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Ran out of marks in ModeStream.popMark(). Current byte offset at input stream: {0}">
+                <Msg class = "String" header = "Current Byte Offset" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Flush_Mark_Out_Of_Range">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Ran out of marks in ModeStream.flushMark(). Current byte offset at input stream: {0}">
+                <Msg class = "String" header = "Current Byte Offset" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Filter_Pattern_Illegal_Char">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Syntax error in filter pattern. Filter pattern: {0}">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unbalanced_Binding">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter pattern {0} has unbalanced binding delimiters">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Filter_Pattern_Empty">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "One of the filter has empty pattern.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Filter_Pattern_Missing">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "One of the filter has no pattern.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Filter_Value_Missing">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "One of the filter has no pattern.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Invalid_Character_Class">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter pattern {0} is malformed with invalid character class.">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Invalid_Char_Range">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter pattern {0} is malformed with invalid character range.">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unterminated_Char_Range">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter pattern {0} is malformed with unterminated character range.">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Missing_Character_Class_Enclosing_Tag">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter pattern {0} is malformed with missing character class enclosing tag.">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Nested_Binding">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter pattern {0} is malformed with nested binding.">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Backslash_At_Pattern_End">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter patten {0} is malformed with backslash at the end.">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Invalid_Hex_Char_In_Pattern">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter pattern {0} is malformed with invalid hex character constant.">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Backslash_At_Value_End">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter replacement value {0} is malformed with backslash at the end.">
+                <Msg class = "String" header = "Filter replacement value" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Invalid_Hex_Char_In_Value">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter replacement value {0} is malformed with invalid hex character constant.">
+                <Msg class = "String" header = "Filter replacement value" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Binding_Reference">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter replacement value {0} has illegal binding reference. Pattern has only {1} bindings.">
+                <Msg class = "String" header = "Filter replacement value" text = "{0}"/>
+                <Msg class = "String" header = "Filter pattern binding number" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_State_In_Regex_Match">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal state in filter pattern match. Filter pattern: {0}">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Miltiple_End_Binding_Steps">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Filter pattern has multiple end of binding steps. Filter pattern: {0}">
+                <Msg class = "String" header = "Filter pattern" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Boolean_Constant">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal boolean constant {0} specified for attribute @{1}">
+                <Msg class = "String" header = "Boolean value" text = "{0}"/>
+                <Msg class = "String" header = "Attribute name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Int_Constant">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal int constant {0} specified for attribute @{1}">
+                <Msg class = "String" header = "int value" text = "{0}"/>
+                <Msg class = "String" header = "Attribute name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_String_Constant">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal String constant {0} specified for attribute @{1}">
+                <Msg class = "String" header = "String value" text = "{0}"/>
+                <Msg class = "String" header = "Attribute name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Hex_Constant">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal Hex constant {0} specified for attribute @{1}">
+                <Msg class = "String" header = "Hex constant value" text = "{0}"/>
+                <Msg class = "String" header = "Attribute name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Octal_Constant">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal Octal constant {0} specified for attribute @{1}">
+                <Msg class = "String" header = "Octal constant value" text = "{0}"/>
+                <Msg class = "String" header = "Attribute name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Syntex_Undefined">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "No Syntax defined for group {0}.">
+                <Msg class = "String" header = "Group name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_File_Attribute">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal attribute {0} for root element &lt;File&gt;.">
+                <Msg class = "String" header = "Attribute name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Group_Attribute">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal attribute {0} for Group element.">
+                <Msg class = "String" header = "Attribute name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Length_Attribute">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal attribute {0} for Length element.">
+                <Msg class = "String" header = "Attribute name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Literal_Attribute">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal attribute {0} for Literal element.">
+                <Msg class = "String" header = "Attribute name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Literal_Attribute_Combination">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Attributes bindvar and value are defined at the same time for a literal element.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Literal_Attribute_Missing_Value">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "A Literal element misses the value attribute.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Undefined_Syntex_Referenced">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Undefined syntex {0} referenced.">
+                <Msg class = "String" header = "Referenced syntax" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Peek_Attribute">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal attribute {0} for Peek element.">
+                <Msg class = "String" header = "Attribute name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Peek_Missing_Literal">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "A peek element misses the literal attribute.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Assign_Attribute_Type_Invalid_Value">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "The attribute @type for Assign element has invalid value {0}.">
+                <Msg class = "String" header = "Attribute value" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Assign_Attribute">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal attribute {0} for Assign element.">
+                <Msg class = "String" header = "Attribute name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Assign_Missing_Var">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "An Assign element misses the value for attribute var.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Assign_Missing_Exp">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "An Assign element misses the value for attribute exp.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Field_Attribute">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal attribute {0} for Field element.">
+                <Msg class = "String" header = "Attribute name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Syntax_Pad">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal pad character {0} specified for Syntax {1}">
+                <Msg class = "String" header = "pad value" text = "{0}"/>
+                <Msg class = "String" header = "Syntax name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Syntax_Attribute">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal attribute {0} for Syntax element.">
+                <Msg class = "String" header = "Attribute name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Syntax_Attribute_Quote_Spec">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal quote spec on syntax {0}.">
+                <Msg class = "String" header = "Syntax name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Variable_Attribute">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal attribute {0} for Variable element.">
+                <Msg class = "String" header = "Attribute name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Variable_Attribute_Type_Invalid_Value">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "The attribute @type for Variable element has invalid value {0}.">
+                <Msg class = "String" header = "Attribute value" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Invalid_FFD_Element">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Invalid element {0} found in ffd file.">
+                <Msg class = "String" header = "Element name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Element_Missing_Name">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Attribute name is required for element {0}.">
+                <Msg class = "String" header = "Element name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "FFD_Root_Element_File">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal ffd file structure: root element must be &lt;File&gt;.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_FFD_Root_Children_Structure">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal structure in ffd file: Element {0} must be child of &lt;File&gt;.">
+                <Msg class = "String" header = "Element name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Whitespace_Flag">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal whitespace flag {0}.">
+                <Msg class = "String" header = "Whitespace flag" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unsupported_Data_Type">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Type {0} is not supported.">
+                <Msg class = "String" header = "Data type" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Literal_Type">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Can not use format with literal type {0}.">
+                <Msg class = "String" header = "Literal type" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Literal_With_No_Content">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Literal {0} has no content.">
+                <Msg class = "String" header = "Literal name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Variable_Literal_With_No_Bindvar">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal variable literal -- no bindvar.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Field_Invalid_Occurence">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Field {0}'s max occurence {1} is less than its min occurence {2}.">
+                <Msg class = "String" header = "Field name" text = "{0}"/>
+                <Msg class = "String" header = "Max occurence" text = "{1}"/>
+                <Msg class = "String" header = "Min occurence" text = "{2}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Peek_Encounter_Variable_Length_Field">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Cannot peek past variable length field {0}.">
+                <Msg class = "String" header = "Field name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Peek_Encounter_Group">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Cannot peek past group {0}.">
+                <Msg class = "String" header = "group name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Peek_Encounter_Default">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Cannot peek past item {0}.">
+                <Msg class = "String" header = "item name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Peek_Cannot_Find_Literal">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Peek: Cannot find literal named {0}.">
+                <Msg class = "String" header = "Literal name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Syntax_Lq_Unmatch">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Encounter illegal character at position {0} in the input stream when reading value for field or literal {1}. \nExpected one of the following: {2}">
+                <Msg class = "String" header = "Position" text = "{0}"/>
+                <Msg class = "String" header = "Field or Literal name" text = "{1}"/>
+                <Msg class = "String" header = "Expected value" text = "{2}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unexpected_End_Of_File">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Unexpected end of file when reading value for field or literal {0}.">
+                <Msg class = "String" header = "Field or literal name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unterminated_String_Input">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Found unterminated string input at position {0} when reading value for field or literal {1}.">
+                <Msg class = "String" header = "Position" text = "{0}"/>
+                <Msg class = "String" header = "Field or literal name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Field_Literal_Value">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal value for {0}: not a string.">
+                <Msg class = "String" header = "Field or literal name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unsupported_Field_Type">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Type {0} for field {1} is not supported.">
+                <Msg class = "String" header = "Data type" text = "{0}"/>
+                <Msg class = "String" header = "Field name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Milformed_Delimiter">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Node {0} has a malformaed delimiter {1}: delimiter can only be a literal or a variable.">
+                <Msg class = "String" header = "Node name" text = "{0}"/>
+                <Msg class = "String" header = "Delimiter" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unimplemented_Node_Type">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Node type {0} is unimplemented.">
+                <Msg class = "String" header = "Node type" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Backslash_At_End_of_Expression">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Stray \\ found at end of substitute string {0}.">
+                <Msg class = "String" header = "Substitute string" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unbalanced_Curly_bracket">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Unbalanced curly bracket in substitute string {0}">
+                <Msg class = "String" header = "Substitute string" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Undefined_Variable_In_Expression">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Variable {0} in substitute string {1} is undefined.">
+                <Msg class = "String" header = "Variable name" text = "{0}"/>
+                <Msg class = "String" header = "Substitute string" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Undefined_Variable_in_Literal_Bindvar">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Variable {0} used in the attribute bindvar in the literal {1} is undefined.">
+                <Msg class = "String" header = "Variable name" text = "{0}"/>
+                <Msg class = "String" header = "Literal name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Ambiguous_Field_Grammar">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Ambiguous grammar found. Field {0} can appear immediately after field {1} without intervening syntax.">
+                <Msg class = "String" header = "Possible next field name" text = "{0}"/>
+                <Msg class = "String" header = "Current field name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Literal_Has_No_Value_Bindvar">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Literal {0} has no value or bindvar defined.">
+                <Msg class = "String" header = "Literal name" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Char_Entity">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Illegal character entity {0} found at position {1} in the input stream.">
+                <Msg class = "String" header = "Character entity" text = "{0}"/>
+                <Msg class = "String" header = "Position at the input stream" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unrecognized_Char_Entity">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Unrecognized character entity found at position {0} in the input stream.">
+                <Msg class = "String" header = "Position at the input stream" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Number_Format_Error">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Error evaluating string {0} as numeric value.">
+                <Msg class = "String" header = "String value" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Parent_Delimiter_found_in_child">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "The Group &quot;{0}&quot; delimiter was found while processing data for its child, &quot;{1}&quot; ">
+                <Msg class = "String" header = "Group Name" text = "{0}"/>
+                <Msg class = "String" header = "Group Delimiter" text = "{2}"/>
+                <Msg class = "String" header = "Child Name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Count_Field_Number_Error">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Error evaluating string {0} as numeric value for countField {1}.">
+                <Msg class = "String" header = "String value" text = "{0}"/>
+                <Msg class = "String" header = "Count field name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Extra_Data_In_Input">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Data did not match flat file definition. Extra data found after position {0} in the input.">
+                <Msg class = "String" header = "Position at the input stream" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unsupported_Type_Format_Error">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Error evaluating string {0} as unsupported type {1}.">
+                <Msg class = "String" header = "String value" text = "{0}"/>
+                <Msg class = "String" header = "Type name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+       <SMessage name = "Illegal_Numeric_Value">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Field {0} cannot convert {1} into a number.">
+                <Msg class = "String" header = "Field Name" text = "{0}"/>
+                <Msg class = "String" header = "Numeric Value" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Unsupported_Numeric_Format_Error">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "The Numeric Format {0} is illegal on field {1}">
+                <Msg class = "String" header = "Format value" text = "{0}"/>
+                <Msg class = "String" header = "Field Name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "String_Value_Format_Error">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Error evaluating string {0} against format {1}.">
+                <Msg class = "String" header = "String value" text = "{0}"/>
+                <Msg class = "String" header = "Format" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Can_Not_Represent_Delimited_Field_Value">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Cannot represent the value {0} for field {1} in the output.">
+                <Msg class = "String" header = "String value" text = "{0}"/>
+                <Msg class = "String" header = "Field name" text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Variable_Stack_Overflow">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Stack overflow on variable state.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Variable_Stack_Underflow">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Stack underflow on variable state.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "VariableState_Key_Not_String">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "VariableState keys must be strings.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Attributes_Forbidden">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Attributes not allowed here.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Mixed_Content_Forbidden">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Mixed content not allowed here.">
+            </Msg>
+        </SMessage>
+        <SMessage name = "Invalid_Child_Name_For_Node">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Invalid child {0} for node {1}.">
+                <Msg class = "String" header = "Child name " text = "{0}"/>
+                <Msg class = "String" header = "Node name: " text = "{1}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Invalid_Data_Missing_kid">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "Invalid data -- missing {0}.">
+                <Msg class = "String" header = "Child name " text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Group_Used_As_Field">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "{0} is a group, not a field.">
+                <Msg class = "String" header = "Group name " text = "{0}"/>
+            </Msg>
+        </SMessage>
+         <SMessage name = "Illegal_Null_Value">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "{0} is not a legal Null Value. Try one of &quot;HIGH_VALUES&quot;, &quot;LOW_VALUES&quot;, &quot;ZEROES&quot;, &quot;SPACES&quot;, &quot;VARIABLE&quot;">
+                <Msg class = "String" header = "Illegal Null Value" text = "{0}"/>
+            </Msg>
+        </SMessage>
+        <SMessage name = "Illegal_Null_Value_Delegation">
+            <Msg class = "Other" header = "FFD_Processing_Error" text = "{0} is not a legal Null Delagation Value. Try one of &quot;FIELD&quot;, &quot;GROUP&quot;, &quot;FIELD-GROUP&quot;">
+                <Msg class = "String" header = "Illegal Null Delegation Value" text = "{0}"/>
+            </Msg>
+        </SMessage>
+    </Domain>
+</Messages>

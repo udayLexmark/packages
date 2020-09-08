@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">ASCIItoHexString</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgY3Vyc29yIAk9IHBpcGVsaW5lLmdldEN1cnNvcigpOwpTdHJpbmcgYXNjaWlT
+dHJpbmcgCT0gbnVsbDsKCmN1cnNvci5sYXN0KCJhc2NpaVN0cmluZyIpOwphc2NpaVN0cmluZyA9
+IChTdHJpbmcpIGN1cnNvci5nZXRWYWx1ZSgpOwoKY2hhciB0aGlzQ2hhcjsKQ2hhcmFjdGVyIHRo
+aXNDaGFyYWN0ZXIgPSBudWxsOwpTdHJpbmcgaGV4U3RyaW5nID0gbnVsbDsKU3RyaW5nIG91dHB1
+dFN0cmluZyA9ICIiOwppbnQgdGVtcEludCA9IDA7CmZvciAoaW50IGk9MDsgaTxhc2NpaVN0cmlu
+Zy5sZW5ndGgoKTsgaSsrKSB7Cgl0aGlzQ2hhciA9IGFzY2lpU3RyaW5nLmNoYXJBdChpKTsKCXRl
+bXBJbnQgPSAoaW50KSB0aGlzQ2hhcjsJCgloZXhTdHJpbmcgPSBJbnRlZ2VyLnRvSGV4U3RyaW5n
+KHRlbXBJbnQpOwoJb3V0cHV0U3RyaW5nID0gb3V0cHV0U3RyaW5nICsgaGV4U3RyaW5nICsgIiAi
+Owp9CgpvdXRwdXRTdHJpbmcgPSBvdXRwdXRTdHJpbmcudHJpbSgpLnRvVXBwZXJDYXNlKCk7Cgpj
+dXJzb3IubGFzdCgpOwpjdXJzb3IuaW5zZXJ0QWZ0ZXIoImhleFN0cmluZyIsb3V0cHV0U3RyaW5n
+KTsK</value>
+</Values>

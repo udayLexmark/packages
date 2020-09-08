@@ -1,0 +1,2783 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<FLOW VERSION="3.0" CLEANUP="true">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" SWITCH="/debug">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<INVOKE NAME="$null" TIMEOUT="" SERVICE="pub.flow:savePipelineToFile" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">savePipelineToFileInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">fileName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/fileName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">Agreements_SourceMap</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">fileName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">fileName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">debug</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/fileName;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/debug;1;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<INVOKE NAME="$default" TIMEOUT="" SERVICE="pub.flow:restorePipelineFromFile" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_name">restorePipelineFromFileInput</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">fileName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">merge</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <array name="field_options" type="value" depth="1">
+          <value>true</value>
+          <value>false</value>
+        </array>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/fileName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">Agreements_SourceMap</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">fileName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">fileName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">debug</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPDELETE NAME="Dropper" FIELD="/fileName;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/debug;1;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+</BRANCH>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>Save Parent errorInfo so it doesn't Accidentally get overwritten if child service fail</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0" TO="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>set error info: "About to map LXKAgreementsFromSiebel.maps:mapSiebelAgreements_to_Agreement_Canonical"</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">LXKAgreementsFromSiebel.maps:mapSiebelAgreements_to_Agreement_Canonical</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">serviceName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>Map from Siebel Agreements  to Agreement header data</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">Agreement</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:Agreement</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/PromoId;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/PromoName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/AccountOrg;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementOrganization;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AccountInformation;2;0/AccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AccountInformation;2;0/MDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AccountInformation;2;0/SoldToAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/AccountName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AccountInformation;2;0/AccountName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/Country;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AccountInformation;2;0/PhysicalAddress;2;0/Country;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/PromoStartDate;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementStartDate;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/PromoEndDate;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementEndDate;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/PromoStatus;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/DealId;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails;2;1/DealNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/DealStatus;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails;2;1/DealStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/ProductName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails;2;1/ProductNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/GrossStreetPriceAdjusted;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails;2;1/ProductUnitPrice;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/RevenueReversalVolume;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails;2;1/RevenueReversalVolume;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/Qty;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails;2;1/AgreementLineQuantity;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/AccountPartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AccountInformation;2;0/AccountType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/EndCustomerPartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/EndCustomerInformaiton;2;0/EndCustomerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/EndCustomerSoldToNum;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/EndCustomerInformaiton;2;0/SoldToEndCustomertNumber;1;0">
+</MAPCOPY>
+
+<MAPINVOKE SERVICE="pub.date:getCurrentDateString" VALIDATE-IN="$none" VALIDATE-OUT="$none" INVOKE-ORDER="0">
+
+  <!-- nodes -->
+
+<MAP MODE="INVOKEINPUT">
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/pattern;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">yyyy-MM-dd'T'HH:mm:ss.SSS</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">pattern</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/timezone;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">GMT</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">timezone</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="INVOKEOUTPUT">
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/value;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/DocumentMetaData;2;0/IntegrationCreationDateTime;1;0">
+</MAPCOPY>
+</MAP>
+</MAPINVOKE>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/DocumentMetaData;2;0/SourceSystem;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">SIEBEL</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">SourceSystem</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/DocumentMetaData;2;0/BusinessProcess;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">Agreements</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">BusinessProcess</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <value name="contentType">1</value>
+      <value name="internalType">reference</value>
+      <value name="dataTypeVersion">dtVersion2</value>
+      <array name="targetNames" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/DocumentMetaData;2;0/IntegrationFrequency;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">DailyBatch</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">IntegrationFrequency</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+      <value>DailyBatch</value>
+      <value>RealTime</value>
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <array name="enumeration" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">DailyBatch</value>
+          <value name="isList">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">RealTime</value>
+          <value name="isList">false</value>
+        </record>
+      </array>
+      <value name="contentType">1</value>
+      <value name="internalType">instance</value>
+      <value name="ct_class">com.wm.lang.schema.datatypev2.WmString</value>
+      <value name="name">string</value>
+      <array name="parent-ancestors" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">anySimpleType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">anyType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+      <record name="baseType" javaclass="com.wm.util.Values">
+        <record name="whiteSpace" javaclass="com.wm.util.Values">
+          <record name="FacetWSCValue" javaclass="com.wm.util.Values">
+            <value name="cDecimalValue">3</value>
+          </record>
+          <value name="facetFixed">false</value>
+        </record>
+        <value name="contentType">1</value>
+        <value name="internalType">instance</value>
+        <value name="ct_class">com.wm.lang.schema.datatypev2.WmString</value>
+        <value name="dataTypeVersion">dtVersion2</value>
+      </record>
+      <value name="dataTypeVersion">dtVersion2</value>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<SEQUENCE TIMEOUT="" EXIT-ON="FAILURE">
+  <COMMENT>check PromoNewFlag</COMMENT>
+
+  <!-- nodes -->
+
+<BRANCH TIMEOUT="" SWITCH="/siebelAgreements/SiebelMessage/ListOfLxkDealsExportIo-New[0]/LxkCpgPlanAccountPromotionProduct[0]/PromoNewFlag">
+  <COMMENT></COMMENT>
+
+  <!-- nodes -->
+
+<MAP NAME="Y" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>set Agreement/Agreement/DocumentMetaData/ObjectChangeActionType = 'NEW'</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">Agreement</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:Agreement</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/DocumentMetaData;2;0/ObjectChangeActionType;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">NEW</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">ObjectChangeActionType</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+      <value>CHANGE</value>
+      <value>DELETE</value>
+      <value>NEW</value>
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <array name="enumeration" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">CHANGE</value>
+          <value name="isList">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">DELETE</value>
+          <value name="isList">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">NEW</value>
+          <value name="isList">false</value>
+        </record>
+      </array>
+      <value name="contentType">1</value>
+      <value name="internalType">instance</value>
+      <value name="ct_class">com.wm.lang.schema.datatypev2.WmString</value>
+      <value name="name">string</value>
+      <array name="parent-ancestors" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">anySimpleType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">anyType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+      <record name="baseType" javaclass="com.wm.util.Values">
+        <record name="whiteSpace" javaclass="com.wm.util.Values">
+          <record name="FacetWSCValue" javaclass="com.wm.util.Values">
+            <value name="cDecimalValue">3</value>
+          </record>
+          <value name="facetFixed">false</value>
+        </record>
+        <value name="contentType">1</value>
+        <value name="internalType">instance</value>
+        <value name="ct_class">com.wm.lang.schema.datatypev2.WmString</value>
+        <value name="dataTypeVersion">dtVersion2</value>
+      </record>
+      <value name="dataTypeVersion">dtVersion2</value>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP NAME="$default" TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>set Agreement/Agreement/DocumentMetaData/ObjectChangeActionType = 'CHANGE'</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">Agreement</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:Agreement</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/DocumentMetaData;2;0/ObjectChangeActionType;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">CHANGE</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">ObjectChangeActionType</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+      <value>CHANGE</value>
+      <value>DELETE</value>
+      <value>NEW</value>
+    </array>
+    <record name="field_content_type" javaclass="com.wm.util.Values">
+      <array name="enumeration" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">CHANGE</value>
+          <value name="isList">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">DELETE</value>
+          <value name="isList">false</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="primitiveType">0</value>
+          <value name="lexRep">NEW</value>
+          <value name="isList">false</value>
+        </record>
+      </array>
+      <value name="contentType">1</value>
+      <value name="internalType">instance</value>
+      <value name="ct_class">com.wm.lang.schema.datatypev2.WmString</value>
+      <value name="name">string</value>
+      <array name="parent-ancestors" type="record" depth="1">
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">anySimpleType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">anyType</value>
+        </record>
+        <record javaclass="com.wm.util.Values">
+          <value name="xmlns">http://www.w3.org/2001/XMLSchema</value>
+          <value name="ncName">string</value>
+        </record>
+      </array>
+      <record name="baseType" javaclass="com.wm.util.Values">
+        <record name="whiteSpace" javaclass="com.wm.util.Values">
+          <record name="FacetWSCValue" javaclass="com.wm.util.Values">
+            <value name="cDecimalValue">3</value>
+          </record>
+          <value name="facetFixed">false</value>
+        </record>
+        <value name="contentType">1</value>
+        <value name="internalType">instance</value>
+        <value name="ct_class">com.wm.lang.schema.datatypev2.WmString</value>
+        <value name="dataTypeVersion">dtVersion2</value>
+      </record>
+      <value name="dataTypeVersion">dtVersion2</value>
+    </record>
+    <value name="nillable">false</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+</BRANCH>
+</SEQUENCE>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>Map Tactics to Related Agreement Types</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">Agreement</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:Agreement</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">Agreement</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:Agreement</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic1;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[0];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic1-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[0];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic1-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[0];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic1-Amount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[0];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic1-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[0];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic1-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[0];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic1-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[0];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic1-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[0];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic1-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[0];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic2;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[1];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic2-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[1];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic2-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[1];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic2-Amount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[1];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic2-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[1];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic2-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[1];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic2-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[1];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic2-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[1];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic2-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[1];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic3;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[2];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic3-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[2];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic3-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[2];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic3-UnitAmount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[2];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic3-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[2];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic3-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[2];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic3-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[2];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic3-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[2];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic3-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[2];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic4;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[3];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic4-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[3];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic4-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[3];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic4-UnitAmount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[3];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic4-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[3];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic4-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[3];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic4-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[3];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic4-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[3];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic4-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[3];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic5;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[4];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic5-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[4];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic5-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[4];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic5-UnitAmount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[4];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic5-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[4];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic5-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[4];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic5-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[4];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic5-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[4];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic5-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[4];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic6;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[5];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic6-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[5];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic6-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[5];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic6-Amount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[5];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic6-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[5];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic6-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[5];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic6-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[5];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic6-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[5];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic6-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[5];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic7;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[6];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic7-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[6];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic7-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[6];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic7-Amount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[6];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic7-TacticComments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[6];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic7-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[6];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic7-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[6];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic7-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[6];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic7-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[6];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic8;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[7];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic8-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[7];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic8-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[7];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic8-Amount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[7];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic8-TacticComments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[7];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic8-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[7];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic8-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[7];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic8-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[7];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic8-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[7];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic9;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[8];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic9-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[8];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic9-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[8];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic9-Amount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[8];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic9-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[8];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic9-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[8];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic9-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[8];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic9-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[8];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic9-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[8];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic10;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[9];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic10-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[9];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic10-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[9];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic10-UnitAmount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[9];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic10-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[9];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic10-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[9];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic10-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[9];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic10-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[9];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic10-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[9];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic11;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[10];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic11-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[10];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic11-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[10];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic11-UnitAmount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[10];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic11-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[10];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic11-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[10];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic11-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[10];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic11-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[10];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic11-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[10];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic12;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[11];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic12-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[11];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic12-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[11];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic12-Amount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[11];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic12-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[11];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic12-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[11];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic12-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[11];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic12-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[11];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic12-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[11];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic13;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[12];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic13-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[12];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic13-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[12];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic13-Expenses;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[12];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic13-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[12];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic13-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[12];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic13-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[12];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic13-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[12];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic13-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[12];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic14;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[13];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic14-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[13];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic14-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[13];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic14-Expenses;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[13];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic14-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[13];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic14-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[13];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic14-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[13];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic14-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[13];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic14-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[13];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic15;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[14];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic15-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[14];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic15-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[14];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic15-Amount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[14];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic15-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[14];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic15-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[14];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic15-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[14];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic15-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[14];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic15-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[14];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-Type;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/TacticType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic17;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[16];2;1/TacticName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic17-Status;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[16];2;1/TacticStatus;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic17Amount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[16];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic17-Comments;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[16];2;1/TacticReason;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic17-PartnerName;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[16];2;1/TacticPartnerName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic17-AccountCustNo;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[16];2;1/TacticAccountCustomerNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic17-LXKMDMAccount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[16];2;1/TacticMDMAccountNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic17-SoldtoNUM;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[16];2;1/TacticSoldToNumber;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic1-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[0];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic2-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[1];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic3-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[2];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic4-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[3];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic5-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[4];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic6-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[5];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic7-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[6];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic8-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[7];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic9-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[8];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic10-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[9];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic11-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[10];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic12-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[11];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic13-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[12];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic14-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[13];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic15-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[14];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic17-PartyRole;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[16];2;1/TacticPartnerType;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-Percent;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/PercentDiscount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-Amount1;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/Amount;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New[0];2;1/LxkCpgPlanAccountPromotionProduct[0];2;1/Tactic16-Amount;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementLineDetails[0];2;1/RelatedAgreementTypes[15];2;1/Amount;1;0">
+</MAPCOPY>
+</MAP>
+
+<MAP TIMEOUT="" MODE="STANDALONE">
+  <COMMENT>set action-About to translate CURRENCY_CODE</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_closed">true</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">Agreement</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:Agreement</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">About to translate CURRENCY_CODE</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">action</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">001</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">false</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">code</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+      <value>001</value>
+      <value>002</value>
+      <value>003</value>
+      <value>004</value>
+      <value>005</value>
+      <value>006</value>
+      <value>007</value>
+      <value>008</value>
+      <value>009</value>
+      <value>010</value>
+      <value>-ANY-</value>
+      <value>022</value>
+    </array>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">DATABASE</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <value name="field_usereditable">false</value>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">category</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <array name="field_options" type="value" depth="1">
+      <value>COMM</value>
+      <value>DATABASE</value>
+      <value>FLOW</value>
+      <value>JDE</value>
+      <value>MAPPING</value>
+      <value>MQSERIES</value>
+      <value>PUBSUB</value>
+      <value>TN</value>
+      <value>GENERAL</value>
+      <value>FILEIO</value>
+      <value>VALIDATION</value>
+      <value>UNKNOWN</value>
+      <value>TRANSLATION</value>
+      <value>BUSINESS_EVENT</value>
+      <value>WORKFLOW</value>
+      <value>XML</value>
+      <value>INTEGRATION</value>
+      <value>WEBSERVICE</value>
+      <value>SAP</value>
+    </array>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<INVOKE TIMEOUT="" SERVICE="LXKBCM.pub:translate" VALIDATE-IN="$none" VALIDATE-OUT="$none">
+  <COMMENT>BCM Lookup for CURRENCY_CODE</COMMENT>
+
+  <!-- nodes -->
+
+<MAP MODE="INPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">Category</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">FieldTypeCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ApplicationName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">ApplicationValue</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">GeographyCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <null name="field_usereditable"/>
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">UniversalValue</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="field_opt">true</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">Agreement</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:Agreement</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/siebelAgreements;4;0;LXKAgreementsFromSiebel.docs:siebelAgreements/SiebelMessage;2;0/ListOfLxkDealsExportIo-New;2;1/LxkCpgPlanAccountPromotionProduct;2;1/CurrencyCode;1;0" TO="/ApplicationValue;1;0">
+</MAPCOPY>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/FieldTypeCode;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">CURRENCY_CODE</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">FieldTypeCode</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/Category;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">UNIVERSAL</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">Category</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/ApplicationName;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">SIEBEL</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="field_name">ApplicationName</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+
+<MAPSET NAME="Setter" OVERWRITE="true" VARIABLES="false" FIELD="/GeographyCode;1;0">
+  <DATA ENCODING="XMLValues" I18N="true">
+
+<Values version="2.0">
+  <value name="xml">WW</value>
+  <record name="type" javaclass="com.wm.util.Values">
+    <value name="node_type">unknown</value>
+    <value name="node_comment"></value>
+    <record name="node_hints" javaclass="com.wm.util.Values">
+      <null name="field_usereditable"/>
+      <value name="field_largerEditor">false</value>
+      <value name="field_password">false</value>
+    </record>
+    <value name="field_name">GeographyCode</value>
+    <value name="field_type">string</value>
+    <value name="field_dim">0</value>
+    <value name="field_opt">true</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+  </record>
+</Values>
+</DATA>
+</MAPSET>
+</MAP>
+
+<MAP MODE="OUTPUT">
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">Category</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">FieldTypeCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ApplicationName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ApplicationValue</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">GeographyCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">Agreement</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:Agreement</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">result</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">resultType</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">result</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">resultType</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/result;1;0" TO="/Agreement;4;0;LXKEnterprise.EnterpriseObjectDocuments:Agreement/Agreement;2;0/AgreementInformation;2;0/AgreementCurrency;1;0">
+</MAPCOPY>
+
+<MAPDELETE NAME="Dropper" FIELD="/result;1;0">
+</MAPDELETE>
+
+<MAPDELETE NAME="Dropper" FIELD="/resultType;1;0">
+</MAPDELETE>
+</MAP>
+</INVOKE>
+
+<MAP MODE="STANDALONE">
+  <COMMENT>Reset Parent errorInfo fields since this service is exiting successfully</COMMENT>
+  <MAPTARGET>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">Category</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">FieldTypeCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ApplicationName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ApplicationValue</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">GeographyCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">Agreement</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:Agreement</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">result</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">resultType</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPTARGET>
+  <MAPSOURCE>
+
+<Values version="2.0">
+  <record name="xml" javaclass="com.wm.util.Values">
+    <value name="node_type">record</value>
+    <value name="field_type">record</value>
+    <value name="field_dim">0</value>
+    <value name="nillable">true</value>
+    <value name="form_qualified">false</value>
+    <value name="is_global">false</value>
+    <array name="rec_fields" type="record" depth="1">
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">Category</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">FieldTypeCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ApplicationName</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">ApplicationValue</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">GeographyCode</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">parent_errorInfo</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.error:errorInfo</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="node_comment"></value>
+        <record name="node_hints" javaclass="com.wm.util.Values">
+          <value name="field_largerEditor">false</value>
+          <value name="field_password">false</value>
+        </record>
+        <value name="field_name">siebelAgreements</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKAgreementsFromSiebel.docs:siebelAgreements</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">record</value>
+        <value name="field_name">Agreement</value>
+        <value name="field_type">recref</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+        <value name="rec_ref">LXKEnterprise.EnterpriseObjectDocuments:Agreement</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">result</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+      <record javaclass="com.wm.util.Values">
+        <value name="node_type">unknown</value>
+        <value name="field_name">resultType</value>
+        <value name="field_type">string</value>
+        <value name="field_dim">0</value>
+        <value name="nillable">true</value>
+        <value name="form_qualified">false</value>
+        <value name="is_global">false</value>
+      </record>
+    </array>
+  </record>
+</Values>
+</MAPSOURCE>
+
+  <!-- nodes -->
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/action;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/severity;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/category;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/code;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/applicationId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/businessProcess;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/system;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/projectId;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/serviceName;1;0">
+</MAPCOPY>
+
+<MAPCOPY NAME="Link" FROM="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0" TO="/errorInfo;4;0;LXKEnterprise.error:errorInfo/transactionId;1;0">
+</MAPCOPY>
+
+<MAPDELETE NAME="Dropper" FIELD="/parent_errorInfo;4;0;LXKEnterprise.error:errorInfo">
+</MAPDELETE>
+</MAP>
+</FLOW>

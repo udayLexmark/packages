@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Values version="2.0">
+  <value name="name">stringToStream</value>
+  <value name="encodeutf8">true</value>
+  <value name="body">SURhdGFDdXJzb3IgcGlwZWxpbmVDdXJzb3IgPSBwaXBlbGluZS5nZXRDdXJzb3IoKTsKCnBpcGVs
+aW5lQ3Vyc29yLmZpcnN0KCJzdHJpbmciKTsKClN0cmluZyBzdHJpbmcgPSAoU3RyaW5nKXBpcGVs
+aW5lQ3Vyc29yLmdldFZhbHVlKCk7CgpwaXBlbGluZUN1cnNvci5kZXN0cm95KCk7CgpTdHJpbmdC
+dWZmZXJJbnB1dFN0cmVhbSBvdXRwdXQgPSBuZXcgU3RyaW5nQnVmZmVySW5wdXRTdHJlYW0oc3Ry
+aW5nKTsKCnBpcGVsaW5lQ3Vyc29yID0gcGlwZWxpbmUuZ2V0Q3Vyc29yKCk7Cgp3aGlsZSAocGlw
+ZWxpbmVDdXJzb3IuZmlyc3QoInN0cmVhbSIpKXsKCglwaXBlbGluZUN1cnNvci5kZWxldGUoKTsK
+Cn0KCnBpcGVsaW5lQ3Vyc29yLmxhc3QoKTsKCk9iamVjdCBpbnB1dFN0cmVhbSA9IG91dHB1dDsK
+CnBpcGVsaW5lQ3Vyc29yLmluc2VydEFmdGVyKCJzdHJlYW0iLCBpbnB1dFN0cmVhbSApOwoKcGlw
+ZWxpbmVDdXJzb3IuZGVzdHJveSgpOwo=</value>
+</Values>
